@@ -1,0 +1,3 @@
+struct Team: Codable {
+    let 
+}

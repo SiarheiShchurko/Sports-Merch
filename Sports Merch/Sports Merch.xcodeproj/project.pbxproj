@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED31FC4A2C04696000D09CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC492C04696000D09CC8 /* AppDelegate.swift */; };
+		ED31FC532C04696200D09CC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED31FC522C04696200D09CC8 /* Assets.xcassets */; };
+		ED31FC562C04696200D09CC8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = ED31FC552C04696200D09CC8 /* Base */; };
+		ED31FC5F2C046A0000D09CC8 /* RaceSaverAtsManagerSta.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC5E2C046A0000D09CC8 /* RaceSaverAtsManagerSta.swift */; };
+		ED31FC622C046A1900D09CC8 /* GniOnboardArtTypeRams.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC612C046A1900D09CC8 /* GniOnboardArtTypeRams.swift */; };
+		ED31FC642C046A2C00D09CC8 /* VC + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC632C046A2C00D09CC8 /* VC + Ext.swift */; };
+		ED31FC662C046A4C00D09CC8 /* Label + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC652C046A4C00D09CC8 /* Label + Ext.swift */; };
+		ED31FC682C046A6100D09CC8 /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC672C046A6100D09CC8 /* UIColor + Ext.swift */; };
+		ED31FC6A2C046A7300D09CC8 /* Double + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC692C046A7300D09CC8 /* Double + Ext.swift */; };
+		ED31FC6C2C046A8900D09CC8 /* RaceDefltsAtsServiceCes.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC6B2C046A8900D09CC8 /* RaceDefltsAtsServiceCes.swift */; };
+		ED31FC6F2C046B3E00D09CC8 /* SecSimpleLabelRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC6E2C046B3E00D09CC8 /* SecSimpleLabelRace.swift */; };
+		ED31FC722C046B5A00D09CC8 /* AtsOnboardRaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC712C046B5A00D09CC8 /* AtsOnboardRaceCell.swift */; };
+		ED31FC762C046BB400D09CC8 /* ClasPrimarySecButtonRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC752C046BB400D09CC8 /* ClasPrimarySecButtonRace.swift */; };
+		ED31FC792C046BDA00D09CC8 /* PartipiantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC782C046BDA00D09CC8 /* PartipiantsTableViewCell.swift */; };
+		ED31FC7C2C046D0500D09CC8 /* SecTemplRaceTextViewAts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC7B2C046D0500D09CC8 /* SecTemplRaceTextViewAts.swift */; };
+		ED31FC7E2C046D2A00D09CC8 /* SecTimCollectionRaceViewAts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC7D2C046D2A00D09CC8 /* SecTimCollectionRaceViewAts.swift */; };
+		ED31FC802C046D4500D09CC8 /* SecUnicalImageRaceViewAts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC7F2C046D4500D09CC8 /* SecUnicalImageRaceViewAts.swift */; };
+		ED31FC822C046D5800D09CC8 /* SecUnicalRaceTFAts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC812C046D5800D09CC8 /* SecUnicalRaceTFAts.swift */; };
+		ED31FC842C046D6B00D09CC8 /* SecUniqueStackViewGniff.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC832C046D6B00D09CC8 /* SecUniqueStackViewGniff.swift */; };
+		ED31FC862C046D7900D09CC8 /* SimpleSecImageRaceButtonAts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC852C046D7900D09CC8 /* SimpleSecImageRaceButtonAts.swift */; };
+		ED31FC882C046DA300D09CC8 /* WeRaceViewsecViewAts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC872C046DA300D09CC8 /* WeRaceViewsecViewAts.swift */; };
+		ED31FC8A2C046DE700D09CC8 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC892C046DE700D09CC8 /* FontSize.swift */; };
+		ED31FC8C2C0471AD00D09CC8 /* RaceUsrSecDeviceArts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC8B2C0471AD00D09CC8 /* RaceUsrSecDeviceArts.swift */; };
+		ED31FC8E2C04723C00D09CC8 /* SecOnboardArtsTypeRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC8D2C04723C00D09CC8 /* SecOnboardArtsTypeRace.swift */; };
+		ED31FC912C0473E100D09CC8 /* SplashSecScreenRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC902C0473E100D09CC8 /* SplashSecScreenRace.swift */; };
+		ED31FC932C047AC000D09CC8 /* OnboardingRaceScreenAts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC922C047AC000D09CC8 /* OnboardingRaceScreenAts.swift */; };
+		ED31FC952C047AD300D09CC8 /* OnboardingAtsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC942C047AD300D09CC8 /* OnboardingAtsProtocol.swift */; };
+		ED31FC972C047B0F00D09CC8 /* PushAtrScreenRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC962C047B0F00D09CC8 /* PushAtrScreenRace.swift */; };
+		ED31FC992C047B2E00D09CC8 /* TabBarRaceModuleSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC982C047B2E00D09CC8 /* TabBarRaceModuleSec.swift */; };
+		ED31FC9B2C047B5800D09CC8 /* CustomPickerProtol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC9A2C047B5800D09CC8 /* CustomPickerProtol.swift */; };
+		ED31FC9D2C047C1F00D09CC8 /* SportsTeamsContrlr.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC9C2C047C1F00D09CC8 /* SportsTeamsContrlr.swift */; };
+		ED31FC9F2C047C3C00D09CC8 /* TheShopsContrlr.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC9E2C047C3C00D09CC8 /* TheShopsContrlr.swift */; };
+		ED31FCA12C047C6F00D09CC8 /* RaceSettingsArtModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA02C047C6F00D09CC8 /* RaceSettingsArtModule.swift */; };
+		ED31FCA32C047FB000D09CC8 /* WController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA22C047FB000D09CC8 /* WController.swift */; };
+		ED31FCA52C04BE8300D09CC8 /* SportsTeamsVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA42C04BE8300D09CC8 /* SportsTeamsVm.swift */; };
+		ED31FCA72C04BF3D00D09CC8 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA62C04BF3D00D09CC8 /* File.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ED31FC462C04696000D09CC8 /* Sports Merch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sports Merch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED31FC492C04696000D09CC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ED31FC522C04696200D09CC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED31FC552C04696200D09CC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED31FC572C04696200D09CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED31FC5E2C046A0000D09CC8 /* RaceSaverAtsManagerSta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSaverAtsManagerSta.swift; sourceTree = "<group>"; };
+		ED31FC612C046A1900D09CC8 /* GniOnboardArtTypeRams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GniOnboardArtTypeRams.swift; sourceTree = "<group>"; };
+		ED31FC632C046A2C00D09CC8 /* VC + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC + Ext.swift"; sourceTree = "<group>"; };
+		ED31FC652C046A4C00D09CC8 /* Label + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Label + Ext.swift"; sourceTree = "<group>"; };
+		ED31FC672C046A6100D09CC8 /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
+		ED31FC692C046A7300D09CC8 /* Double + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double + Ext.swift"; sourceTree = "<group>"; };
+		ED31FC6B2C046A8900D09CC8 /* RaceDefltsAtsServiceCes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDefltsAtsServiceCes.swift; sourceTree = "<group>"; };
+		ED31FC6E2C046B3E00D09CC8 /* SecSimpleLabelRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecSimpleLabelRace.swift; sourceTree = "<group>"; };
+		ED31FC712C046B5A00D09CC8 /* AtsOnboardRaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtsOnboardRaceCell.swift; sourceTree = "<group>"; };
+		ED31FC752C046BB400D09CC8 /* ClasPrimarySecButtonRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClasPrimarySecButtonRace.swift; sourceTree = "<group>"; };
+		ED31FC782C046BDA00D09CC8 /* PartipiantsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartipiantsTableViewCell.swift; sourceTree = "<group>"; };
+		ED31FC7B2C046D0500D09CC8 /* SecTemplRaceTextViewAts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecTemplRaceTextViewAts.swift; sourceTree = "<group>"; };
+		ED31FC7D2C046D2A00D09CC8 /* SecTimCollectionRaceViewAts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecTimCollectionRaceViewAts.swift; sourceTree = "<group>"; };
+		ED31FC7F2C046D4500D09CC8 /* SecUnicalImageRaceViewAts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecUnicalImageRaceViewAts.swift; sourceTree = "<group>"; };
+		ED31FC812C046D5800D09CC8 /* SecUnicalRaceTFAts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecUnicalRaceTFAts.swift; sourceTree = "<group>"; };
+		ED31FC832C046D6B00D09CC8 /* SecUniqueStackViewGniff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecUniqueStackViewGniff.swift; sourceTree = "<group>"; };
+		ED31FC852C046D7900D09CC8 /* SimpleSecImageRaceButtonAts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSecImageRaceButtonAts.swift; sourceTree = "<group>"; };
+		ED31FC872C046DA300D09CC8 /* WeRaceViewsecViewAts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeRaceViewsecViewAts.swift; sourceTree = "<group>"; };
+		ED31FC892C046DE700D09CC8 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
+		ED31FC8B2C0471AD00D09CC8 /* RaceUsrSecDeviceArts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceUsrSecDeviceArts.swift; sourceTree = "<group>"; };
+		ED31FC8D2C04723C00D09CC8 /* SecOnboardArtsTypeRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecOnboardArtsTypeRace.swift; sourceTree = "<group>"; };
+		ED31FC902C0473E100D09CC8 /* SplashSecScreenRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashSecScreenRace.swift; sourceTree = "<group>"; };
+		ED31FC922C047AC000D09CC8 /* OnboardingRaceScreenAts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRaceScreenAts.swift; sourceTree = "<group>"; };
+		ED31FC942C047AD300D09CC8 /* OnboardingAtsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAtsProtocol.swift; sourceTree = "<group>"; };
+		ED31FC962C047B0F00D09CC8 /* PushAtrScreenRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAtrScreenRace.swift; sourceTree = "<group>"; };
+		ED31FC982C047B2E00D09CC8 /* TabBarRaceModuleSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRaceModuleSec.swift; sourceTree = "<group>"; };
+		ED31FC9A2C047B5800D09CC8 /* CustomPickerProtol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerProtol.swift; sourceTree = "<group>"; };
+		ED31FC9C2C047C1F00D09CC8 /* SportsTeamsContrlr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTeamsContrlr.swift; sourceTree = "<group>"; };
+		ED31FC9E2C047C3C00D09CC8 /* TheShopsContrlr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheShopsContrlr.swift; sourceTree = "<group>"; };
+		ED31FCA02C047C6F00D09CC8 /* RaceSettingsArtModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSettingsArtModule.swift; sourceTree = "<group>"; };
+		ED31FCA22C047FB000D09CC8 /* WController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WController.swift; sourceTree = "<group>"; };
+		ED31FCA42C04BE8300D09CC8 /* SportsTeamsVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTeamsVm.swift; sourceTree = "<group>"; };
+		ED31FCA62C04BF3D00D09CC8 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED31FC432C04696000D09CC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED31FC3D2C04696000D09CC8 = {
+			isa = PBXGroup;
+			children = (
+				ED31FC482C04696000D09CC8 /* Sports Merch */,
+				ED31FC472C04696000D09CC8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED31FC472C04696000D09CC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED31FC462C04696000D09CC8 /* Sports Merch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED31FC482C04696000D09CC8 /* Sports Merch */ = {
+			isa = PBXGroup;
+			children = (
+				ED31FC8F2C0473D800D09CC8 /* Screens */,
+				ED31FC6D2C046B2600D09CC8 /* DesignFlow */,
+				ED31FC602C046A1100D09CC8 /* Model */,
+				ED31FC5D2C0469F800D09CC8 /* Services */,
+				ED31FC492C04696000D09CC8 /* AppDelegate.swift */,
+				ED31FC522C04696200D09CC8 /* Assets.xcassets */,
+				ED31FC542C04696200D09CC8 /* LaunchScreen.storyboard */,
+				ED31FC572C04696200D09CC8 /* Info.plist */,
+				ED31FCA22C047FB000D09CC8 /* WController.swift */,
+			);
+			path = "Sports Merch";
+			sourceTree = "<group>";
+		};
+		ED31FC5D2C0469F800D09CC8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ED31FC632C046A2C00D09CC8 /* VC + Ext.swift */,
+				ED31FC652C046A4C00D09CC8 /* Label + Ext.swift */,
+				ED31FC672C046A6100D09CC8 /* UIColor + Ext.swift */,
+				ED31FC692C046A7300D09CC8 /* Double + Ext.swift */,
+				ED31FC6B2C046A8900D09CC8 /* RaceDefltsAtsServiceCes.swift */,
+				ED31FC5E2C046A0000D09CC8 /* RaceSaverAtsManagerSta.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ED31FC602C046A1100D09CC8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED31FC892C046DE700D09CC8 /* FontSize.swift */,
+				ED31FC612C046A1900D09CC8 /* GniOnboardArtTypeRams.swift */,
+				ED31FC8B2C0471AD00D09CC8 /* RaceUsrSecDeviceArts.swift */,
+				ED31FC8D2C04723C00D09CC8 /* SecOnboardArtsTypeRace.swift */,
+				ED31FCA62C04BF3D00D09CC8 /* File.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ED31FC6D2C046B2600D09CC8 /* DesignFlow */ = {
+			isa = PBXGroup;
+			children = (
+				ED31FC772C046BD100D09CC8 /* TableView */,
+				ED31FC742C046BAE00D09CC8 /* Buttons */,
+				ED31FC702C046B4900D09CC8 /* CollView */,
+				ED31FC6E2C046B3E00D09CC8 /* SecSimpleLabelRace.swift */,
+				ED31FC7B2C046D0500D09CC8 /* SecTemplRaceTextViewAts.swift */,
+				ED31FC7F2C046D4500D09CC8 /* SecUnicalImageRaceViewAts.swift */,
+				ED31FC812C046D5800D09CC8 /* SecUnicalRaceTFAts.swift */,
+				ED31FC832C046D6B00D09CC8 /* SecUniqueStackViewGniff.swift */,
+				ED31FC872C046DA300D09CC8 /* WeRaceViewsecViewAts.swift */,
+			);
+			path = DesignFlow;
+			sourceTree = "<group>";
+		};
+		ED31FC702C046B4900D09CC8 /* CollView */ = {
+			isa = PBXGroup;
+			children = (
+				ED31FC732C046B6500D09CC8 /* Cells */,
+				ED31FC7D2C046D2A00D09CC8 /* SecTimCollectionRaceViewAts.swift */,
+			);
+			path = CollView;
+			sourceTree = "<group>";
+		};
+		ED31FC732C046B6500D09CC8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ED31FC712C046B5A00D09CC8 /* AtsOnboardRaceCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		ED31FC742C046BAE00D09CC8 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				ED31FC752C046BB400D09CC8 /* ClasPrimarySecButtonRace.swift */,
+				ED31FC852C046D7900D09CC8 /* SimpleSecImageRaceButtonAts.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		ED31FC772C046BD100D09CC8 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				ED31FC782C046BDA00D09CC8 /* PartipiantsTableViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		ED31FC8F2C0473D800D09CC8 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				ED31FC902C0473E100D09CC8 /* SplashSecScreenRace.swift */,
+				ED31FC922C047AC000D09CC8 /* OnboardingRaceScreenAts.swift */,
+				ED31FC942C047AD300D09CC8 /* OnboardingAtsProtocol.swift */,
+				ED31FC962C047B0F00D09CC8 /* PushAtrScreenRace.swift */,
+				ED31FC9A2C047B5800D09CC8 /* CustomPickerProtol.swift */,
+				ED31FC982C047B2E00D09CC8 /* TabBarRaceModuleSec.swift */,
+				ED31FC9C2C047C1F00D09CC8 /* SportsTeamsContrlr.swift */,
+				ED31FC9E2C047C3C00D09CC8 /* TheShopsContrlr.swift */,
+				ED31FCA02C047C6F00D09CC8 /* RaceSettingsArtModule.swift */,
+				ED31FCA42C04BE8300D09CC8 /* SportsTeamsVm.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED31FC452C04696000D09CC8 /* Sports Merch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED31FC5A2C04696200D09CC8 /* Build configuration list for PBXNativeTarget "Sports Merch" */;
+			buildPhases = (
+				ED31FC422C04696000D09CC8 /* Sources */,
+				ED31FC432C04696000D09CC8 /* Frameworks */,
+				ED31FC442C04696000D09CC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sports Merch";
+			productName = "Sports Merch";
+			productReference = ED31FC462C04696000D09CC8 /* Sports Merch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED31FC3E2C04696000D09CC8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					ED31FC452C04696000D09CC8 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = ED31FC412C04696000D09CC8 /* Build configuration list for PBXProject "Sports Merch" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED31FC3D2C04696000D09CC8;
+			productRefGroup = ED31FC472C04696000D09CC8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED31FC452C04696000D09CC8 /* Sports Merch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED31FC442C04696000D09CC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED31FC532C04696200D09CC8 /* Assets.xcassets in Resources */,
+				ED31FC562C04696200D09CC8 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED31FC422C04696000D09CC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED31FC932C047AC000D09CC8 /* OnboardingRaceScreenAts.swift in Sources */,
+				ED31FC642C046A2C00D09CC8 /* VC + Ext.swift in Sources */,
+				ED31FC762C046BB400D09CC8 /* ClasPrimarySecButtonRace.swift in Sources */,
+				ED31FC662C046A4C00D09CC8 /* Label + Ext.swift in Sources */,
+				ED31FC682C046A6100D09CC8 /* UIColor + Ext.swift in Sources */,
+				ED31FCA12C047C6F00D09CC8 /* RaceSettingsArtModule.swift in Sources */,
+				ED31FC9B2C047B5800D09CC8 /* CustomPickerProtol.swift in Sources */,
+				ED31FCA32C047FB000D09CC8 /* WController.swift in Sources */,
+				ED31FC882C046DA300D09CC8 /* WeRaceViewsecViewAts.swift in Sources */,
+				ED31FC8E2C04723C00D09CC8 /* SecOnboardArtsTypeRace.swift in Sources */,
+				ED31FC802C046D4500D09CC8 /* SecUnicalImageRaceViewAts.swift in Sources */,
+				ED31FCA72C04BF3D00D09CC8 /* File.swift in Sources */,
+				ED31FC992C047B2E00D09CC8 /* TabBarRaceModuleSec.swift in Sources */,
+				ED31FC722C046B5A00D09CC8 /* AtsOnboardRaceCell.swift in Sources */,
+				ED31FC842C046D6B00D09CC8 /* SecUniqueStackViewGniff.swift in Sources */,
+				ED31FC8C2C0471AD00D09CC8 /* RaceUsrSecDeviceArts.swift in Sources */,
+				ED31FC622C046A1900D09CC8 /* GniOnboardArtTypeRams.swift in Sources */,
+				ED31FC6F2C046B3E00D09CC8 /* SecSimpleLabelRace.swift in Sources */,
+				ED31FC9F2C047C3C00D09CC8 /* TheShopsContrlr.swift in Sources */,
+				ED31FC912C0473E100D09CC8 /* SplashSecScreenRace.swift in Sources */,
+				ED31FC6A2C046A7300D09CC8 /* Double + Ext.swift in Sources */,
+				ED31FC972C047B0F00D09CC8 /* PushAtrScreenRace.swift in Sources */,
+				ED31FC7C2C046D0500D09CC8 /* SecTemplRaceTextViewAts.swift in Sources */,
+				ED31FC822C046D5800D09CC8 /* SecUnicalRaceTFAts.swift in Sources */,
+				ED31FC7E2C046D2A00D09CC8 /* SecTimCollectionRaceViewAts.swift in Sources */,
+				ED31FC5F2C046A0000D09CC8 /* RaceSaverAtsManagerSta.swift in Sources */,
+				ED31FC8A2C046DE700D09CC8 /* FontSize.swift in Sources */,
+				ED31FC792C046BDA00D09CC8 /* PartipiantsTableViewCell.swift in Sources */,
+				ED31FC9D2C047C1F00D09CC8 /* SportsTeamsContrlr.swift in Sources */,
+				ED31FC6C2C046A8900D09CC8 /* RaceDefltsAtsServiceCes.swift in Sources */,
+				ED31FC952C047AD300D09CC8 /* OnboardingAtsProtocol.swift in Sources */,
+				ED31FC862C046D7900D09CC8 /* SimpleSecImageRaceButtonAts.swift in Sources */,
+				ED31FCA52C04BE8300D09CC8 /* SportsTeamsVm.swift in Sources */,
+				ED31FC4A2C04696000D09CC8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ED31FC542C04696200D09CC8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED31FC552C04696200D09CC8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED31FC582C04696200D09CC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ED31FC592C04696200D09CC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED31FC5B2C04696200D09CC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sports Merch/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-.Sports-Merch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED31FC5C2C04696200D09CC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sports Merch/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-.Sports-Merch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED31FC412C04696000D09CC8 /* Build configuration list for PBXProject "Sports Merch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED31FC582C04696200D09CC8 /* Debug */,
+				ED31FC592C04696200D09CC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED31FC5A2C04696200D09CC8 /* Build configuration list for PBXNativeTarget "Sports Merch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED31FC5B2C04696200D09CC8 /* Debug */,
+				ED31FC5C2C04696200D09CC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED31FC3E2C04696000D09CC8 /* Project object */;
+}
