@@ -11,7 +11,8 @@ final class TabBarRaceModuleSec: UITabBarController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private lazy var competitionsContr = SportsTeamsContrlr()
+    private lazy var competitionsContr = SportsTeamsContrlr(sportsTeamsVm: SportsTeamsVm(storage: RaceSaverAtsManagerSta()),
+                                                            pickerContr: picker)
     
     private lazy var participantsContr = TheShopsContrlr()
     

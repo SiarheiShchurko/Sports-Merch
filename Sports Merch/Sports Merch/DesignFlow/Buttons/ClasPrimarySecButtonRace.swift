@@ -42,8 +42,8 @@ private extension ClasPrimarySecButtonRace {
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .appPrimaryColor
         setTitle(title, for: .normal)
-        
         titleLabel?.font = font
+        layer.cornerRadius = 16
         clipsToBounds = true
         
         self.isEnabled = isEnabled

@@ -20,7 +20,7 @@
 		ED31FC6F2C046B3E00D09CC8 /* SecSimpleLabelRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC6E2C046B3E00D09CC8 /* SecSimpleLabelRace.swift */; };
 		ED31FC722C046B5A00D09CC8 /* AtsOnboardRaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC712C046B5A00D09CC8 /* AtsOnboardRaceCell.swift */; };
 		ED31FC762C046BB400D09CC8 /* ClasPrimarySecButtonRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC752C046BB400D09CC8 /* ClasPrimarySecButtonRace.swift */; };
-		ED31FC792C046BDA00D09CC8 /* PartipiantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC782C046BDA00D09CC8 /* PartipiantsTableViewCell.swift */; };
+		ED31FC792C046BDA00D09CC8 /* TeamAttributesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC782C046BDA00D09CC8 /* TeamAttributesTableViewCell.swift */; };
 		ED31FC7C2C046D0500D09CC8 /* SecTemplRaceTextViewAts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC7B2C046D0500D09CC8 /* SecTemplRaceTextViewAts.swift */; };
 		ED31FC7E2C046D2A00D09CC8 /* SecTimCollectionRaceViewAts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC7D2C046D2A00D09CC8 /* SecTimCollectionRaceViewAts.swift */; };
 		ED31FC802C046D4500D09CC8 /* SecUnicalImageRaceViewAts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC7F2C046D4500D09CC8 /* SecUnicalImageRaceViewAts.swift */; };
@@ -36,13 +36,24 @@
 		ED31FC952C047AD300D09CC8 /* OnboardingAtsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC942C047AD300D09CC8 /* OnboardingAtsProtocol.swift */; };
 		ED31FC972C047B0F00D09CC8 /* PushAtrScreenRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC962C047B0F00D09CC8 /* PushAtrScreenRace.swift */; };
 		ED31FC992C047B2E00D09CC8 /* TabBarRaceModuleSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC982C047B2E00D09CC8 /* TabBarRaceModuleSec.swift */; };
-		ED31FC9B2C047B5800D09CC8 /* CustomPickerProtol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC9A2C047B5800D09CC8 /* CustomPickerProtol.swift */; };
+		ED31FC9B2C047B5800D09CC8 /* RacePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC9A2C047B5800D09CC8 /* RacePickerController.swift */; };
 		ED31FC9D2C047C1F00D09CC8 /* SportsTeamsContrlr.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC9C2C047C1F00D09CC8 /* SportsTeamsContrlr.swift */; };
 		ED31FC9F2C047C3C00D09CC8 /* TheShopsContrlr.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC9E2C047C3C00D09CC8 /* TheShopsContrlr.swift */; };
 		ED31FCA12C047C6F00D09CC8 /* RaceSettingsArtModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA02C047C6F00D09CC8 /* RaceSettingsArtModule.swift */; };
 		ED31FCA32C047FB000D09CC8 /* WController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA22C047FB000D09CC8 /* WController.swift */; };
 		ED31FCA52C04BE8300D09CC8 /* SportsTeamsVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA42C04BE8300D09CC8 /* SportsTeamsVm.swift */; };
-		ED31FCA72C04BF3D00D09CC8 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA62C04BF3D00D09CC8 /* File.swift */; };
+		ED31FCA72C04BF3D00D09CC8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA62C04BF3D00D09CC8 /* Team.swift */; };
+		EDF4B81E2C05C52700E0A479 /* FileManagerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B81D2C05C52700E0A479 /* FileManagerServiceProtocol.swift */; };
+		EDF4B8202C05C6F000E0A479 /* UICollView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B81F2C05C6F000E0A479 /* UICollView + Ext.swift */; };
+		EDF4B8222C05C6F900E0A479 /* UITableView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B8212C05C6F900E0A479 /* UITableView + Ext.swift */; };
+		EDF4B8272C05C9FC00E0A479 /* TeamsCellRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B8262C05C9FC00E0A479 /* TeamsCellRch.swift */; };
+		EDF4B8292C05CBA400E0A479 /* BrandAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B8282C05CBA400E0A479 /* BrandAttributes.swift */; };
+		EDF4B82B2C05F78800E0A479 /* NewTeamScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B82A2C05F78800E0A479 /* NewTeamScreen.swift */; };
+		EDF4B82D2C05F80000E0A479 /* NewTeamVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B82C2C05F80000E0A479 /* NewTeamVm.swift */; };
+		EDF4B82F2C0607AC00E0A479 /* ImageTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B82E2C0607AC00E0A479 /* ImageTitleButton.swift */; };
+		EDF4B8312C0622AF00E0A479 /* TraTableGniViewArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B8302C0622AF00E0A479 /* TraTableGniViewArt.swift */; };
+		EDF4B8342C06264A00E0A479 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B8332C06264A00E0A479 /* Test.swift */; };
+		EDF4B8372C062C4500E0A479 /* TransitObjectsDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B8362C062C4500E0A479 /* TransitObjectsDelegateProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,7 +72,7 @@
 		ED31FC6E2C046B3E00D09CC8 /* SecSimpleLabelRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecSimpleLabelRace.swift; sourceTree = "<group>"; };
 		ED31FC712C046B5A00D09CC8 /* AtsOnboardRaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtsOnboardRaceCell.swift; sourceTree = "<group>"; };
 		ED31FC752C046BB400D09CC8 /* ClasPrimarySecButtonRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClasPrimarySecButtonRace.swift; sourceTree = "<group>"; };
-		ED31FC782C046BDA00D09CC8 /* PartipiantsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartipiantsTableViewCell.swift; sourceTree = "<group>"; };
+		ED31FC782C046BDA00D09CC8 /* TeamAttributesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamAttributesTableViewCell.swift; sourceTree = "<group>"; };
 		ED31FC7B2C046D0500D09CC8 /* SecTemplRaceTextViewAts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecTemplRaceTextViewAts.swift; sourceTree = "<group>"; };
 		ED31FC7D2C046D2A00D09CC8 /* SecTimCollectionRaceViewAts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecTimCollectionRaceViewAts.swift; sourceTree = "<group>"; };
 		ED31FC7F2C046D4500D09CC8 /* SecUnicalImageRaceViewAts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecUnicalImageRaceViewAts.swift; sourceTree = "<group>"; };
@@ -77,13 +88,24 @@
 		ED31FC942C047AD300D09CC8 /* OnboardingAtsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAtsProtocol.swift; sourceTree = "<group>"; };
 		ED31FC962C047B0F00D09CC8 /* PushAtrScreenRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAtrScreenRace.swift; sourceTree = "<group>"; };
 		ED31FC982C047B2E00D09CC8 /* TabBarRaceModuleSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRaceModuleSec.swift; sourceTree = "<group>"; };
-		ED31FC9A2C047B5800D09CC8 /* CustomPickerProtol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerProtol.swift; sourceTree = "<group>"; };
+		ED31FC9A2C047B5800D09CC8 /* RacePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacePickerController.swift; sourceTree = "<group>"; };
 		ED31FC9C2C047C1F00D09CC8 /* SportsTeamsContrlr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTeamsContrlr.swift; sourceTree = "<group>"; };
 		ED31FC9E2C047C3C00D09CC8 /* TheShopsContrlr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheShopsContrlr.swift; sourceTree = "<group>"; };
 		ED31FCA02C047C6F00D09CC8 /* RaceSettingsArtModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSettingsArtModule.swift; sourceTree = "<group>"; };
 		ED31FCA22C047FB000D09CC8 /* WController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WController.swift; sourceTree = "<group>"; };
 		ED31FCA42C04BE8300D09CC8 /* SportsTeamsVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTeamsVm.swift; sourceTree = "<group>"; };
-		ED31FCA62C04BF3D00D09CC8 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		ED31FCA62C04BF3D00D09CC8 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		EDF4B81D2C05C52700E0A479 /* FileManagerServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerServiceProtocol.swift; sourceTree = "<group>"; };
+		EDF4B81F2C05C6F000E0A479 /* UICollView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollView + Ext.swift"; sourceTree = "<group>"; };
+		EDF4B8212C05C6F900E0A479 /* UITableView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView + Ext.swift"; sourceTree = "<group>"; };
+		EDF4B8262C05C9FC00E0A479 /* TeamsCellRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCellRch.swift; sourceTree = "<group>"; };
+		EDF4B8282C05CBA400E0A479 /* BrandAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandAttributes.swift; sourceTree = "<group>"; };
+		EDF4B82A2C05F78800E0A479 /* NewTeamScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTeamScreen.swift; sourceTree = "<group>"; };
+		EDF4B82C2C05F80000E0A479 /* NewTeamVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTeamVm.swift; sourceTree = "<group>"; };
+		EDF4B82E2C0607AC00E0A479 /* ImageTitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTitleButton.swift; sourceTree = "<group>"; };
+		EDF4B8302C0622AF00E0A479 /* TraTableGniViewArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraTableGniViewArt.swift; sourceTree = "<group>"; };
+		EDF4B8332C06264A00E0A479 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		EDF4B8362C062C4500E0A479 /* TransitObjectsDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitObjectsDelegateProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +138,8 @@
 		ED31FC482C04696000D09CC8 /* Sports Merch */ = {
 			isa = PBXGroup;
 			children = (
+				EDF4B8352C062C2A00E0A479 /* Protocols */,
+				EDF4B8232C05C72E00E0A479 /* Ext */,
 				ED31FC8F2C0473D800D09CC8 /* Screens */,
 				ED31FC6D2C046B2600D09CC8 /* DesignFlow */,
 				ED31FC602C046A1100D09CC8 /* Model */,
@@ -132,12 +156,9 @@
 		ED31FC5D2C0469F800D09CC8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				ED31FC632C046A2C00D09CC8 /* VC + Ext.swift */,
-				ED31FC652C046A4C00D09CC8 /* Label + Ext.swift */,
-				ED31FC672C046A6100D09CC8 /* UIColor + Ext.swift */,
-				ED31FC692C046A7300D09CC8 /* Double + Ext.swift */,
 				ED31FC6B2C046A8900D09CC8 /* RaceDefltsAtsServiceCes.swift */,
 				ED31FC5E2C046A0000D09CC8 /* RaceSaverAtsManagerSta.swift */,
+				EDF4B81D2C05C52700E0A479 /* FileManagerServiceProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -145,11 +166,12 @@
 		ED31FC602C046A1100D09CC8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ED31FCA62C04BF3D00D09CC8 /* Team.swift */,
 				ED31FC892C046DE700D09CC8 /* FontSize.swift */,
-				ED31FC612C046A1900D09CC8 /* GniOnboardArtTypeRams.swift */,
+				EDF4B8282C05CBA400E0A479 /* BrandAttributes.swift */,
 				ED31FC8B2C0471AD00D09CC8 /* RaceUsrSecDeviceArts.swift */,
+				ED31FC612C046A1900D09CC8 /* GniOnboardArtTypeRams.swift */,
 				ED31FC8D2C04723C00D09CC8 /* SecOnboardArtsTypeRace.swift */,
-				ED31FCA62C04BF3D00D09CC8 /* File.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				ED31FC712C046B5A00D09CC8 /* AtsOnboardRaceCell.swift */,
+				EDF4B8262C05C9FC00E0A479 /* TeamsCellRch.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -192,6 +215,7 @@
 			children = (
 				ED31FC752C046BB400D09CC8 /* ClasPrimarySecButtonRace.swift */,
 				ED31FC852C046D7900D09CC8 /* SimpleSecImageRaceButtonAts.swift */,
+				EDF4B82E2C0607AC00E0A479 /* ImageTitleButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -199,7 +223,8 @@
 		ED31FC772C046BD100D09CC8 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				ED31FC782C046BDA00D09CC8 /* PartipiantsTableViewCell.swift */,
+				EDF4B8322C0622BD00E0A479 /* Cell */,
+				EDF4B8302C0622AF00E0A479 /* TraTableGniViewArt.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -207,18 +232,50 @@
 		ED31FC8F2C0473D800D09CC8 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				ED31FC902C0473E100D09CC8 /* SplashSecScreenRace.swift */,
-				ED31FC922C047AC000D09CC8 /* OnboardingRaceScreenAts.swift */,
-				ED31FC942C047AD300D09CC8 /* OnboardingAtsProtocol.swift */,
-				ED31FC962C047B0F00D09CC8 /* PushAtrScreenRace.swift */,
-				ED31FC9A2C047B5800D09CC8 /* CustomPickerProtol.swift */,
 				ED31FC982C047B2E00D09CC8 /* TabBarRaceModuleSec.swift */,
 				ED31FC9C2C047C1F00D09CC8 /* SportsTeamsContrlr.swift */,
-				ED31FC9E2C047C3C00D09CC8 /* TheShopsContrlr.swift */,
-				ED31FCA02C047C6F00D09CC8 /* RaceSettingsArtModule.swift */,
 				ED31FCA42C04BE8300D09CC8 /* SportsTeamsVm.swift */,
+				ED31FC9E2C047C3C00D09CC8 /* TheShopsContrlr.swift */,
+				ED31FC9A2C047B5800D09CC8 /* RacePickerController.swift */,
+				ED31FC962C047B0F00D09CC8 /* PushAtrScreenRace.swift */,
+				ED31FC902C0473E100D09CC8 /* SplashSecScreenRace.swift */,
+				ED31FCA02C047C6F00D09CC8 /* RaceSettingsArtModule.swift */,
+				ED31FC942C047AD300D09CC8 /* OnboardingAtsProtocol.swift */,
+				ED31FC922C047AC000D09CC8 /* OnboardingRaceScreenAts.swift */,
+				EDF4B82A2C05F78800E0A479 /* NewTeamScreen.swift */,
+				EDF4B82C2C05F80000E0A479 /* NewTeamVm.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		EDF4B8232C05C72E00E0A479 /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				ED31FC632C046A2C00D09CC8 /* VC + Ext.swift */,
+				ED31FC652C046A4C00D09CC8 /* Label + Ext.swift */,
+				ED31FC672C046A6100D09CC8 /* UIColor + Ext.swift */,
+				ED31FC692C046A7300D09CC8 /* Double + Ext.swift */,
+				EDF4B81F2C05C6F000E0A479 /* UICollView + Ext.swift */,
+				EDF4B8212C05C6F900E0A479 /* UITableView + Ext.swift */,
+			);
+			path = Ext;
+			sourceTree = "<group>";
+		};
+		EDF4B8322C0622BD00E0A479 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				ED31FC782C046BDA00D09CC8 /* TeamAttributesTableViewCell.swift */,
+				EDF4B8332C06264A00E0A479 /* Test.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EDF4B8352C062C2A00E0A479 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EDF4B8362C062C4500E0A479 /* TransitObjectsDelegateProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,20 +354,27 @@
 				ED31FC662C046A4C00D09CC8 /* Label + Ext.swift in Sources */,
 				ED31FC682C046A6100D09CC8 /* UIColor + Ext.swift in Sources */,
 				ED31FCA12C047C6F00D09CC8 /* RaceSettingsArtModule.swift in Sources */,
-				ED31FC9B2C047B5800D09CC8 /* CustomPickerProtol.swift in Sources */,
+				ED31FC9B2C047B5800D09CC8 /* RacePickerController.swift in Sources */,
 				ED31FCA32C047FB000D09CC8 /* WController.swift in Sources */,
+				EDF4B82D2C05F80000E0A479 /* NewTeamVm.swift in Sources */,
+				EDF4B8342C06264A00E0A479 /* Test.swift in Sources */,
 				ED31FC882C046DA300D09CC8 /* WeRaceViewsecViewAts.swift in Sources */,
 				ED31FC8E2C04723C00D09CC8 /* SecOnboardArtsTypeRace.swift in Sources */,
 				ED31FC802C046D4500D09CC8 /* SecUnicalImageRaceViewAts.swift in Sources */,
-				ED31FCA72C04BF3D00D09CC8 /* File.swift in Sources */,
+				ED31FCA72C04BF3D00D09CC8 /* Team.swift in Sources */,
 				ED31FC992C047B2E00D09CC8 /* TabBarRaceModuleSec.swift in Sources */,
 				ED31FC722C046B5A00D09CC8 /* AtsOnboardRaceCell.swift in Sources */,
+				EDF4B8292C05CBA400E0A479 /* BrandAttributes.swift in Sources */,
 				ED31FC842C046D6B00D09CC8 /* SecUniqueStackViewGniff.swift in Sources */,
 				ED31FC8C2C0471AD00D09CC8 /* RaceUsrSecDeviceArts.swift in Sources */,
 				ED31FC622C046A1900D09CC8 /* GniOnboardArtTypeRams.swift in Sources */,
+				EDF4B8272C05C9FC00E0A479 /* TeamsCellRch.swift in Sources */,
 				ED31FC6F2C046B3E00D09CC8 /* SecSimpleLabelRace.swift in Sources */,
 				ED31FC9F2C047C3C00D09CC8 /* TheShopsContrlr.swift in Sources */,
 				ED31FC912C0473E100D09CC8 /* SplashSecScreenRace.swift in Sources */,
+				EDF4B8222C05C6F900E0A479 /* UITableView + Ext.swift in Sources */,
+				EDF4B8372C062C4500E0A479 /* TransitObjectsDelegateProtocol.swift in Sources */,
+				EDF4B8202C05C6F000E0A479 /* UICollView + Ext.swift in Sources */,
 				ED31FC6A2C046A7300D09CC8 /* Double + Ext.swift in Sources */,
 				ED31FC972C047B0F00D09CC8 /* PushAtrScreenRace.swift in Sources */,
 				ED31FC7C2C046D0500D09CC8 /* SecTemplRaceTextViewAts.swift in Sources */,
@@ -318,9 +382,13 @@
 				ED31FC7E2C046D2A00D09CC8 /* SecTimCollectionRaceViewAts.swift in Sources */,
 				ED31FC5F2C046A0000D09CC8 /* RaceSaverAtsManagerSta.swift in Sources */,
 				ED31FC8A2C046DE700D09CC8 /* FontSize.swift in Sources */,
-				ED31FC792C046BDA00D09CC8 /* PartipiantsTableViewCell.swift in Sources */,
+				ED31FC792C046BDA00D09CC8 /* TeamAttributesTableViewCell.swift in Sources */,
 				ED31FC9D2C047C1F00D09CC8 /* SportsTeamsContrlr.swift in Sources */,
 				ED31FC6C2C046A8900D09CC8 /* RaceDefltsAtsServiceCes.swift in Sources */,
+				EDF4B82B2C05F78800E0A479 /* NewTeamScreen.swift in Sources */,
+				EDF4B81E2C05C52700E0A479 /* FileManagerServiceProtocol.swift in Sources */,
+				EDF4B8312C0622AF00E0A479 /* TraTableGniViewArt.swift in Sources */,
+				EDF4B82F2C0607AC00E0A479 /* ImageTitleButton.swift in Sources */,
 				ED31FC952C047AD300D09CC8 /* OnboardingAtsProtocol.swift in Sources */,
 				ED31FC862C046D7900D09CC8 /* SimpleSecImageRaceButtonAts.swift in Sources */,
 				ED31FCA52C04BE8300D09CC8 /* SportsTeamsVm.swift in Sources */,
