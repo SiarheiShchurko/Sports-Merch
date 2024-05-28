@@ -2,13 +2,19 @@ import Foundation
 
 protocol SportsTeamsProtocol: AnyObject {
     var teams: [Team]  { get set }
+    var searchingTeams: [Team] { get set }
     var searchingText: String { get set }
     var updateTeams: (() -> Void)? { get set }
+    
+    func add(new team: Team)
+    func update(oldTeam: Team, for newTeam: Team)
+    func delete(_ deletingTeam: Team)
 }
 
 final class SportsTeamsVm: SportsTeamsProtocol {
     init(storage: RaceSaverAtsManagerSta<Team>) {
         self.storage = storage
+        getTeams()
     }
     
     private let storage: RaceSaverAtsManagerSta<Team>
@@ -16,11 +22,12 @@ final class SportsTeamsVm: SportsTeamsProtocol {
     var updateTeams: (() -> Void)?
     var teams: [Team] = [] {
         didSet {
+            print("Teams")
             updateTeams?()
         }
     }
     
-    private var searchingTeams: [Team] = [] {
+     var searchingTeams: [Team] = [] {
         didSet {
             updateTeams?()
         }
@@ -50,6 +57,39 @@ private extension SportsTeamsVm {
     }
 }
 
-private extension SportsTeamsVm {
+extension SportsTeamsVm {
+    func add(new team: Team) {
+        let key = "UserTeams"
+        storage.saveModel(team, key: key)
+        
+        getTeams()
+    }
     
+    func update(oldTeam: Team, for newTeam: Team) {
+        let key = "UserTeams"
+        var bufferTeams = teams
+        
+        teams.enumerated().forEach({ index, value in
+            if value == oldTeam {
+                bufferTeams[index] = newTeam
+            }
+        })
+        storage.saveModels(bufferTeams, key: key)
+        
+        getTeams()
+    }
+    
+    func delete(_ deletingTeam: Team) {
+        let key = "UserTeams"
+        var bufferTeams = teams
+        
+        teams.enumerated().forEach({ index, value in
+            if value == deletingTeam {
+                bufferTeams.remove(at: index)
+            }
+        })
+        storage.saveModels(bufferTeams, key: key)
+        
+        getTeams()
+    }
 }

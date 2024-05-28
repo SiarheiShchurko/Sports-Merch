@@ -1,8 +1,10 @@
 import UIKit
 
 final class TabBarRaceModuleSec: UITabBarController {
-    init(picker: RacePickerController = RacePickerController()) {
+    init(picker: RacePickerController = RacePickerController(),
+         fileManagerService: FileManagerServiceProtocol = FileManagerService()) {
         self.picker = picker
+        self.fileManagerService = fileManagerService
         super.init(nibName: nil,
                    bundle: nil)
     }
@@ -12,12 +14,14 @@ final class TabBarRaceModuleSec: UITabBarController {
     }
     
     private lazy var competitionsContr = SportsTeamsContrlr(sportsTeamsVm: SportsTeamsVm(storage: RaceSaverAtsManagerSta()),
-                                                            pickerContr: picker)
+                                                            pickerContr: picker, 
+                                                            fileManager: fileManagerService)
     
     private lazy var participantsContr = TheShopsContrlr()
     
-    private let setContr = RaceSettingsArtModule()
     private let picker: RacePickerController
+    private let setContr = RaceSettingsArtModule()
+    private let fileManagerService: FileManagerServiceProtocol
     
     // Life cycle
     override func viewDidLoad() {

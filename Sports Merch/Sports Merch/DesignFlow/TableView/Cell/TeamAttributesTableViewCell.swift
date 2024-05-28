@@ -47,6 +47,7 @@ extension TeamAttributesTableViewCell {
 private extension TeamAttributesTableViewCell {
     func addSubviews() {
         addSubview(nameLabel)
+        addSubview(separator)
         contentView.addSubview(trashButton)
         NSLayoutConstraint.activate([
             trashButton.centerYAnchor.constraint(equalTo: nameLabel.centerYAnchor),
@@ -54,10 +55,15 @@ private extension TeamAttributesTableViewCell {
             trashButton.heightAnchor.constraint(equalToConstant: 32),
             trashButton.widthAnchor.constraint(equalToConstant: 32),
             
-            nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16),
+            nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
             nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             nameLabel.trailingAnchor.constraint(equalTo: trashButton.leadingAnchor, constant: -4),
-            nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
+            nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
+            
+            separator.bottomAnchor.constraint(equalTo: bottomAnchor),
+            separator.heightAnchor.constraint(equalToConstant: 1),
+            separator.leadingAnchor.constraint(equalTo: leadingAnchor),
+            separator.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
     }
 }

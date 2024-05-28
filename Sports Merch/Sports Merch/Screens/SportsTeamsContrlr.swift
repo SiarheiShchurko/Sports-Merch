@@ -2,9 +2,11 @@ import UIKit
 
 final class SportsTeamsContrlr: UIViewController {
     init(sportsTeamsVm: SportsTeamsProtocol,
-         pickerContr: RacePickerController) {
+         pickerContr: RacePickerController,
+         fileManager: FileManagerServiceProtocol) {
         self.sportsTeamsVm = sportsTeamsVm
         self.picker = pickerContr
+        self.fileManagerService = fileManager
         super.init(nibName: nil,
                    bundle: nil)
         updateTeams()
@@ -18,6 +20,7 @@ final class SportsTeamsContrlr: UIViewController {
     private var isSearching: Bool = false
     private let picker: RacePickerController
     private let sportsTeamsVm: SportsTeamsProtocol
+    private let fileManagerService: FileManagerServiceProtocol
     
     // Labels
     private let headerLabel: SecSimpleLabelRace = SecSimpleLabelRace(text: "Sports teams",
@@ -28,7 +31,7 @@ final class SportsTeamsContrlr: UIViewController {
                                                                          font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize),
                                                                          textAlignment: .center)
     
-    private let emptyLabel: SecSimpleLabelRace = SecSimpleLabelRace(text: "There are no records",
+    private let emptyLabel: SecSimpleLabelRace = SecSimpleLabelRace(text: "\nThere are no records",
                                                                     textColor: .black,
                                                                     font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize),
                                                                     textAlignment: .center)
@@ -41,7 +44,7 @@ final class SportsTeamsContrlr: UIViewController {
     
     // Search bar
     private let sportsSearchBar: UISearchBar = {
-       let searchBar = UISearchBar()
+        let searchBar = UISearchBar()
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         searchBar.searchBarStyle = .minimal
         searchBar.placeholder = "Search"
@@ -51,8 +54,8 @@ final class SportsTeamsContrlr: UIViewController {
         
         // Set attr
         let attributes: [NSAttributedString.Key: Any] = [
-                    .foregroundColor: UIColor.white,
-                    .font: UIFont.systemFont(ofSize: CGFloat.RaceFontArtSizeSec.secondFontSize)]
+            .foregroundColor: UIColor.white,
+            .font: UIFont.systemFont(ofSize: CGFloat.RaceFontArtSizeSec.secondFontSize)]
         let attributedPlaceholder = NSAttributedString(string: "Search", attributes: attributes)
         searchBar.searchTextField.attributedPlaceholder = attributedPlaceholder
         
@@ -70,11 +73,12 @@ final class SportsTeamsContrlr: UIViewController {
                                                                   scrollDirection: .vertical)
     // Stacks
     private lazy var emptyStack = SecUniqueStackViewGniff(views: [emptyLabel, emptyTeamsImage, bottomEmptyLabel],
-                                                         axis: .vertical,
-                                                         alignment: .fill,
-                                                         distribution: .fillProportionally,
-                                                         spacing: 16,
-                                                         backgroundColor: .white)
+                                                          axis: .vertical,
+                                                          alignment: .fill,
+                                                          distribution: .fillProportionally,
+                                                          spacing: 16,
+                                                          backgroundColor: .white,
+                                                          cornerRadius: 16)
     // Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,7 +96,7 @@ private extension SportsTeamsContrlr {
 
 private extension SportsTeamsContrlr {
     @objc func plusDidTapped() {
-        let newTeamController = NewTeamScreen(newTeamVm: NewTeamVm(fileManager: FileManagerService()),
+        let newTeamController = NewTeamScreen(newTeamVm: NewTeamVm(fileManager: fileManagerService),
                                               currentTeam: nil,
                                               picker: picker)
         newTeamController.sportsTeamDelegate = self
@@ -116,6 +120,10 @@ private extension SportsTeamsContrlr {
 private extension SportsTeamsContrlr {
     func setSportsTeamsContrlr() {
         view.backgroundColor = .appMainBckgrd
+        view.hideKeyboard()
+        
+        teamsCollectionView.dataSource = self
+        teamsCollectionView.delegate = self
         
         teamsCountLabel.layer.cornerRadius = 16
         teamsCountLabel.layer.backgroundColor = UIColor.white.cgColor
@@ -184,16 +192,66 @@ private extension SportsTeamsContrlr {
     }
 }
 
+extension SportsTeamsContrlr: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        isSearching ? sportsTeamsVm.searchingTeams.count : sportsTeamsVm.teams.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(TeamsCellRch.self)", for: indexPath) as? TeamsCellRch else {
+            return UICollectionViewCell()
+        }
+        let team: Team
+        isSearching ? (team = sportsTeamsVm.searchingTeams[indexPath.row]) : (team = sportsTeamsVm.teams[indexPath.row])
+        cell.set(team)
+        return cell
+    }
+}
+
+extension SportsTeamsContrlr: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let currentTeam: Team
+        isSearching ? (currentTeam = sportsTeamsVm.searchingTeams[indexPath.row]) : (currentTeam = sportsTeamsVm.teams[indexPath.row])
+        
+        let newTeamController = NewTeamScreen(newTeamVm: NewTeamVm(fileManager: fileManagerService),
+                                              currentTeam: currentTeam,
+                                              picker: picker)
+        newTeamController.sportsTeamDelegate = self
+        navigationController?.pushViewController(newTeamController, animated: true)
+    }
+}
+
+extension SportsTeamsContrlr: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        8
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.bounds.width / 2.1
+        let height = collectionView.bounds.height / 2.15
+        return CGSize(width: width, height: height)
+    }
+}
+
 extension SportsTeamsContrlr: TransitObjectsDelegateProtocol {
+    func update<T>(oldTeam: T, for newTeam: T) where T : Decodable, T : Encodable {
+        if let newCurrentTeam = newTeam as? Team,
+           let oldCurrentTeam = oldTeam as? Team {
+            print("Tranform")
+            sportsTeamsVm.update(oldTeam: oldCurrentTeam, for: newCurrentTeam)
+        }
+    }
+    
     func add<T>(new: T) where T : Decodable, T : Encodable {
         if let newTeam = new as? Team {
-            print("")
+            
+            sportsTeamsVm.add(new: newTeam)
         }
     }
     
     func delete<T>(_ attribute: T) where T : Decodable, T : Encodable {
         if let deletingTeam = attribute as? Team {
-            print("")
+            sportsTeamsVm.delete(deletingTeam)
         }
     }
 }

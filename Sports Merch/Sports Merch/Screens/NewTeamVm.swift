@@ -2,16 +2,16 @@ import Foundation
 
 protocol NewTeamProtocol: AnyObject {
     var attributes: [BrandAttributes] { get set }
-    var receiveImageName: ((String) -> Void)? { get set }
     var updateAttributes: (() -> Void)? { get set }
     
-    func saveImage(from data: Data)
+    func saveImage(from data: Data?) -> String
+    func loadImage(with name: String) -> Data?
+    func delete(_ attribute: BrandAttributes)
 }
 
 final class NewTeamVm: NewTeamProtocol {
-    var updateAttributes: (() -> Void)?
     
-    var receiveImageName: ((String) -> Void)?
+    var updateAttributes: (() -> Void)?
     
     var attributes: [BrandAttributes] = [] {
         didSet {
@@ -28,10 +28,36 @@ final class NewTeamVm: NewTeamProtocol {
     
 }
 
+// Image saver
 extension NewTeamVm {
-    func saveImage(from data: Data) {
-        fileManager.saveImage?(data: data, complition: { [ weak self ] name in
-            self?.receiveImageName?(name)
-        })
+    func saveImage(from data: Data?) -> String {
+        var imageName: String = ""
+        
+        if let data {
+            fileManager.saveImage?(data: data, complition: { name in
+                imageName = name
+            })
+        } 
+        return imageName
+    }
+    
+    func loadImage(with name: String) -> Data? {
+        var data: Data? = nil
+        
+        if !name.isEmpty {
+            fileManager.loadImage(imageName: name) { currentData in
+                data = currentData
+            }
+        }
+        return data
+    }
+}
+
+
+// Delete brand attribute
+extension NewTeamVm {
+    func delete(_ attribute: BrandAttributes) {
+        let bufferAttribute = attributes
+        attributes = bufferAttribute.filter({ $0 != attribute })
     }
 }

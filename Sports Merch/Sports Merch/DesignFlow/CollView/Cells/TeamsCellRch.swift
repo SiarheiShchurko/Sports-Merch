@@ -3,6 +3,7 @@ final class TeamsCellRch: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
+        layer.cornerRadius = 16
         addSubviews()
     }
     required init?(coder: NSCoder) {
@@ -39,7 +40,8 @@ extension TeamsCellRch {
         } else {
             mainImage.image = UIImage(named: "emptyStrAvatarEchImg")
         }
-        
+        teamNameLabel.text = cell.teamName
+        phoneNumberLabel.text = cell.phoneNumber
     }
 }
 
