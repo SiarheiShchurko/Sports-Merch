@@ -125,6 +125,8 @@ private extension SportsTeamsContrlr {
         teamsCollectionView.dataSource = self
         teamsCollectionView.delegate = self
         
+        sportsSearchBar.delegate = self
+        
         teamsCountLabel.layer.cornerRadius = 16
         teamsCountLabel.layer.backgroundColor = UIColor.white.cgColor
         
@@ -201,7 +203,7 @@ extension SportsTeamsContrlr: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(TeamsCellRch.self)", for: indexPath) as? TeamsCellRch else {
             return UICollectionViewCell()
         }
-        let team: Team
+        let team: TeamEachShop
         isSearching ? (team = sportsTeamsVm.searchingTeams[indexPath.row]) : (team = sportsTeamsVm.teams[indexPath.row])
         cell.set(team)
         return cell
@@ -210,7 +212,7 @@ extension SportsTeamsContrlr: UICollectionViewDataSource {
 
 extension SportsTeamsContrlr: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let currentTeam: Team
+        let currentTeam: TeamEachShop
         isSearching ? (currentTeam = sportsTeamsVm.searchingTeams[indexPath.row]) : (currentTeam = sportsTeamsVm.teams[indexPath.row])
         
         let newTeamController = NewTeamScreen(newTeamVm: NewTeamVm(fileManager: fileManagerService),
@@ -227,30 +229,61 @@ extension SportsTeamsContrlr: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.bounds.width / 2.1
-        let height = collectionView.bounds.height / 2.15
+        let width: CGFloat = collectionView.bounds.width / 2.1
+        let height: CGFloat
+        view.frame.height > 700 ? (height = collectionView.bounds.height / 2.15) : (height = collectionView.bounds.height / 1.4)
         return CGSize(width: width, height: height)
+    }
+}
+
+// MARK: - SearchBar ext
+extension SportsTeamsContrlr: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        ///
+        sportsTeamsVm.searchingTeams.removeAll()
+        guard searchText != "" || searchText != " " else {
+            return
+        }
+        if searchBar.text == "" {
+            isSearching = false
+            DispatchQueue.main.async { [ weak self ] in
+                self?.teamsCollectionView.reloadData()
+            }
+            
+        } else {
+            isSearching = true
+            guard let signalName = searchBar.text else {
+                return
+            }
+            sportsTeamsVm.searchingText = signalName
+        }
+        isSearching && sportsTeamsVm.searchingTeams.count == 0 ? (emptyStack.isHidden = false) : (emptyStack.isHidden = true)
     }
 }
 
 extension SportsTeamsContrlr: TransitObjectsDelegateProtocol {
     func update<T>(oldTeam: T, for newTeam: T) where T : Decodable, T : Encodable {
-        if let newCurrentTeam = newTeam as? Team,
-           let oldCurrentTeam = oldTeam as? Team {
-            print("Tranform")
+        isSearching = false
+        sportsSearchBar.text = ""
+        
+        if let newCurrentTeam = newTeam as? TeamEachShop,
+           let oldCurrentTeam = oldTeam as? TeamEachShop {
             sportsTeamsVm.update(oldTeam: oldCurrentTeam, for: newCurrentTeam)
         }
     }
     
     func add<T>(new: T) where T : Decodable, T : Encodable {
-        if let newTeam = new as? Team {
-            
+        isSearching = false
+        sportsSearchBar.text = ""
+        if let newTeam = new as? TeamEachShop {
             sportsTeamsVm.add(new: newTeam)
         }
     }
     
     func delete<T>(_ attribute: T) where T : Decodable, T : Encodable {
-        if let deletingTeam = attribute as? Team {
+        isSearching = false
+        sportsSearchBar.text = ""
+        if let deletingTeam = attribute as? TeamEachShop {
             sportsTeamsVm.delete(deletingTeam)
         }
     }

@@ -2,7 +2,7 @@ import UIKit
 
 final class NewTeamScreen: UIViewController {
     init(newTeamVm: NewTeamProtocol,
-         currentTeam: Team?,
+         currentTeam: TeamEachShop?,
          picker: RacePickerController) {
         self.newTeamVm = newTeamVm
         self.currentTeam = currentTeam
@@ -20,7 +20,7 @@ final class NewTeamScreen: UIViewController {
     weak var sportsTeamDelegate: TransitObjectsDelegateProtocol?
     
     private var coverTeamsData: Data?
-    private let currentTeam: Team?
+    private let currentTeam: TeamEachShop?
     
     private let newTeamVm: NewTeamProtocol
     private let picker: RacePickerController
@@ -57,6 +57,7 @@ final class NewTeamScreen: UIViewController {
         button.layer.cornerRadius = 16
         button.setTitle("Delete", for: .normal)
         button.setTitleColor(.appPrimaryColor, for: .normal)
+        button.titleLabel?.font = .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize)
         button.layer.borderColor = UIColor.appPrimaryColor.cgColor
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -66,7 +67,7 @@ final class NewTeamScreen: UIViewController {
     private let nameTextField = SecUnicalRaceTFAts(placeholder: "Name")
     
     private let contactNumberTextField = SecUnicalRaceTFAts(placeholder: "+1392847562",
-                                                            keyboardType: .numberPad,
+                                                            keyboardType: .decimalPad,
                                                             isCanPerformAction: false)
     // Table view
     private let teamTableView = TraTableGniViewArt(color: .white,
@@ -240,9 +241,8 @@ private extension NewTeamScreen {
     }
     
     @objc func deleteDidTapped() {
-        if let currentTeam {
-            sportsTeamDelegate?.delete(currentTeam)
-            navigationController?.popViewController(animated: true)
+        DispatchQueue.main.async { [ weak self ] in
+            self?.deleteAlert(with: self?.currentTeam)
         }
     }
     
@@ -253,16 +253,16 @@ private extension NewTeamScreen {
             return
         }
         
-        let newTeam: Team
+        let newTeam: TeamEachShop
         
         if let coverTeamsData {
             let imageName = newTeamVm.saveImage(from: coverTeamsData)
-            newTeam = Team(imageName: imageName,
+            newTeam = TeamEachShop(imageName: imageName,
                            teamName: name,
                            phoneNumber: phoneNumber,
                            brandAttributes: self.newTeamVm.attributes)
         } else {
-            newTeam = Team(imageName: currentTeam?.imageName ?? "",
+            newTeam = TeamEachShop(imageName: currentTeam?.imageName ?? "",
                            teamName: name,
                            phoneNumber: phoneNumber,
                            brandAttributes: self.newTeamVm.attributes)
@@ -342,7 +342,7 @@ extension NewTeamScreen: CustomPickerProtol {
 
 // Alert
 private extension NewTeamScreen {
-    func deleteAlert(with team: Team?) {
+    func deleteAlert(with team: TeamEachShop?) {
         let alertController = UIAlertController(title: "Delete",
                                                 message: "Are you sure you want to delete this team?",
                                                 preferredStyle: .alert)

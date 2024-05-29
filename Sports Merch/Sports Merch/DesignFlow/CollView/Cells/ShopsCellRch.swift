@@ -1,5 +1,5 @@
 import UIKit
-final class TeamsCellRch: UICollectionViewCell {
+final class ShopsCellRch: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,7 +34,7 @@ final class TeamsCellRch: UICollectionViewCell {
     }()
 }
 
-extension TeamsCellRch {
+extension ShopsCellRch {
     func set(_ cell: TeamEachShop) {
         if !cell.imageName.isEmpty {
             loadImage(imageName: cell.imageName) { [ weak self ] data in
@@ -48,7 +48,7 @@ extension TeamsCellRch {
     }
 }
 
-private extension TeamsCellRch {
+private extension ShopsCellRch {
     func addSubviews() {
         addSubview(mainImage)
         addSubview(teamNameLabel)

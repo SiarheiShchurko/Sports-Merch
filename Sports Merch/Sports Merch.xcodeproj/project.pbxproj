@@ -42,7 +42,9 @@
 		ED31FCA12C047C6F00D09CC8 /* RaceSettingsArtModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA02C047C6F00D09CC8 /* RaceSettingsArtModule.swift */; };
 		ED31FCA32C047FB000D09CC8 /* WController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA22C047FB000D09CC8 /* WController.swift */; };
 		ED31FCA52C04BE8300D09CC8 /* SportsTeamsVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA42C04BE8300D09CC8 /* SportsTeamsVm.swift */; };
-		ED31FCA72C04BF3D00D09CC8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA62C04BF3D00D09CC8 /* Team.swift */; };
+		ED31FCA72C04BF3D00D09CC8 /* TeamEachShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA62C04BF3D00D09CC8 /* TeamEachShop.swift */; };
+		EDBE8EBB2C071BA900A20A75 /* ShopsErchVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBE8EBA2C071BA900A20A75 /* ShopsErchVm.swift */; };
+		EDBE8EBD2C07251B00A20A75 /* ShopsCellRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBE8EBC2C07251B00A20A75 /* ShopsCellRch.swift */; };
 		EDF4B81E2C05C52700E0A479 /* FileManagerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B81D2C05C52700E0A479 /* FileManagerServiceProtocol.swift */; };
 		EDF4B8202C05C6F000E0A479 /* UICollView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B81F2C05C6F000E0A479 /* UICollView + Ext.swift */; };
 		EDF4B8222C05C6F900E0A479 /* UITableView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B8212C05C6F900E0A479 /* UITableView + Ext.swift */; };
@@ -94,7 +96,9 @@
 		ED31FCA02C047C6F00D09CC8 /* RaceSettingsArtModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSettingsArtModule.swift; sourceTree = "<group>"; };
 		ED31FCA22C047FB000D09CC8 /* WController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WController.swift; sourceTree = "<group>"; };
 		ED31FCA42C04BE8300D09CC8 /* SportsTeamsVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTeamsVm.swift; sourceTree = "<group>"; };
-		ED31FCA62C04BF3D00D09CC8 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		ED31FCA62C04BF3D00D09CC8 /* TeamEachShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEachShop.swift; sourceTree = "<group>"; };
+		EDBE8EBA2C071BA900A20A75 /* ShopsErchVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsErchVm.swift; sourceTree = "<group>"; };
+		EDBE8EBC2C07251B00A20A75 /* ShopsCellRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsCellRch.swift; sourceTree = "<group>"; };
 		EDF4B81D2C05C52700E0A479 /* FileManagerServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerServiceProtocol.swift; sourceTree = "<group>"; };
 		EDF4B81F2C05C6F000E0A479 /* UICollView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollView + Ext.swift"; sourceTree = "<group>"; };
 		EDF4B8212C05C6F900E0A479 /* UITableView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView + Ext.swift"; sourceTree = "<group>"; };
@@ -166,7 +170,7 @@
 		ED31FC602C046A1100D09CC8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ED31FCA62C04BF3D00D09CC8 /* Team.swift */,
+				ED31FCA62C04BF3D00D09CC8 /* TeamEachShop.swift */,
 				ED31FC892C046DE700D09CC8 /* FontSize.swift */,
 				EDF4B8282C05CBA400E0A479 /* BrandAttributes.swift */,
 				ED31FC8B2C0471AD00D09CC8 /* RaceUsrSecDeviceArts.swift */,
@@ -206,6 +210,7 @@
 			children = (
 				ED31FC712C046B5A00D09CC8 /* AtsOnboardRaceCell.swift */,
 				EDF4B8262C05C9FC00E0A479 /* TeamsCellRch.swift */,
+				EDBE8EBC2C07251B00A20A75 /* ShopsCellRch.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -235,15 +240,16 @@
 				ED31FC982C047B2E00D09CC8 /* TabBarRaceModuleSec.swift */,
 				ED31FC9C2C047C1F00D09CC8 /* SportsTeamsContrlr.swift */,
 				ED31FCA42C04BE8300D09CC8 /* SportsTeamsVm.swift */,
+				EDF4B82A2C05F78800E0A479 /* NewTeamScreen.swift */,
+				EDF4B82C2C05F80000E0A479 /* NewTeamVm.swift */,
 				ED31FC9E2C047C3C00D09CC8 /* TheShopsContrlr.swift */,
+				EDBE8EBA2C071BA900A20A75 /* ShopsErchVm.swift */,
 				ED31FC9A2C047B5800D09CC8 /* RacePickerController.swift */,
 				ED31FC962C047B0F00D09CC8 /* PushAtrScreenRace.swift */,
 				ED31FC902C0473E100D09CC8 /* SplashSecScreenRace.swift */,
 				ED31FCA02C047C6F00D09CC8 /* RaceSettingsArtModule.swift */,
 				ED31FC942C047AD300D09CC8 /* OnboardingAtsProtocol.swift */,
 				ED31FC922C047AC000D09CC8 /* OnboardingRaceScreenAts.swift */,
-				EDF4B82A2C05F78800E0A479 /* NewTeamScreen.swift */,
-				EDF4B82C2C05F80000E0A479 /* NewTeamVm.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -361,7 +367,7 @@
 				ED31FC882C046DA300D09CC8 /* WeRaceViewsecViewAts.swift in Sources */,
 				ED31FC8E2C04723C00D09CC8 /* SecOnboardArtsTypeRace.swift in Sources */,
 				ED31FC802C046D4500D09CC8 /* SecUnicalImageRaceViewAts.swift in Sources */,
-				ED31FCA72C04BF3D00D09CC8 /* Team.swift in Sources */,
+				ED31FCA72C04BF3D00D09CC8 /* TeamEachShop.swift in Sources */,
 				ED31FC992C047B2E00D09CC8 /* TabBarRaceModuleSec.swift in Sources */,
 				ED31FC722C046B5A00D09CC8 /* AtsOnboardRaceCell.swift in Sources */,
 				EDF4B8292C05CBA400E0A479 /* BrandAttributes.swift in Sources */,
@@ -370,6 +376,7 @@
 				ED31FC622C046A1900D09CC8 /* GniOnboardArtTypeRams.swift in Sources */,
 				EDF4B8272C05C9FC00E0A479 /* TeamsCellRch.swift in Sources */,
 				ED31FC6F2C046B3E00D09CC8 /* SecSimpleLabelRace.swift in Sources */,
+				EDBE8EBD2C07251B00A20A75 /* ShopsCellRch.swift in Sources */,
 				ED31FC9F2C047C3C00D09CC8 /* TheShopsContrlr.swift in Sources */,
 				ED31FC912C0473E100D09CC8 /* SplashSecScreenRace.swift in Sources */,
 				EDF4B8222C05C6F900E0A479 /* UITableView + Ext.swift in Sources */,
@@ -381,6 +388,7 @@
 				ED31FC822C046D5800D09CC8 /* SecUnicalRaceTFAts.swift in Sources */,
 				ED31FC7E2C046D2A00D09CC8 /* SecTimCollectionRaceViewAts.swift in Sources */,
 				ED31FC5F2C046A0000D09CC8 /* RaceSaverAtsManagerSta.swift in Sources */,
+				EDBE8EBB2C071BA900A20A75 /* ShopsErchVm.swift in Sources */,
 				ED31FC8A2C046DE700D09CC8 /* FontSize.swift in Sources */,
 				ED31FC792C046BDA00D09CC8 /* TeamAttributesTableViewCell.swift in Sources */,
 				ED31FC9D2C047C1F00D09CC8 /* SportsTeamsContrlr.swift in Sources */,

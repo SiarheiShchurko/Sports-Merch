@@ -1,33 +1,32 @@
 import Foundation
 
 protocol SportsTeamsProtocol: AnyObject {
-    var teams: [Team]  { get set }
-    var searchingTeams: [Team] { get set }
+    var teams: [TeamEachShop]  { get set }
+    var searchingTeams: [TeamEachShop] { get set }
     var searchingText: String { get set }
     var updateTeams: (() -> Void)? { get set }
     
-    func add(new team: Team)
-    func update(oldTeam: Team, for newTeam: Team)
-    func delete(_ deletingTeam: Team)
+    func add(new team: TeamEachShop)
+    func update(oldTeam: TeamEachShop, for newTeam: TeamEachShop)
+    func delete(_ deletingTeam: TeamEachShop)
 }
 
 final class SportsTeamsVm: SportsTeamsProtocol {
-    init(storage: RaceSaverAtsManagerSta<Team>) {
+    init(storage: RaceSaverAtsManagerSta<TeamEachShop>) {
         self.storage = storage
         getTeams()
     }
     
-    private let storage: RaceSaverAtsManagerSta<Team>
+    private let storage: RaceSaverAtsManagerSta<TeamEachShop>
     
     var updateTeams: (() -> Void)?
-    var teams: [Team] = [] {
+    var teams: [TeamEachShop] = [] {
         didSet {
-            print("Teams")
             updateTeams?()
         }
     }
     
-     var searchingTeams: [Team] = [] {
+     var searchingTeams: [TeamEachShop] = [] {
         didSet {
             updateTeams?()
         }
@@ -58,14 +57,14 @@ private extension SportsTeamsVm {
 }
 
 extension SportsTeamsVm {
-    func add(new team: Team) {
+    func add(new team: TeamEachShop) {
         let key = "UserTeams"
         storage.saveModel(team, key: key)
         
         getTeams()
     }
     
-    func update(oldTeam: Team, for newTeam: Team) {
+    func update(oldTeam: TeamEachShop, for newTeam: TeamEachShop) {
         let key = "UserTeams"
         var bufferTeams = teams
         
@@ -79,7 +78,7 @@ extension SportsTeamsVm {
         getTeams()
     }
     
-    func delete(_ deletingTeam: Team) {
+    func delete(_ deletingTeam: TeamEachShop) {
         let key = "UserTeams"
         var bufferTeams = teams
         

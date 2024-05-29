@@ -17,7 +17,9 @@ final class TabBarRaceModuleSec: UITabBarController {
                                                             pickerContr: picker, 
                                                             fileManager: fileManagerService)
     
-    private lazy var participantsContr = TheShopsContrlr()
+    private lazy var participantsContr = TheShopsContrlr(shopsErchVm: ShopsErchVm(),
+                                                         pickerContr: picker,
+                                                         fileManager: fileManagerService)
     
     private let picker: RacePickerController
     private let setContr = RaceSettingsArtModule()

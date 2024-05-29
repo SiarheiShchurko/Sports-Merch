@@ -51,14 +51,15 @@ private extension SecUnicalRaceTFAts {
                                   backgroundColor: UIColor) {
         indent(size: 16)
         attributedPlaceholder = NSAttributedString(string: placeholdere,
-                                                   attributes: [NSAttributedString.Key.foregroundColor: placeholderColor, .font: UIFont.systemFont(ofSize: 17)])
+                                                   attributes: [NSAttributedString.Key.foregroundColor: placeholderColor, .font: UIFont.systemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize)])
         translatesAutoresizingMaskIntoConstraints = false
         self.keyboardType = keyboardType
         self.backgroundColor = backgroundColor
         self.text = text
         textColor = tintColor
+        layer.cornerRadius = 16
         clearButtonMode = .whileEditing
-        font = .boldSystemFont(ofSize: 17)
+        font = .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize)
         contentVerticalAlignment = verticalAlign
     }
 }
