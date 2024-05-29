@@ -1,11 +1,11 @@
 import UIKit
 
-final class NewTeamScreen: UIViewController {
-    init(newTeamVm: NewTeamProtocol,
-         currentTeam: Team?,
+final class NewShopScreen: UIViewController {
+    init(newShopmVm: NewShopProtocol,
+         currentShop: Shop?,
          picker: RacePickerController) {
-        self.newTeamVm = newTeamVm
-        self.currentTeam = currentTeam
+        self.newShopmVm = newShopmVm
+        self.currentShop = currentShop
         self.picker = picker
         super.init(nibName: nil,
                    bundle: nil)
@@ -17,15 +17,15 @@ final class NewTeamScreen: UIViewController {
     }
     
     // Property
-    weak var sportsTeamDelegate: TransitObjectsDelegateProtocol?
+    weak var sportsShopDelegate: TransitObjectsDelegateProtocol?
     
     private var coverTeamsData: Data?
-    private let currentTeam: Team?
+    private let currentShop: Shop?
     
-    private let newTeamVm: NewTeamProtocol
+    private let newShopmVm: NewShopProtocol
     private let picker: RacePickerController
     
-    private lazy var textFieldsArray: [SecUnicalRaceTFAts] = [nameTextField, contactNumberTextField]
+    private lazy var textFieldsArray: [SecUnicalRaceTFAts] = [nameTextField, addressTextField, contactNumberTextField]
     
     // Labels
     private let titleLabel = SecSimpleLabelRace(text: "",
@@ -69,6 +69,9 @@ final class NewTeamScreen: UIViewController {
     private let contactNumberTextField = SecUnicalRaceTFAts(placeholder: "+1392847562",
                                                             keyboardType: .decimalPad,
                                                             isCanPerformAction: false)
+    
+    private let addressTextField = SecUnicalRaceTFAts(placeholder: "Address")
+    
     // Table view
     private let teamTableView = TraTableGniViewArt(color: .white,
                                                    registerClass: TeamAttributesTableViewCell.self,
@@ -98,7 +101,7 @@ final class NewTeamScreen: UIViewController {
 }
 
 // SetView
-private extension NewTeamScreen {
+private extension NewShopScreen {
     func setView() {
         view.backgroundColor = .white
         view.hideKeyboard()
@@ -114,7 +117,7 @@ private extension NewTeamScreen {
         
         teamTableView.dataSource = self
         
-        currentTeam != nil ? setEditingItemUI() : setNewItemUI()
+        currentShop != nil ? setEditingItemUI() : setNewItemUI()
     }
     
     func constraints() {
@@ -128,9 +131,10 @@ private extension NewTeamScreen {
             teamAvatar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             teamAvatar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             teamAvatar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            teamAvatar.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.35),
+            teamAvatar.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.33),
             
             nameTextField.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.06),
+            addressTextField.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.06),
             contactNumberTextField.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.06),
             
             textFieldStack.topAnchor.constraint(equalTo: teamAvatar.bottomAnchor, constant: 16),
@@ -167,24 +171,24 @@ private extension NewTeamScreen {
         saveButton.setTitle("Save", for: .normal)
         titleLabel.text = "Edit"
         
-        if let currentTeam {
+        if let currentShop {
             
-            nameTextField.text = currentTeam.teamName
-            contactNumberTextField.text = currentTeam.phoneNumber
-            newTeamVm.attributes = currentTeam.brandAttributes
-            
-            if let imageDta = newTeamVm.loadImage(with: currentTeam.imageName) {
-                teamAvatar.image = UIImage(data: imageDta)
-            } else {
-                teamAvatar.image = UIImage(named: "emptyStrAvatarEchImg")
-            }
+            //            nameTextField.text = currentTeam.teamName
+            //            contactNumberTextField.text = currentTeam.phoneNumber
+            //            newTeamVm.attributes = currentTeam.brandAttributes
+            //
+            //            if let imageDta = newTeamVm.loadImage(with: currentTeam.imageName) {
+            //                teamAvatar.image = UIImage(data: imageDta)
+            //            } else {
+            //                teamAvatar.image = UIImage(named: "emptyStrAvatarEchImg")
+            //            }
         }
     }
 }
 
-private extension NewTeamScreen {
+private extension NewShopScreen {
     func updateVmParams() {
-        newTeamVm.updateAttributes = { [ weak self ] in
+        newShopmVm.updateAttributes = { [ weak self ] in
             DispatchQueue.main.async {
                 guard let self else {
                     return
@@ -193,11 +197,11 @@ private extension NewTeamScreen {
                 self.teamsTextFieldScreenDidChanged()
             }
         }
-        }
     }
+}
 
 
-private extension NewTeamScreen {
+private extension NewShopScreen {
     func newTeamTargets() {
         deleteButton.addTarget(self, action: #selector(deleteDidTapped), for: .touchUpInside)
         saveButton.addTarget(self, action: #selector(saveDidTapped), for: .touchUpInside)
@@ -210,7 +214,7 @@ private extension NewTeamScreen {
     }
 }
 
-private extension NewTeamScreen {
+private extension NewShopScreen {
     @objc func avatarImageDidTapped() {
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
@@ -242,51 +246,54 @@ private extension NewTeamScreen {
     
     @objc func deleteDidTapped() {
         DispatchQueue.main.async { [ weak self ] in
-            self?.deleteAlert(with: self?.currentTeam)
+            self?.deleteAlert(with: self?.currentShop)
         }
     }
     
     @objc func saveDidTapped() {
         
         guard let name = nameTextField.text,
-              let phoneNumber = contactNumberTextField.text else {
+              let phoneNumber = contactNumberTextField.text,
+        let address = addressTextField.text else {
             return
         }
         
-        let newTeam: Team
+        let newShop: Shop
         
         if let coverTeamsData {
-            let imageName = newTeamVm.saveImage(from: coverTeamsData)
-            newTeam = Team(imageName: imageName,
+            let imageName = newShopmVm.saveImage(from: coverTeamsData)
+            newShop = Shop(imageName: imageName,
                            teamName: name,
                            phoneNumber: phoneNumber,
-                           brandAttributes: self.newTeamVm.attributes)
+                           brandName: [],
+                           address: address)
         } else {
-            newTeam = Team(imageName: currentTeam?.imageName ?? "",
+            newShop = Shop(imageName: currentShop?.imageName ?? "",
                            teamName: name,
                            phoneNumber: phoneNumber,
-                           brandAttributes: self.newTeamVm.attributes)
+                           brandName: [],
+                           address: address)
         }
         
-        if let currentTeam {
-            sportsTeamDelegate?.update(oldTeam: currentTeam, for: newTeam)
+        if let currentShop {
+            sportsShopDelegate?.update(oldTeam: currentShop, for: newShop)
         } else {
-            sportsTeamDelegate?.add(new: newTeam)
+            sportsShopDelegate?.add(new: newShop)
         }
         navigationController?.popViewController(animated: true)
     }
 }
 
-extension NewTeamScreen: UITableViewDataSource {
+extension NewShopScreen: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        newTeamVm.attributes.count
+        newShopmVm.attributes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(TeamAttributesTableViewCell.self)", for: indexPath) as? TeamAttributesTableViewCell else {
             return UITableViewCell()
         }
-        let team = newTeamVm.attributes[indexPath.row]
+        let team = newShopmVm.attributes[indexPath.row]
         cell.teamDelegate = self
         cell.set(team)
         return cell
@@ -294,7 +301,7 @@ extension NewTeamScreen: UITableViewDataSource {
 }
 
 // Picker extension
-extension NewTeamScreen: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension NewShopScreen: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true)
     }
@@ -315,7 +322,7 @@ extension NewTeamScreen: UIImagePickerControllerDelegate, UINavigationController
 }
 
 // Delegate
-extension NewTeamScreen: TransitObjectsDelegateProtocol {
+extension NewShopScreen: TransitObjectsDelegateProtocol {
     func update<T>(oldTeam: T, for newTeam: T) where T : Decodable, T : Encodable {
         print("MOCK UPDATE")
     }
@@ -326,12 +333,12 @@ extension NewTeamScreen: TransitObjectsDelegateProtocol {
     
     func delete<T>(_ attribute: T) where T : Decodable, T : Encodable {
         if let currentAttribute = attribute as? BrandAttributes {
-            newTeamVm.delete(currentAttribute)
+            newShopmVm.delete(currentAttribute)
         }
     }
 }
 
-extension NewTeamScreen: CustomPickerProtol {
+extension NewShopScreen: CustomPickerProtol {
     func dismisPickerController() {
         DispatchQueue.main.async { [ weak self ] in
             self?.activityIndicator.stopAnimating()
@@ -341,8 +348,8 @@ extension NewTeamScreen: CustomPickerProtol {
 }
 
 // Alert
-private extension NewTeamScreen {
-    func deleteAlert(with team: Team?) {
+private extension NewShopScreen {
+    func deleteAlert(with shop: Shop?) {
         let alertController = UIAlertController(title: "Delete",
                                                 message: "Are you sure you want to delete this team?",
                                                 preferredStyle: .alert)
@@ -353,10 +360,10 @@ private extension NewTeamScreen {
         let deleteAction = UIAlertAction(title: "Delete",
                                          style: .destructive) { [ weak self ]  _ in
             guard let self,
-                  let team else {
-                return
-            }
-            self.sportsTeamDelegate?.delete(team)
+                  let shop else {
+                      return
+                  }
+            self.sportsShopDelegate?.delete(shop)
             self.navigationController?.popViewController(animated: true)
         }
         
@@ -385,7 +392,7 @@ private extension NewTeamScreen {
             let newAttributes = BrandAttributes(brandName: currentAttributes,
                                                 count: nil)
             
-            self.newTeamVm.attributes.append(newAttributes)
+            self.newShopmVm.attributes.append(newAttributes)
         }
         
         alertController.addAction(addAction)

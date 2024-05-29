@@ -35,7 +35,7 @@ final class TeamsCellRch: UICollectionViewCell {
 }
 
 extension TeamsCellRch {
-    func set(_ cell: TeamEachShop) {
+    func set(_ cell: Team) {
         if !cell.imageName.isEmpty {
             loadImage(imageName: cell.imageName) { [ weak self ] data in
                 self?.mainImage.image = UIImage(data: data)

@@ -52,12 +52,11 @@ final class TheShopsContrlr: UIViewController {
     // Stacks
     private lazy var emptyStack = SecUniqueStackViewGniff(views: [emptyLabel, emptyTeamsImage, addStackEachButton, bottomEmptyLabel],
                                                           axis: .vertical,
-                                                          alignment: .fill,
+                                                          alignment: .center,
                                                           distribution: .fillProportionally,
                                                           spacing: 16,
                                                           backgroundColor: .white,
                                                           cornerRadius: 16)
-    
     // Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,12 +78,16 @@ private extension TheShopsContrlr {
         
         shopsCollectionView.dataSource = self
         shopsCollectionView.delegate = self
+        
+        emptyStack.isHidden = !shopsErchVm.shops.isEmpty
+        
+        shopsCollectionView.isUserInteractionEnabled = true
     }
     
     func setShopsErchConstraints() {
         view.addSubview(headerLabel)
         view.addSubview(plusShopsErchButton)
-        
+        view.addSubview(shopsCollectionView)
         view.addSubview(emptyStack)
         NSLayoutConstraint.activate([
             plusShopsErchButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -96,11 +99,26 @@ private extension TheShopsContrlr {
             headerLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             headerLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             
-            emptyStack.topAnchor.constraint(equalTo: shopsCollectionView.topAnchor),
+            shopsCollectionView.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 16),
+            shopsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            shopsCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            shopsCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            
+            emptyStack.centerYAnchor.constraint(equalTo: shopsCollectionView.centerYAnchor),
             emptyStack.leadingAnchor.constraint(equalTo: headerLabel.leadingAnchor),
-            emptyStack.trailingAnchor.constraint(equalTo: headerLabel.trailingAnchor)
+            emptyStack.trailingAnchor.constraint(equalTo: headerLabel.trailingAnchor),
+            
+            addStackEachButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.06),
+            addStackEachButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.4)
         
         ])
+    }
+}
+
+// Targets
+private extension TheShopsContrlr {
+    func shopTargets() {
+        
     }
 }
 
@@ -110,38 +128,35 @@ extension TheShopsContrlr: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(TeamsCellRch.self)", for: indexPath) as? ShopsCellRch else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(ShopsCellRch.self)", for: indexPath) as? ShopsCellRch else {
             return UICollectionViewCell()
         }
-        let team: TeamEachShop
-        isSearching ? (team = sportsTeamsVm.searchingTeams[indexPath.row]) : (team = sportsTeamsVm.teams[indexPath.row])
-        cell.set(team)
+        let shop: Shop = shopsErchVm.shops[indexPath.row]
+        cell.set(shop)
         return cell
     }
 }
 
 extension TheShopsContrlr: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let currentTeam: TeamEachShop
-        isSearching ? (currentTeam = sportsTeamsVm.searchingTeams[indexPath.row]) : (currentTeam = sportsTeamsVm.teams[indexPath.row])
+        let currentShop: Shop = shopsErchVm.shops[indexPath.row]
         
-        let newTeamController = NewTeamScreen(newTeamVm: NewTeamVm(fileManager: fileManagerService),
-                                              currentTeam: currentTeam,
-                                              picker: picker)
-        newTeamController.sportsTeamDelegate = self
-        navigationController?.pushViewController(newTeamController, animated: true)
+//        let newTeamController = NewTeamScreen(newTeamVm: NewTeamVm(fileManager: fileManagerService),
+//                                              currentTeam: currentTeam,
+//                                              picker: picker)
+//        newTeamController.sportsTeamDelegate = self
+//        navigationController?.pushViewController(newTeamController, animated: true)
     }
 }
 
-extension SportsTeamsContrlr: UICollectionViewDelegateFlowLayout {
+extension TheShopsContrlr: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         8
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width: CGFloat = collectionView.bounds.width / 2.1
-        let height: CGFloat
-        view.frame.height > 700 ? (height = collectionView.bounds.height / 2.15) : (height = collectionView.bounds.height / 1.4)
+        let width: CGFloat = collectionView.bounds.width * 0.95
+        let height: CGFloat = collectionView.bounds.height
         return CGSize(width: width, height: height)
     }
 }

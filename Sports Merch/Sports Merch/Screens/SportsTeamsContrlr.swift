@@ -203,7 +203,7 @@ extension SportsTeamsContrlr: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(TeamsCellRch.self)", for: indexPath) as? TeamsCellRch else {
             return UICollectionViewCell()
         }
-        let team: TeamEachShop
+        let team: Team
         isSearching ? (team = sportsTeamsVm.searchingTeams[indexPath.row]) : (team = sportsTeamsVm.teams[indexPath.row])
         cell.set(team)
         return cell
@@ -212,7 +212,7 @@ extension SportsTeamsContrlr: UICollectionViewDataSource {
 
 extension SportsTeamsContrlr: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let currentTeam: TeamEachShop
+        let currentTeam: Team
         isSearching ? (currentTeam = sportsTeamsVm.searchingTeams[indexPath.row]) : (currentTeam = sportsTeamsVm.teams[indexPath.row])
         
         let newTeamController = NewTeamScreen(newTeamVm: NewTeamVm(fileManager: fileManagerService),
@@ -266,8 +266,8 @@ extension SportsTeamsContrlr: TransitObjectsDelegateProtocol {
         isSearching = false
         sportsSearchBar.text = ""
         
-        if let newCurrentTeam = newTeam as? TeamEachShop,
-           let oldCurrentTeam = oldTeam as? TeamEachShop {
+        if let newCurrentTeam = newTeam as? Team,
+           let oldCurrentTeam = oldTeam as? Team {
             sportsTeamsVm.update(oldTeam: oldCurrentTeam, for: newCurrentTeam)
         }
     }
@@ -275,7 +275,7 @@ extension SportsTeamsContrlr: TransitObjectsDelegateProtocol {
     func add<T>(new: T) where T : Decodable, T : Encodable {
         isSearching = false
         sportsSearchBar.text = ""
-        if let newTeam = new as? TeamEachShop {
+        if let newTeam = new as? Team {
             sportsTeamsVm.add(new: newTeam)
         }
     }
@@ -283,7 +283,7 @@ extension SportsTeamsContrlr: TransitObjectsDelegateProtocol {
     func delete<T>(_ attribute: T) where T : Decodable, T : Encodable {
         isSearching = false
         sportsSearchBar.text = ""
-        if let deletingTeam = attribute as? TeamEachShop {
+        if let deletingTeam = attribute as? Team {
             sportsTeamsVm.delete(deletingTeam)
         }
     }
