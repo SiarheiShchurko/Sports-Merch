@@ -17,16 +17,17 @@ final class TabBarRaceModuleSec: UITabBarController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private lazy var competitionsContr = SportsTeamsContrlr(sportsTeamsVm: SportsTeamsVm(storage: teamStorage),
+    private lazy var teamsEchContr = SportsTeamsContrlr(sportsTeamsVm: SportsTeamsVm(storage: teamStorage),
                                                             pickerContr: picker,
                                                             fileManager: fileManagerService)
     
-    private lazy var participantsContr = TheShopsContrlr(shopsErchVm: ShopsErchVm(storage: shopStorage),
+    private lazy var shopsEachContr = TheShopsContrlr(shopsErchVm: ShopsErchVm(storage: shopStorage),
                                                          pickerContr: picker,
                                                          fileManager: fileManagerService)
     
+    private let setEachContr = RaceSettingsArtModule()
+    
     private let picker: RacePickerController
-    private let setContr = RaceSettingsArtModule()
     private let fileManagerService: FileManagerServiceProtocol
     private let teamStorage: RaceSaverAtsManagerSta<Team>
     private let shopStorage: RaceSaverAtsManagerSta<Shop>
@@ -55,13 +56,13 @@ private extension TabBarRaceModuleSec {
     
     func generateTabBar() {
         viewControllers = [
-            create(vc: competitionsContr,
+            create(vc: teamsEchContr,
                    title: "",
                    image: UIImage(systemName: "house.fill")),
-            create(vc: participantsContr,
+            create(vc: shopsEachContr,
                    title: "",
                    image: UIImage(systemName: "doc.fill.badge.plus")),
-            create(vc: setContr,
+            create(vc: setEachContr,
                    title: "",
                    image: UIImage(systemName: "gearshape.fill"))
         ]

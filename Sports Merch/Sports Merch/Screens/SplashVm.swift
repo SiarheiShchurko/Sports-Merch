@@ -13,7 +13,6 @@ final class SplashVm: SplashVmProtocol {
     private let shopsStorage: RaceSaverAtsManagerSta<Shop>
     
     func getShops() {
-        print("aa")
         let key = "UserShops"
        if shopsStorage.getModels(with: key).isEmpty,
           !RaceDefltsAtsServiceCes.isRaceOnboardingStaDidShowedSec {
@@ -38,7 +37,6 @@ final class SplashVm: SplashVmProtocol {
                                             ])
                                   ],
                                   address: "Metro Region, Guatemala, Sanaa 14, 20 Calle, 25-96")
-           
            
            shopsStorage.saveModel(defaultShop, key: key)
        }
