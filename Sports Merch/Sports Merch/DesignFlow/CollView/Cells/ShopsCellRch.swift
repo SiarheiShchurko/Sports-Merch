@@ -80,7 +80,9 @@ extension ShopsCellRch {
         currentShop = cell
         shopIndexPath = indexPath
         
-        if !cell.imageName.isEmpty {
+        if cell.imageName == "defaultShopImg" {
+            mainImage.image = UIImage(named: cell.imageName)
+        } else if !cell.imageName.isEmpty {
             loadImage(imageName: cell.imageName) { [ weak self ] data in
                 self?.mainImage.image = UIImage(data: data)
             }

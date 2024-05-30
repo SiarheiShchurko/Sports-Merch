@@ -3,8 +3,10 @@ import UIKit
 //import Apphud
 
 class SplashSecScreenRace: UIViewController {
-    init(isGtv: Bool) {
+    init(isGtv: Bool,
+         splashVm: SplashVmProtocol) {
         self.isGtv = isGtv
+        self.splashVm = splashVm
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -13,6 +15,7 @@ class SplashSecScreenRace: UIViewController {
     }
     
     private let isGtv: Bool
+    private let splashVm: SplashVmProtocol
     
     private let percentLoadingLabel: UILabel = {
         let label = UILabel()
