@@ -9,9 +9,14 @@ protocol ShopsErchProtocol: AnyObject {
     func add(new shop: Shop)
     func delete(_ deletingShop: Shop)
     func update(oldShop: Shop, for newShop: Shop)
+    
+    func add(new brand: BrandName, with shopIndexPath: Int)
+    func delete(_ deletingBrand: BrandName, with shopIndexPath: Int)
+    func update(_ oldBrand: BrandName, with newBrand: BrandName, with shopIndexPath: Int)
 }
 
 final class ShopsErchVm: ShopsErchProtocol {
+    
     var updateShops: (() -> Void)?
     
     
@@ -29,6 +34,7 @@ final class ShopsErchVm: ShopsErchProtocol {
     }
 }
 
+// Edit shops
 extension ShopsErchVm {
     func add(new shop: Shop) {
         let key = "UserShops"
@@ -63,6 +69,92 @@ extension ShopsErchVm {
         storage.saveModels(bufferShops, key: key)
         
         getShops()
+    }
+}
+
+// Edit brands
+extension ShopsErchVm {
+    
+    func add(new brand: BrandName, with shopIndexPath: Int) {
+        if shopIndexPath <= shops.count - 1 {
+            let key = "UserShops"
+            var bufferShops = shops
+            let currentShop = bufferShops[shopIndexPath]
+            
+            var brands = currentShop.brandName
+            brands.append(brand)
+            
+            let updatingShop = Shop(imageName: currentShop.imageName,
+                                    shopName: currentShop.shopName,
+                                    phoneNumber: currentShop.phoneNumber,
+                                    brandName: brands,
+                                    address: currentShop.address)
+            
+            bufferShops[shopIndexPath] = updatingShop
+            
+            storage.saveModels(bufferShops, key: key)
+            
+            getShops()
+        }
+    }
+    
+    func update(_ oldBrand: BrandName, with newBrand: BrandName, with shopIndexPath: Int) {
+        if shopIndexPath <= shops.count - 1 {
+            let key = "UserShops"
+            var bufferShops = shops
+            
+            let shop = bufferShops[shopIndexPath]
+            
+            var bufferBrands = shop.brandName
+            
+            shop.brandName.enumerated().forEach { index, value in
+                if value == oldBrand {
+                    bufferBrands[index] = newBrand
+                }
+            }
+            
+            let updatingShop = Shop(imageName: shop.imageName,
+                                    shopName: shop.shopName,
+                                    phoneNumber: shop.phoneNumber,
+                                    brandName: bufferBrands,
+                                    address: shop.address)
+            
+            bufferShops[shopIndexPath] = updatingShop
+            
+            storage.saveModels(bufferShops, key: key)
+            
+            getShops()
+        }
+    }
+    
+    
+    func delete(_ deletingBrand: BrandName, with shopIndexPath: Int) {
+        if shopIndexPath <= shops.count - 1 {
+            let key = "UserShops"
+            var bufferShops = shops
+            
+            let shop = bufferShops[shopIndexPath]
+            
+            var bufferBrands = shop.brandName
+            
+            shop.brandName.enumerated().forEach { index, value in
+                if value == deletingBrand {
+                    bufferBrands.remove(at: index)
+                }
+            }
+            
+            let updatingShop = Shop(imageName: shop.imageName,
+                                    shopName: shop.shopName,
+                                    phoneNumber: shop.phoneNumber,
+                                    brandName: bufferBrands,
+                                    address: shop.address)
+            
+            bufferShops[shopIndexPath] = updatingShop
+            
+            storage.saveModels(bufferShops, key: key)
+            
+            getShops()
+        }
     }
 }
 

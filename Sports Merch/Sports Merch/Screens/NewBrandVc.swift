@@ -124,12 +124,14 @@ private extension NewBrandVc {
         let newBrand: BrandName = BrandName(brandName: name,
                                             brandAttributes: newBrandVm.attributes)
         
+        print("New brand\(newBrand)")
+        
         if let currentBrand {
             sportsShopDelegate?.update(oldValue: currentBrand, for: newBrand)
         } else {
             sportsShopDelegate?.add(new: newBrand)
         }
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true)
     }
 }
 
@@ -211,7 +213,6 @@ extension NewBrandVc: UITableViewDataSource {
             return UITableViewCell()
         }
         let team = newBrandVm.attributes[indexPath.row]
-        //   cell.teamDelegate = self
         cell.set(team)
         return cell
     }
@@ -224,6 +225,7 @@ extension NewBrandVc: UITableViewDelegate {
     }
 }
 
+// Alerts
 private extension NewBrandVc {
     func addAttributeBrandAlert() {
         let alertController = UIAlertController(title: "Create",

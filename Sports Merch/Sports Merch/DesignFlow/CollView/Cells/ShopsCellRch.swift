@@ -1,9 +1,13 @@
 import UIKit
 
+// Trasporte
+protocol CellDelegateProtocol: AnyObject {
+    func reloadCells()
+}
+
 protocol EditShopDelegateProtocol: AnyObject {
     func openShopForEdit(with indexPath: Int)
     func openNewBrandVc(with indexPath: Int)
-    func add(new brand: BrandName, for itemIndexPath: Int)
 }
 
 final class ShopsCellRch: UICollectionViewCell {
@@ -24,6 +28,8 @@ final class ShopsCellRch: UICollectionViewCell {
     }
     
     weak var editShopDelegate: EditShopDelegateProtocol?
+    
+    weak var cellDelegateProtocol: CellDelegateProtocol?
     
     private var currentShop: Shop?
     private var shopIndexPath: Int?
@@ -64,7 +70,7 @@ final class ShopsCellRch: UICollectionViewCell {
     private let addBrandButton = ClasPrimarySecButtonRace(title: "Add")
     
     // TableView
-    private let brandsNameTableView = TraTableGniViewArt(color: .white,
+    private let brandsNameTableView = TraTableGniViewArt(color: .lightGray,
                                                          registerClass: ShopsBrandTableViewCell.self,
                                                          cell: "\(ShopsBrandTableViewCell.self)",
                                                          rowHeigh: UITableView.automaticDimension,
@@ -87,6 +93,9 @@ extension ShopsCellRch {
         nameShopLabel.text = cell.shopName
         addressLabel.text = cell.address
         phoneNumberLabel.text = cell.phoneNumber
+        
+    
+        brandsNameTableView.reloadData()
     }
 }
 
@@ -168,10 +177,13 @@ extension ShopsCellRch: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(ShopsBrandTableViewCell.self)", for: indexPath) as? ShopsBrandTableViewCell else {
                 return UITableViewCell()
             }
+            
+           
             let brand = currentShop.brandName[indexPath.row]
             cell.set(brand)
             return cell
+        } else {
+            return UITableViewCell()
         }
-        return UITableViewCell()
     }
 }

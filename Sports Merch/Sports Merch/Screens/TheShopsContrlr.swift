@@ -22,6 +22,8 @@ final class TheShopsContrlr: UIViewController {
     private let shopsErchVm: ShopsErchProtocol
     private let fileManagerService: FileManagerServiceProtocol
     
+    private var shopIndexPath: Int?
+    
     // Labels
     private let headerLabel: SecSimpleLabelRace = SecSimpleLabelRace(text: "The shops",
                                                                      textColor: .white,
@@ -186,12 +188,19 @@ extension TheShopsContrlr: TransitObjectsDelegateProtocol {
     func add<T>(new: T) where T : Decodable, T : Encodable {
         if let newShop = new as? Shop {
             shopsErchVm.add(new: newShop)
+        } else if let newBrand = new as? BrandName,
+                  let shopIndexPath {
+            print("A")
+            shopsErchVm.add(new: newBrand, with: shopIndexPath)
         }
     }
     
     func delete<T>(_ deletingItem: T) where T : Decodable, T : Encodable {
         if let deletingShop = deletingItem as? Shop {
             shopsErchVm.delete(deletingShop)
+        } else if let deletingBrand = deletingItem as? BrandName,
+                  let shopIndexPath {
+            shopsErchVm.delete(deletingBrand, with: shopIndexPath)
         }
     }
     
@@ -199,13 +208,19 @@ extension TheShopsContrlr: TransitObjectsDelegateProtocol {
         if let oldShop = oldValue as? Shop,
            let newShop = newValue as? Shop {
             shopsErchVm.update(oldShop: oldShop, for: newShop)
+        } else if let oldBrand = oldValue as? BrandName,
+                  let newBrand = newValue as? BrandName,
+                  let shopIndexPath {
+            shopsErchVm.update(oldBrand, with: newBrand, with: shopIndexPath)
         }
     }
 }
 
 extension TheShopsContrlr: EditShopDelegateProtocol {
     func openNewBrandVc(with indexPath: Int) {
-        let newBrandVc = NewBrandVc(currentBrand: nil, 
+        shopIndexPath = indexPath
+        
+        let newBrandVc = NewBrandVc(currentBrand: nil,
                                     newBrandVm: NewBrandVm())
         newBrandVc.sportsShopDelegate = self
         openRamsSheetsArt(vc: newBrandVc)
@@ -222,7 +237,7 @@ extension TheShopsContrlr: EditShopDelegateProtocol {
         
     }
     
-    func add(new brand: BrandName, for itemIndexPath: Int) {
-        //
-    }
+//    func add(new brand: BrandName, for itemIndexPath: Int) {
+//        //
+//    }
 }

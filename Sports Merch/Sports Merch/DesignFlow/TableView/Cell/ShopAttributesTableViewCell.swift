@@ -12,10 +12,6 @@ final class ShopAttributesTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    weak var teamDelegate: TransitObjectsDelegateProtocol?
-    
-    private var currentAttribute: BrandAttributes?
-    
     // Labels
     let nameLabel = SecSimpleLabelRace(text: "",
                                        font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize),
@@ -37,9 +33,10 @@ final class ShopAttributesTableViewCell: UITableViewCell {
 
 extension ShopAttributesTableViewCell {
     func set(_ cell: BrandAttributes) {
-        currentAttribute = cell
         nameLabel.text = cell.brandName
         countLabel.text = "\(cell.count ?? 0)"
+        
+        print("Name label \(cell.brandName)")
     }
 }
 
@@ -51,6 +48,7 @@ private extension ShopAttributesTableViewCell {
         NSLayoutConstraint.activate([
             countLabel.centerYAnchor.constraint(equalTo: nameLabel.centerYAnchor),
             countLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            countLabel.heightAnchor.constraint(equalToConstant: 32),
             
             nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
             nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
