@@ -127,6 +127,7 @@ private extension NewBrandVc {
         print("New brand\(newBrand)")
         
         if let currentBrand {
+            print("currentBrand\(currentBrand)")
             sportsShopDelegate?.update(oldValue: currentBrand, for: newBrand)
         } else {
             sportsShopDelegate?.add(new: newBrand)
@@ -326,7 +327,7 @@ private extension NewBrandVc {
                 return
             }
             self.sportsShopDelegate?.delete(brand)
-            self.navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true)
         }
         
         alertController.addAction(startAction)

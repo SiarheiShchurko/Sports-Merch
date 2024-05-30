@@ -41,8 +41,8 @@ final class TheShopsContrlr: UIViewController {
                                                             comtentMode: .scaleAspectFit)
     // Buttons
     private let plusShopsErchButton: SimpleSecImageRaceButtonAts = SimpleSecImageRaceButtonAts(isSystem: true,
-                                                                                            imgName: "plus",
-                                                                                            color: .white)
+                                                                                               imgName: "plus",
+                                                                                               color: .white)
     private let addStackEachButton = ClasPrimarySecButtonRace(title: "Add")
     
     // CollectionView
@@ -135,12 +135,12 @@ private extension TheShopsContrlr {
 
 // User actions
 private extension TheShopsContrlr {
-   @objc func plusShopDidTapped() {
+    @objc func plusShopDidTapped() {
         let newShopScreen = NewShopScreen(newShopmVm: NewShopVm(fileManager: fileManagerService),
                                           currentShop: nil,
                                           picker: picker)
-       newShopScreen.sportsShopDelegate = self
-       navigationController?.pushViewController(newShopScreen, animated: true)
+        newShopScreen.sportsShopDelegate = self
+        navigationController?.pushViewController(newShopScreen, animated: true)
     }
 }
 
@@ -157,18 +157,6 @@ extension TheShopsContrlr: UICollectionViewDataSource {
         cell.editShopDelegate = self
         cell.set(shop, indexPath: indexPath.row)
         return cell
-    }
-}
-
-extension TheShopsContrlr: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let currentShop: Shop = shopsErchVm.shops[indexPath.row]
-        
-//        let newTeamController = NewTeamScreen(newTeamVm: NewTeamVm(fileManager: fileManagerService),
-//                                              currentTeam: currentTeam,
-//                                              picker: picker)
-//        newTeamController.sportsTeamDelegate = self
-//        navigationController?.pushViewController(newTeamController, animated: true)
     }
 }
 
@@ -190,7 +178,6 @@ extension TheShopsContrlr: TransitObjectsDelegateProtocol {
             shopsErchVm.add(new: newShop)
         } else if let newBrand = new as? BrandName,
                   let shopIndexPath {
-            print("A")
             shopsErchVm.add(new: newBrand, with: shopIndexPath)
         }
     }
@@ -217,6 +204,15 @@ extension TheShopsContrlr: TransitObjectsDelegateProtocol {
 }
 
 extension TheShopsContrlr: EditShopDelegateProtocol {
+    func edit(_ currentBrand: BrandName, with indexPath: Int) {
+        shopIndexPath = indexPath
+        
+        let editBrandVc = NewBrandVc(currentBrand: currentBrand,
+                                     newBrandVm: NewBrandVm())
+        editBrandVc.sportsShopDelegate = self
+        openRamsSheetsArt(vc: editBrandVc)
+    }
+    
     func openNewBrandVc(with indexPath: Int) {
         shopIndexPath = indexPath
         
@@ -230,14 +226,10 @@ extension TheShopsContrlr: EditShopDelegateProtocol {
         let currentShop: Shop = shopsErchVm.shops[indexPath]
         
         let editShopScreen = NewShopScreen(newShopmVm: NewShopVm(fileManager: fileManagerService),
-                                          currentShop: currentShop,
-                                          picker: picker)
+                                           currentShop: currentShop,
+                                           picker: picker)
         editShopScreen.sportsShopDelegate = self
         navigationController?.pushViewController(editShopScreen, animated: true)
         
     }
-    
-//    func add(new brand: BrandName, for itemIndexPath: Int) {
-//        //
-//    }
 }

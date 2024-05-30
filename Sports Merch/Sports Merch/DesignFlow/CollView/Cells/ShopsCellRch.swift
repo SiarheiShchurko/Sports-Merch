@@ -1,13 +1,9 @@
 import UIKit
 
-// Trasporte
-protocol CellDelegateProtocol: AnyObject {
-    func reloadCells()
-}
-
 protocol EditShopDelegateProtocol: AnyObject {
     func openShopForEdit(with indexPath: Int)
     func openNewBrandVc(with indexPath: Int)
+    func edit(_ currentBrand: BrandName, with indexPath: Int)
 }
 
 final class ShopsCellRch: UICollectionViewCell {
@@ -29,10 +25,12 @@ final class ShopsCellRch: UICollectionViewCell {
     
     weak var editShopDelegate: EditShopDelegateProtocol?
     
-    weak var cellDelegateProtocol: CellDelegateProtocol?
-    
     private var currentShop: Shop?
     private var shopIndexPath: Int?
+    
+    private let brandRowHeight: CGFloat = {
+        CGFloat.RaceFontArtSizeSec.mainFontSize * 8
+    }()
     
     // Label
     private let nameShopLabel = SecSimpleLabelRace(text: "",
@@ -70,10 +68,10 @@ final class ShopsCellRch: UICollectionViewCell {
     private let addBrandButton = ClasPrimarySecButtonRace(title: "Add")
     
     // TableView
-    private let brandsNameTableView = TraTableGniViewArt(color: .lightGray,
+    private lazy var brandsNameTableView = TraTableGniViewArt(color: .white,
                                                          registerClass: ShopsBrandTableViewCell.self,
                                                          cell: "\(ShopsBrandTableViewCell.self)",
-                                                         rowHeigh: UITableView.automaticDimension,
+                                                         rowHeigh: brandRowHeight,
                                                          separatorStyle: .none)
 }
 
@@ -94,8 +92,8 @@ extension ShopsCellRch {
         addressLabel.text = cell.address
         phoneNumberLabel.text = cell.phoneNumber
         
-    
         brandsNameTableView.reloadData()
+        
     }
 }
 
@@ -180,10 +178,27 @@ extension ShopsCellRch: UITableViewDataSource {
             
            
             let brand = currentShop.brandName[indexPath.row]
-            cell.set(brand)
+            cell.editDelegate = self
+            cell.set(brand, with: indexPath.row)
             return cell
         } else {
             return UITableViewCell()
+        }
+    }
+}
+
+extension ShopsCellRch: EditShopDelegateProtocol {
+    func openShopForEdit(with indexPath: Int) {
+        print("MOCK")
+    }
+    
+    func openNewBrandVc(with indexPath: Int) {
+        print("MOCK")
+    }
+    
+    func edit(_ currentBrand: BrandName, with indexPath: Int) {
+        if let shopIndexPath {
+            editShopDelegate?.edit(currentBrand, with: shopIndexPath)
         }
     }
 }
