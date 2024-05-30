@@ -61,6 +61,7 @@ final class TheShopsContrlr: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setShopsErchController()
+        shopTargets()
         setShopsErchConstraints()
     }
 }
@@ -68,7 +69,15 @@ final class TheShopsContrlr: UIViewController {
 
 private extension TheShopsContrlr {
     func updateErchShops() {
-        //
+        shopsErchVm.updateShops = { [ weak self ] in
+            DispatchQueue.main.async {
+                guard let self else {
+                    return
+                }
+                self.shopsCollectionView.reloadData()
+                self.emptyStack.isHidden = !self.shopsErchVm.shops.isEmpty
+            }
+        }
     }
 }
 
@@ -100,9 +109,9 @@ private extension TheShopsContrlr {
             headerLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             
             shopsCollectionView.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 16),
-            shopsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            shopsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             shopsCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            shopsCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            shopsCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             emptyStack.centerYAnchor.constraint(equalTo: shopsCollectionView.centerYAnchor),
             emptyStack.leadingAnchor.constraint(equalTo: headerLabel.leadingAnchor),
@@ -110,7 +119,6 @@ private extension TheShopsContrlr {
             
             addStackEachButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.06),
             addStackEachButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.4)
-        
         ])
     }
 }
@@ -118,7 +126,19 @@ private extension TheShopsContrlr {
 // Targets
 private extension TheShopsContrlr {
     func shopTargets() {
-        
+        plusShopsErchButton.addTarget(self, action: #selector(plusShopDidTapped), for: .touchUpInside)
+        addStackEachButton.addTarget(self, action: #selector(plusShopDidTapped), for: .touchUpInside)
+    }
+}
+
+// User actions
+private extension TheShopsContrlr {
+   @objc func plusShopDidTapped() {
+        let newShopScreen = NewShopScreen(newShopmVm: NewShopVm(fileManager: fileManagerService),
+                                          currentShop: nil,
+                                          picker: picker)
+       newShopScreen.sportsShopDelegate = self
+       navigationController?.pushViewController(newShopScreen, animated: true)
     }
 }
 
@@ -132,7 +152,8 @@ extension TheShopsContrlr: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         let shop: Shop = shopsErchVm.shops[indexPath.row]
-        cell.set(shop)
+        cell.editShopDelegate = self
+        cell.set(shop, indexPath: indexPath.row)
         return cell
     }
 }
@@ -158,5 +179,50 @@ extension TheShopsContrlr: UICollectionViewDelegateFlowLayout {
         let width: CGFloat = collectionView.bounds.width * 0.95
         let height: CGFloat = collectionView.bounds.height
         return CGSize(width: width, height: height)
+    }
+}
+
+extension TheShopsContrlr: TransitObjectsDelegateProtocol {
+    func add<T>(new: T) where T : Decodable, T : Encodable {
+        if let newShop = new as? Shop {
+            shopsErchVm.add(new: newShop)
+        }
+    }
+    
+    func delete<T>(_ deletingItem: T) where T : Decodable, T : Encodable {
+        if let deletingShop = deletingItem as? Shop {
+            shopsErchVm.delete(deletingShop)
+        }
+    }
+    
+    func update<T>(oldValue: T, for newValue: T) where T : Decodable, T : Encodable {
+        if let oldShop = oldValue as? Shop,
+           let newShop = newValue as? Shop {
+            shopsErchVm.update(oldShop: oldShop, for: newShop)
+        }
+    }
+}
+
+extension TheShopsContrlr: EditShopDelegateProtocol {
+    func openNewBrandVc(with indexPath: Int) {
+        let newBrandVc = NewBrandVc(currentBrand: nil, 
+                                    newBrandVm: NewBrandVm())
+        newBrandVc.sportsShopDelegate = self
+        openRamsSheetsArt(vc: newBrandVc)
+    }
+    
+    func openShopForEdit(with indexPath: Int) {
+        let currentShop: Shop = shopsErchVm.shops[indexPath]
+        
+        let editShopScreen = NewShopScreen(newShopmVm: NewShopVm(fileManager: fileManagerService),
+                                          currentShop: currentShop,
+                                          picker: picker)
+        editShopScreen.sportsShopDelegate = self
+        navigationController?.pushViewController(editShopScreen, animated: true)
+        
+    }
+    
+    func add(new brand: BrandName, for itemIndexPath: Int) {
+        //
     }
 }

@@ -51,6 +51,8 @@
 		EDC50BD92C075FF600482918 /* ShopAttributesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC50BD82C075FF600482918 /* ShopAttributesTableViewCell.swift */; };
 		EDC50BDB2C07684000482918 /* NewShopScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC50BDA2C07684000482918 /* NewShopScreen.swift */; };
 		EDC50BDD2C0768C300482918 /* NewShopVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC50BDC2C0768C300482918 /* NewShopVm.swift */; };
+		EDCD28702C0873EA00C6EF66 /* NewBrandVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCD286F2C0873EA00C6EF66 /* NewBrandVc.swift */; };
+		EDCD28722C0875D500C6EF66 /* NewBrandVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCD28712C0875D500C6EF66 /* NewBrandVm.swift */; };
 		EDF4B81E2C05C52700E0A479 /* FileManagerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B81D2C05C52700E0A479 /* FileManagerServiceProtocol.swift */; };
 		EDF4B8202C05C6F000E0A479 /* UICollView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B81F2C05C6F000E0A479 /* UICollView + Ext.swift */; };
 		EDF4B8222C05C6F900E0A479 /* UITableView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B8212C05C6F900E0A479 /* UITableView + Ext.swift */; };
@@ -111,6 +113,8 @@
 		EDC50BD82C075FF600482918 /* ShopAttributesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopAttributesTableViewCell.swift; sourceTree = "<group>"; };
 		EDC50BDA2C07684000482918 /* NewShopScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewShopScreen.swift; sourceTree = "<group>"; };
 		EDC50BDC2C0768C300482918 /* NewShopVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewShopVm.swift; sourceTree = "<group>"; };
+		EDCD286F2C0873EA00C6EF66 /* NewBrandVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBrandVc.swift; sourceTree = "<group>"; };
+		EDCD28712C0875D500C6EF66 /* NewBrandVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBrandVm.swift; sourceTree = "<group>"; };
 		EDF4B81D2C05C52700E0A479 /* FileManagerServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerServiceProtocol.swift; sourceTree = "<group>"; };
 		EDF4B81F2C05C6F000E0A479 /* UICollView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollView + Ext.swift"; sourceTree = "<group>"; };
 		EDF4B8212C05C6F900E0A479 /* UITableView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView + Ext.swift"; sourceTree = "<group>"; };
@@ -260,6 +264,8 @@
 				EDBE8EBA2C071BA900A20A75 /* ShopsErchVm.swift */,
 				EDC50BDA2C07684000482918 /* NewShopScreen.swift */,
 				EDC50BDC2C0768C300482918 /* NewShopVm.swift */,
+				EDCD286F2C0873EA00C6EF66 /* NewBrandVc.swift */,
+				EDCD28712C0875D500C6EF66 /* NewBrandVm.swift */,
 				ED31FC9A2C047B5800D09CC8 /* RacePickerController.swift */,
 				ED31FC962C047B0F00D09CC8 /* PushAtrScreenRace.swift */,
 				ED31FC902C0473E100D09CC8 /* SplashSecScreenRace.swift */,
@@ -405,6 +411,7 @@
 				ED31FC6A2C046A7300D09CC8 /* Double + Ext.swift in Sources */,
 				ED31FC972C047B0F00D09CC8 /* PushAtrScreenRace.swift in Sources */,
 				ED31FC7C2C046D0500D09CC8 /* SecTemplRaceTextViewAts.swift in Sources */,
+				EDCD28702C0873EA00C6EF66 /* NewBrandVc.swift in Sources */,
 				ED31FC822C046D5800D09CC8 /* SecUnicalRaceTFAts.swift in Sources */,
 				ED31FC7E2C046D2A00D09CC8 /* SecTimCollectionRaceViewAts.swift in Sources */,
 				ED31FC5F2C046A0000D09CC8 /* RaceSaverAtsManagerSta.swift in Sources */,
@@ -421,6 +428,7 @@
 				EDF4B82F2C0607AC00E0A479 /* ImageTitleButton.swift in Sources */,
 				ED31FC952C047AD300D09CC8 /* OnboardingAtsProtocol.swift in Sources */,
 				ED31FC862C046D7900D09CC8 /* SimpleSecImageRaceButtonAts.swift in Sources */,
+				EDCD28722C0875D500C6EF66 /* NewBrandVm.swift in Sources */,
 				EDC50BDB2C07684000482918 /* NewShopScreen.swift in Sources */,
 				EDC50BDD2C0768C300482918 /* NewShopVm.swift in Sources */,
 				ED31FCA52C04BE8300D09CC8 /* SportsTeamsVm.swift in Sources */,

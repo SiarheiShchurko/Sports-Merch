@@ -262,12 +262,12 @@ extension SportsTeamsContrlr: UISearchBarDelegate {
 }
 
 extension SportsTeamsContrlr: TransitObjectsDelegateProtocol {
-    func update<T>(oldTeam: T, for newTeam: T) where T : Decodable, T : Encodable {
+    func update<T>(oldValue: T, for newValue: T) where T : Decodable, T : Encodable {
         isSearching = false
         sportsSearchBar.text = ""
         
-        if let newCurrentTeam = newTeam as? Team,
-           let oldCurrentTeam = oldTeam as? Team {
+        if let newCurrentTeam = newValue as? Team,
+           let oldCurrentTeam = oldValue as? Team {
             sportsTeamsVm.update(oldTeam: oldCurrentTeam, for: newCurrentTeam)
         }
     }

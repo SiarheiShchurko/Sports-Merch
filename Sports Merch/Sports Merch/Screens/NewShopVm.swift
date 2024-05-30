@@ -6,7 +6,7 @@ protocol NewShopProtocol: AnyObject {
     
     func saveImage(from data: Data?) -> String
     func loadImage(with name: String) -> Data?
-    func delete(_ attribute: BrandAttributes)
+   // func delete(_ attribute: BrandAttributes)
 }
 
 final class NewShopVm: NewShopProtocol {

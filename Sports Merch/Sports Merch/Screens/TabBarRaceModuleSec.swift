@@ -2,9 +2,13 @@ import UIKit
 
 final class TabBarRaceModuleSec: UITabBarController {
     init(picker: RacePickerController = RacePickerController(),
+         teamsStorage: RaceSaverAtsManagerSta<Team> = RaceSaverAtsManagerSta<Team>(),
+         shopsStorage: RaceSaverAtsManagerSta<Shop> = RaceSaverAtsManagerSta<Shop>(),
          fileManagerService: FileManagerServiceProtocol = FileManagerService()) {
         self.picker = picker
         self.fileManagerService = fileManagerService
+        self.teamStorage = teamsStorage
+        self.shopStorage = shopsStorage
         super.init(nibName: nil,
                    bundle: nil)
     }
@@ -13,17 +17,19 @@ final class TabBarRaceModuleSec: UITabBarController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private lazy var competitionsContr = SportsTeamsContrlr(sportsTeamsVm: SportsTeamsVm(storage: RaceSaverAtsManagerSta()),
-                                                            pickerContr: picker, 
+    private lazy var competitionsContr = SportsTeamsContrlr(sportsTeamsVm: SportsTeamsVm(storage: teamStorage),
+                                                            pickerContr: picker,
                                                             fileManager: fileManagerService)
     
-    private lazy var participantsContr = TheShopsContrlr(shopsErchVm: ShopsErchVm(),
+    private lazy var participantsContr = TheShopsContrlr(shopsErchVm: ShopsErchVm(storage: shopStorage),
                                                          pickerContr: picker,
                                                          fileManager: fileManagerService)
     
     private let picker: RacePickerController
     private let setContr = RaceSettingsArtModule()
     private let fileManagerService: FileManagerServiceProtocol
+    private let teamStorage: RaceSaverAtsManagerSta<Team>
+    private let shopStorage: RaceSaverAtsManagerSta<Shop>
     
     // Life cycle
     override func viewDidLoad() {

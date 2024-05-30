@@ -269,7 +269,7 @@ private extension NewTeamScreen {
         }
         
         if let currentTeam {
-            sportsTeamDelegate?.update(oldTeam: currentTeam, for: newTeam)
+            sportsTeamDelegate?.update(oldValue: currentTeam, for: newTeam)
         } else {
             sportsTeamDelegate?.add(new: newTeam)
         }
@@ -316,7 +316,7 @@ extension NewTeamScreen: UIImagePickerControllerDelegate, UINavigationController
 
 // Delegate
 extension NewTeamScreen: TransitObjectsDelegateProtocol {
-    func update<T>(oldTeam: T, for newTeam: T) where T : Decodable, T : Encodable {
+    func update<T>(oldValue: T, for newValue: T) where T : Decodable, T : Encodable {
         print("MOCK UPDATE")
     }
     
@@ -324,8 +324,8 @@ extension NewTeamScreen: TransitObjectsDelegateProtocol {
         print("MOCK ADD")
     }
     
-    func delete<T>(_ attribute: T) where T : Decodable, T : Encodable {
-        if let currentAttribute = attribute as? BrandAttributes {
+    func delete<T>(_ deletingItem: T) where T : Decodable, T : Encodable {
+        if let currentAttribute = deletingItem as? BrandAttributes {
             newTeamVm.delete(currentAttribute)
         }
     }

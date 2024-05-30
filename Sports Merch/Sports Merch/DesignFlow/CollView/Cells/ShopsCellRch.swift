@@ -1,4 +1,11 @@
 import UIKit
+
+protocol EditShopDelegateProtocol: AnyObject {
+    func openShopForEdit(with indexPath: Int)
+    func openNewBrandVc(with indexPath: Int)
+    func add(new brand: BrandName, for itemIndexPath: Int)
+}
+
 final class ShopsCellRch: UICollectionViewCell {
     
     override init(frame: CGRect) {
@@ -7,6 +14,8 @@ final class ShopsCellRch: UICollectionViewCell {
         layer.cornerRadius = 16
         
         brandsNameTableView.dataSource = self
+        
+        shopCellTarget()
         addSubviews()
     }
     
@@ -14,7 +23,11 @@ final class ShopsCellRch: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    weak var editShopDelegate: EditShopDelegateProtocol?
+    
     private var currentShop: Shop?
+    private var shopIndexPath: Int?
+    
     // Label
     private let nameShopLabel = SecSimpleLabelRace(text: "",
                                                    textColor: .black,
@@ -59,8 +72,9 @@ final class ShopsCellRch: UICollectionViewCell {
 }
 
 extension ShopsCellRch {
-    func set(_ cell: Shop) {
+    func set(_ cell: Shop, indexPath: Int) {
         currentShop = cell
+        shopIndexPath = indexPath
         
         if !cell.imageName.isEmpty {
             loadImage(imageName: cell.imageName) { [ weak self ] data in
@@ -70,7 +84,7 @@ extension ShopsCellRch {
             mainImage.image = UIImage(named: "emptyStrAvatarEchImg")
         }
         
-        nameShopLabel.text = cell.teamName
+        nameShopLabel.text = cell.shopName
         addressLabel.text = cell.address
         phoneNumberLabel.text = cell.phoneNumber
     }
@@ -104,10 +118,9 @@ private extension ShopsCellRch {
             addressLabel.leadingAnchor.constraint(equalTo: nameShopLabel.leadingAnchor),
             addressLabel.trailingAnchor.constraint(equalTo: editButton.trailingAnchor),
             
-            phoneNumberLabel.topAnchor.constraint(equalTo: nameShopLabel.bottomAnchor, constant: 8),
+            phoneNumberLabel.topAnchor.constraint(equalTo: addressLabel.bottomAnchor, constant: 8),
             phoneNumberLabel.leadingAnchor.constraint(equalTo: nameShopLabel.leadingAnchor),
             phoneNumberLabel.trailingAnchor.constraint(equalTo: nameShopLabel.trailingAnchor),
-            phoneNumberLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
             
             addBrandButton.topAnchor.constraint(equalTo: mainImage.bottomAnchor, constant: 32),
             addBrandButton.leadingAnchor.constraint(equalTo: mainImage.leadingAnchor),
@@ -118,8 +131,30 @@ private extension ShopsCellRch {
             brandsNameTableView.leadingAnchor.constraint(equalTo: addBrandButton.leadingAnchor),
             brandsNameTableView.trailingAnchor.constraint(equalTo: addBrandButton.trailingAnchor),
             brandsNameTableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
-            
         ])
+    }
+}
+
+
+private extension ShopsCellRch {
+    func shopCellTarget() {
+        addBrandButton.addTarget(self, action: #selector(addButtonDidTapped), for: .touchUpInside)
+        editButton.addTarget(self, action: #selector(editButtonDidTapped), for: .touchUpInside)
+    }
+}
+
+// User actions
+private extension ShopsCellRch {
+    @objc func editButtonDidTapped() {
+        if let shopIndexPath {
+            editShopDelegate?.openShopForEdit(with: shopIndexPath)
+        }
+    }
+    
+    @objc func addButtonDidTapped() {
+        if let shopIndexPath {
+            editShopDelegate?.openNewBrandVc(with: shopIndexPath)
+        }
     }
 }
 

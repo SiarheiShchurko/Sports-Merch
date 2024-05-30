@@ -9,7 +9,7 @@ final class NewShopScreen: UIViewController {
         self.picker = picker
         super.init(nibName: nil,
                    bundle: nil)
-        updateVmParams()
+       
     }
     
     required init?(coder: NSCoder) {
@@ -43,10 +43,6 @@ final class NewShopScreen: UIViewController {
     private let teamAvatar = SecUnicalImageRaceViewAts(imageName: "",
                                                        comtentMode: .scaleAspectFill)
     // Buttons
-    private let addAttributeButton = ImageTitleButton(titleButton: "+ Add more",
-                                                      colorButton: .white,
-                                                      fontButton: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize))
-    
     private let saveButton = ClasPrimarySecButtonRace(title: "",
                                                       font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize),
                                                       isEnabled: false)
@@ -72,14 +68,9 @@ final class NewShopScreen: UIViewController {
     
     private let addressTextField = SecUnicalRaceTFAts(placeholder: "Address")
     
-    // Table view
-    private let teamTableView = TraTableGniViewArt(color: .white,
-                                                   registerClass: TeamAttributesTableViewCell.self,
-                                                   cell: "\(TeamAttributesTableViewCell.self)",
-                                                   rowHeigh: UITableView.automaticDimension,
-                                                   separatorStyle: .none)
     // Stack
     private lazy var textFieldStack = SecUniqueStackViewGniff(views: [nameTextField,
+                                                                      addressTextField,
                                                                       contactNumberTextField],
                                                               axis: .vertical,
                                                               alignment: .fill,
@@ -115,16 +106,12 @@ private extension NewShopScreen {
             $0.layer.borderWidth = 1.0
         })
         
-        teamTableView.dataSource = self
-        
         currentShop != nil ? setEditingItemUI() : setNewItemUI()
     }
     
     func constraints() {
         view.addSubview(teamAvatar)
         view.addSubview(textFieldStack)
-        view.addSubview(addAttributeButton)
-        view.addSubview(teamTableView)
         view.addSubview(buttonsStack)
         view.addSubview(activityIndicator)
         NSLayoutConstraint.activate([
@@ -140,15 +127,6 @@ private extension NewShopScreen {
             textFieldStack.topAnchor.constraint(equalTo: teamAvatar.bottomAnchor, constant: 16),
             textFieldStack.leadingAnchor.constraint(equalTo: teamAvatar.leadingAnchor),
             textFieldStack.trailingAnchor.constraint(equalTo: teamAvatar.trailingAnchor),
-            
-            addAttributeButton.topAnchor.constraint(equalTo: textFieldStack.bottomAnchor, constant: 16),
-            addAttributeButton.leadingAnchor.constraint(equalTo: teamAvatar.leadingAnchor),
-            addAttributeButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.04),
-            
-            teamTableView.topAnchor.constraint(equalTo: addAttributeButton.bottomAnchor, constant: 8),
-            teamTableView.leadingAnchor.constraint(equalTo: teamAvatar.leadingAnchor),
-            teamTableView.trailingAnchor.constraint(equalTo: teamAvatar.trailingAnchor),
-            teamTableView.bottomAnchor.constraint(equalTo: buttonsStack.topAnchor, constant: -8),
             
             buttonsStack.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.06),
             buttonsStack.leadingAnchor.constraint(equalTo: teamAvatar.leadingAnchor),
@@ -173,39 +151,23 @@ private extension NewShopScreen {
         
         if let currentShop {
             
-            //            nameTextField.text = currentTeam.teamName
-            //            contactNumberTextField.text = currentTeam.phoneNumber
-            //            newTeamVm.attributes = currentTeam.brandAttributes
-            //
-            //            if let imageDta = newTeamVm.loadImage(with: currentTeam.imageName) {
-            //                teamAvatar.image = UIImage(data: imageDta)
-            //            } else {
-            //                teamAvatar.image = UIImage(named: "emptyStrAvatarEchImg")
-            //            }
-        }
-    }
-}
-
-private extension NewShopScreen {
-    func updateVmParams() {
-        newShopmVm.updateAttributes = { [ weak self ] in
-            DispatchQueue.main.async {
-                guard let self else {
-                    return
-                }
-                self.teamTableView.reloadData()
-                self.teamsTextFieldScreenDidChanged()
+            nameTextField.text = currentShop.shopName
+            addressTextField.text = currentShop.address
+            contactNumberTextField.text = currentShop.phoneNumber
+            
+            if let imageDta = newShopmVm.loadImage(with: currentShop.imageName) {
+                teamAvatar.image = UIImage(data: imageDta)
+            } else {
+                teamAvatar.image = UIImage(named: "emptyStrAvatarEchImg")
             }
         }
     }
 }
 
-
 private extension NewShopScreen {
     func newTeamTargets() {
         deleteButton.addTarget(self, action: #selector(deleteDidTapped), for: .touchUpInside)
         saveButton.addTarget(self, action: #selector(saveDidTapped), for: .touchUpInside)
-        addAttributeButton.addTarget(self, action: #selector(addAttributedDidTapped), for: .touchUpInside)
         textFieldsArray.forEach({ $0.addTarget(self, action: #selector(teamsTextFieldScreenDidChanged), for: .editingChanged) })
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(avatarImageDidTapped))
@@ -238,12 +200,6 @@ private extension NewShopScreen {
         saveButton.isEnabled = !name.isEmpty && !numberPhone.isEmpty
     }
     
-    @objc func addAttributedDidTapped() {
-        DispatchQueue.main.async { [ weak self ] in
-            self?.addAttributeBrandAlert()
-        }
-    }
-    
     @objc func deleteDidTapped() {
         DispatchQueue.main.async { [ weak self ] in
             self?.deleteAlert(with: self?.currentShop)
@@ -254,7 +210,7 @@ private extension NewShopScreen {
         
         guard let name = nameTextField.text,
               let phoneNumber = contactNumberTextField.text,
-        let address = addressTextField.text else {
+              let address = addressTextField.text else {
             return
         }
         
@@ -263,20 +219,20 @@ private extension NewShopScreen {
         if let coverTeamsData {
             let imageName = newShopmVm.saveImage(from: coverTeamsData)
             newShop = Shop(imageName: imageName,
-                           teamName: name,
+                           shopName: name,
                            phoneNumber: phoneNumber,
-                           brandName: [],
+                           brandName: currentShop?.brandName ?? [],
                            address: address)
         } else {
             newShop = Shop(imageName: currentShop?.imageName ?? "",
-                           teamName: name,
+                           shopName: name,
                            phoneNumber: phoneNumber,
-                           brandName: [],
+                           brandName: currentShop?.brandName ?? [],
                            address: address)
         }
         
         if let currentShop {
-            sportsShopDelegate?.update(oldTeam: currentShop, for: newShop)
+            sportsShopDelegate?.update(oldValue: currentShop, for: newShop)
         } else {
             sportsShopDelegate?.add(new: newShop)
         }
@@ -284,21 +240,7 @@ private extension NewShopScreen {
     }
 }
 
-extension NewShopScreen: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        newShopmVm.attributes.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(TeamAttributesTableViewCell.self)", for: indexPath) as? TeamAttributesTableViewCell else {
-            return UITableViewCell()
-        }
-        let team = newShopmVm.attributes[indexPath.row]
-        cell.teamDelegate = self
-        cell.set(team)
-        return cell
-    }
-}
+
 
 // Picker extension
 extension NewShopScreen: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -322,21 +264,21 @@ extension NewShopScreen: UIImagePickerControllerDelegate, UINavigationController
 }
 
 // Delegate
-extension NewShopScreen: TransitObjectsDelegateProtocol {
-    func update<T>(oldTeam: T, for newTeam: T) where T : Decodable, T : Encodable {
-        print("MOCK UPDATE")
-    }
-    
-    func add<T>(new: T) where T : Decodable, T : Encodable {
-        print("MOCK ADD")
-    }
-    
-    func delete<T>(_ attribute: T) where T : Decodable, T : Encodable {
-        if let currentAttribute = attribute as? BrandAttributes {
-            newShopmVm.delete(currentAttribute)
-        }
-    }
-}
+//extension NewShopScreen: TransitObjectsDelegateProtocol {
+//    func update<T>(oldValue: T, for newValue: T) where T : Decodable, T : Encodable {
+//        print("MOCK UPDATE")
+//    }
+//    
+//    func add<T>(new: T) where T : Decodable, T : Encodable {
+//        print("MOCK ADD")
+//    }
+//    
+//    func delete<T>(_ deletingItem: T) where T : Decodable, T : Encodable {
+//        if let currentAttribute = deletingItem as? BrandAttributes {
+//            newShopmVm.delete(currentAttribute)
+//        }
+//    }
+//}
 
 extension NewShopScreen: CustomPickerProtol {
     func dismisPickerController() {
@@ -351,7 +293,7 @@ extension NewShopScreen: CustomPickerProtol {
 private extension NewShopScreen {
     func deleteAlert(with shop: Shop?) {
         let alertController = UIAlertController(title: "Delete",
-                                                message: "Are you sure you want to delete this team?",
+                                                message: "Are you sure you want to delete this shop?",
                                                 preferredStyle: .alert)
         
         let startAction = UIAlertAction(title: "Close",
@@ -361,42 +303,14 @@ private extension NewShopScreen {
                                          style: .destructive) { [ weak self ]  _ in
             guard let self,
                   let shop else {
-                      return
-                  }
+                return
+            }
             self.sportsShopDelegate?.delete(shop)
             self.navigationController?.popViewController(animated: true)
         }
         
         alertController.addAction(startAction)
         alertController.addAction(deleteAction)
-        
-        present(alertController, animated: true, completion: nil)
-    }
-    
-    func addAttributeBrandAlert() {
-        let alertController = UIAlertController(title: "Create",
-                                                message: "Enter attributes type (T-shirts/Form)",
-                                                preferredStyle: .alert)
-        alertController.addTextField()
-        
-        let closeAction = UIAlertAction(title: "Close",
-                                        style: .cancel,
-                                        handler: nil)
-        
-        let addAction = UIAlertAction(title: "Add",
-                                      style: .default) { [ weak self ]  _ in
-            guard let self,
-                  let currentAttributes = alertController.textFields?.first?.text else {
-                return
-            }
-            let newAttributes = BrandAttributes(brandName: currentAttributes,
-                                                count: nil)
-            
-            self.newShopmVm.attributes.append(newAttributes)
-        }
-        
-        alertController.addAction(addAction)
-        alertController.addAction(closeAction)
         
         present(alertController, animated: true, completion: nil)
     }

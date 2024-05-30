@@ -16,6 +16,8 @@ final class ShopsBrandTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    weak var editDelegate: EditShopDelegateProtocol?
+    
     private var currentBrand: BrandName?
     
     // Labels
