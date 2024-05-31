@@ -30,7 +30,6 @@ final class NewRchBrandTopVcSor: UIViewController {
     private let addAttributeButton = ImageRchTitleRtoButtonTro(titleButton: "+ Add attribute",
                                                       colorButton: .white,
                                                       fontButton: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize))
-    // Buttons
     private let saveButton = RchsPrimaryTopButtonTro(title: "",
                                                       font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize),
                                                       isEnabled: false)
@@ -124,10 +123,7 @@ private extension NewRchBrandTopVcSor {
         let newBrand: SorBrandRchsNameTro = SorBrandRchsNameTro(brandName: name,
                                             brandAttributes: newBrandVm.attributes)
         
-        print("New brand\(newBrand)")
-        
         if let currentBrand {
-            print("currentBrand\(currentBrand)")
             sportsShopDelegate?.update(oldValue: currentBrand, for: newBrand)
         } else {
             sportsShopDelegate?.add(new: newBrand)

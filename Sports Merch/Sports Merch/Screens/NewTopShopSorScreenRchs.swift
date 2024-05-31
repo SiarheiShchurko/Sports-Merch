@@ -155,7 +155,9 @@ private extension NewTopShopSorScreenRchs {
             addressTextField.text = currentShop.address
             contactNumberTextField.text = currentShop.phoneNumber
             
-            if let imageDta = newShopmVm.loadImage(with: currentShop.imageName) {
+            if currentShop.imageName == "defaultShopImg" {
+                teamAvatar.image = UIImage(named: "defaultShopImg")
+            } else if let imageDta = newShopmVm.loadImage(with: currentShop.imageName) {
                 teamAvatar.image = UIImage(data: imageDta)
             } else {
                 teamAvatar.image = UIImage(named: "emptyStrAvatarEchImg")
