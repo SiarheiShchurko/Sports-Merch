@@ -2,7 +2,7 @@ import UIKit
 
 // MARK: - OpenVC
 extension UIViewController {
-    func openRamsSheetsArt(vc: UIViewController) {
+    func openRchSheetsTop(vc: UIViewController) {
         if #available(iOS 15.0, *) {
             let sheet = vc.sheetPresentationController
             sheet?.detents = [.medium()]
@@ -26,7 +26,7 @@ extension UIViewController {
 
 // MARK: - Make secure
 extension UIView {
-    func makeRamsSecureArt() {
+    func makeRchSecureTop() {
         DispatchQueue.main.async {
             let field = UITextField()
             field.isSecureTextEntry = true
@@ -40,7 +40,7 @@ extension UIView {
 }
 
 extension UIView {
-    func hideKeyboard(exclude viewsToExclude: [UIView] = []) {
+    func hideRchKeyboardTop(exclude viewsToExclude: [UIView] = []) {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard(_:)))
         tapGesture.cancelsTouchesInView = false
         addGestureRecognizer(tapGesture)

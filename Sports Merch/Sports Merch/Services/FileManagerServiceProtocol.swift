@@ -2,7 +2,7 @@ import UIKit
 
 @objc protocol FileManagerServiceProtocol: AnyObject {
     @objc optional func saveImage(data: Data, complition: @escaping (String) -> Void)
-    func loadImage(imageName: String, complition: @escaping (Data) -> Void)
+    func loadSorImageRch(imageName: String, complition: @escaping (Data) -> Void)
 }
 
 final class FileManagerService: FileManagerServiceProtocol {
@@ -20,7 +20,7 @@ final class FileManagerService: FileManagerServiceProtocol {
         }
     }
     
-    func loadImage(imageName: String, complition: @escaping (Data) -> Void) {
+    func loadSorImageRch(imageName: String, complition: @escaping (Data) -> Void) {
             var directoryPath = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
             directoryPath?.appendPathComponent(imageName)
             

@@ -17,53 +17,56 @@
 		ED31FC682C046A6100D09CC8 /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC672C046A6100D09CC8 /* UIColor + Ext.swift */; };
 		ED31FC6A2C046A7300D09CC8 /* Double + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC692C046A7300D09CC8 /* Double + Ext.swift */; };
 		ED31FC6C2C046A8900D09CC8 /* RaceDefltsAtsServiceCes.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC6B2C046A8900D09CC8 /* RaceDefltsAtsServiceCes.swift */; };
-		ED31FC6F2C046B3E00D09CC8 /* SecSimpleLabelRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC6E2C046B3E00D09CC8 /* SecSimpleLabelRace.swift */; };
-		ED31FC722C046B5A00D09CC8 /* AtsOnboardRaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC712C046B5A00D09CC8 /* AtsOnboardRaceCell.swift */; };
-		ED31FC762C046BB400D09CC8 /* ClasPrimarySecButtonRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC752C046BB400D09CC8 /* ClasPrimarySecButtonRace.swift */; };
-		ED31FC792C046BDA00D09CC8 /* TeamAttributesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC782C046BDA00D09CC8 /* TeamAttributesTableViewCell.swift */; };
-		ED31FC7C2C046D0500D09CC8 /* SecTemplRaceTextViewAts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC7B2C046D0500D09CC8 /* SecTemplRaceTextViewAts.swift */; };
-		ED31FC7E2C046D2A00D09CC8 /* SecTimCollectionRaceViewAts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC7D2C046D2A00D09CC8 /* SecTimCollectionRaceViewAts.swift */; };
+		ED31FC6F2C046B3E00D09CC8 /* TroSimpleTroLabelRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC6E2C046B3E00D09CC8 /* TroSimpleTroLabelRch.swift */; };
+		ED31FC722C046B5A00D09CC8 /* RchsOnboardTroCellRto.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC712C046B5A00D09CC8 /* RchsOnboardTroCellRto.swift */; };
+		ED31FC762C046BB400D09CC8 /* RchsPrimaryTopButtonTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC752C046BB400D09CC8 /* RchsPrimaryTopButtonTro.swift */; };
+		ED31FC792C046BDA00D09CC8 /* TeamAttributesTroTableViewCellRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC782C046BDA00D09CC8 /* TeamAttributesTroTableViewCellRch.swift */; };
+		ED31FC7C2C046D0500D09CC8 /* RtoTemplRchTextViewTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC7B2C046D0500D09CC8 /* RtoTemplRchTextViewTro.swift */; };
+		ED31FC7E2C046D2A00D09CC8 /* TroTopCollectionRchsViewOrt.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC7D2C046D2A00D09CC8 /* TroTopCollectionRchsViewOrt.swift */; };
 		ED31FC802C046D4500D09CC8 /* SecUnicalImageRaceViewAts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC7F2C046D4500D09CC8 /* SecUnicalImageRaceViewAts.swift */; };
 		ED31FC822C046D5800D09CC8 /* SecUnicalRaceTFAts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC812C046D5800D09CC8 /* SecUnicalRaceTFAts.swift */; };
 		ED31FC842C046D6B00D09CC8 /* SecUniqueStackViewGniff.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC832C046D6B00D09CC8 /* SecUniqueStackViewGniff.swift */; };
-		ED31FC862C046D7900D09CC8 /* SimpleSecImageRaceButtonAts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC852C046D7900D09CC8 /* SimpleSecImageRaceButtonAts.swift */; };
+		ED31FC862C046D7900D09CC8 /* SimpleTroImageRchButtonTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC852C046D7900D09CC8 /* SimpleTroImageRchButtonTro.swift */; };
 		ED31FC882C046DA300D09CC8 /* WeRaceViewsecViewAts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC872C046DA300D09CC8 /* WeRaceViewsecViewAts.swift */; };
 		ED31FC8A2C046DE700D09CC8 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC892C046DE700D09CC8 /* FontSize.swift */; };
 		ED31FC8C2C0471AD00D09CC8 /* RaceUsrSecDeviceArts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC8B2C0471AD00D09CC8 /* RaceUsrSecDeviceArts.swift */; };
 		ED31FC8E2C04723C00D09CC8 /* SecOnboardArtsTypeRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC8D2C04723C00D09CC8 /* SecOnboardArtsTypeRace.swift */; };
-		ED31FC912C0473E100D09CC8 /* SplashSecScreenRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC902C0473E100D09CC8 /* SplashSecScreenRace.swift */; };
-		ED31FC932C047AC000D09CC8 /* OnboardingRaceScreenAts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC922C047AC000D09CC8 /* OnboardingRaceScreenAts.swift */; };
-		ED31FC952C047AD300D09CC8 /* OnboardingAtsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC942C047AD300D09CC8 /* OnboardingAtsProtocol.swift */; };
-		ED31FC972C047B0F00D09CC8 /* PushAtrScreenRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC962C047B0F00D09CC8 /* PushAtrScreenRace.swift */; };
-		ED31FC992C047B2E00D09CC8 /* TabBarRaceModuleSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC982C047B2E00D09CC8 /* TabBarRaceModuleSec.swift */; };
-		ED31FC9B2C047B5800D09CC8 /* RacePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC9A2C047B5800D09CC8 /* RacePickerController.swift */; };
-		ED31FC9D2C047C1F00D09CC8 /* SportsTeamsContrlr.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC9C2C047C1F00D09CC8 /* SportsTeamsContrlr.swift */; };
-		ED31FC9F2C047C3C00D09CC8 /* TheShopsContrlr.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC9E2C047C3C00D09CC8 /* TheShopsContrlr.swift */; };
-		ED31FCA12C047C6F00D09CC8 /* RaceSettingsArtModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA02C047C6F00D09CC8 /* RaceSettingsArtModule.swift */; };
+		ED31FC912C0473E100D09CC8 /* SplashSorScreenTopRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC902C0473E100D09CC8 /* SplashSorScreenTopRch.swift */; };
+		ED31FC932C047AC000D09CC8 /* OnboardingRchScreenTopTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC922C047AC000D09CC8 /* OnboardingRchScreenTopTro.swift */; };
+		ED31FC952C047AD300D09CC8 /* OnboardingTopProtocolRchSor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC942C047AD300D09CC8 /* OnboardingTopProtocolRchSor.swift */; };
+		ED31FC972C047B0F00D09CC8 /* PushSorScreenRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC962C047B0F00D09CC8 /* PushSorScreenRch.swift */; };
+		ED31FC992C047B2E00D09CC8 /* RchTabSorBarRSorModuleRop.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC982C047B2E00D09CC8 /* RchTabSorBarRSorModuleRop.swift */; };
+		ED31FC9B2C047B5800D09CC8 /* SorPickerRemControllerSor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC9A2C047B5800D09CC8 /* SorPickerRemControllerSor.swift */; };
+		ED31FC9D2C047C1F00D09CC8 /* SportsRchTeamsSorContrlr.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC9C2C047C1F00D09CC8 /* SportsRchTeamsSorContrlr.swift */; };
+		ED31FC9F2C047C3C00D09CC8 /* TheSorShopsTopContrlrRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC9E2C047C3C00D09CC8 /* TheSorShopsTopContrlrRch.swift */; };
+		ED31FCA12C047C6F00D09CC8 /* RchSetSorScrTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA02C047C6F00D09CC8 /* RchSetSorScrTop.swift */; };
 		ED31FCA32C047FB000D09CC8 /* WController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA22C047FB000D09CC8 /* WController.swift */; };
-		ED31FCA52C04BE8300D09CC8 /* SportsTeamsVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA42C04BE8300D09CC8 /* SportsTeamsVm.swift */; };
+		ED31FCA52C04BE8300D09CC8 /* SportsSorTeamsVmRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA42C04BE8300D09CC8 /* SportsSorTeamsVmRch.swift */; };
 		ED31FCA72C04BF3D00D09CC8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA62C04BF3D00D09CC8 /* Team.swift */; };
-		ED7E47FF2C0907AA00CA2981 /* SplashVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E47FE2C0907AA00CA2981 /* SplashVm.swift */; };
-		ED7E48012C090A9600CA2981 /* ettst.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E48002C090A9600CA2981 /* ettst.swift */; };
-		EDBE8EBB2C071BA900A20A75 /* ShopsErchVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBE8EBA2C071BA900A20A75 /* ShopsErchVm.swift */; };
-		EDBE8EBD2C07251B00A20A75 /* ShopsCellRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBE8EBC2C07251B00A20A75 /* ShopsCellRch.swift */; };
+		ED7E47FF2C0907AA00CA2981 /* SplashTopVmRchSor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E47FE2C0907AA00CA2981 /* SplashTopVmRchSor.swift */; };
+		EDBCA6192C09AED0006E528A /* RchUsageSorPolicyTopScreenTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBCA6182C09AED0006E528A /* RchUsageSorPolicyTopScreenTro.swift */; };
+		EDBCA61B2C09AF39006E528A /* WeTraViewRamsViewArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBCA61A2C09AF39006E528A /* WeTraViewRamsViewArt.swift */; };
+		EDBCA61D2C09AFA5006E528A /* PrefRchsCellSor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBCA61C2C09AFA5006E528A /* PrefRchsCellSor.swift */; };
+		EDBCA61F2C09B009006E528A /* EthereTypeUell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBCA61E2C09B009006E528A /* EthereTypeUell.swift */; };
+		EDBE8EBB2C071BA900A20A75 /* ShopsTopErchVmRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBE8EBA2C071BA900A20A75 /* ShopsTopErchVmRch.swift */; };
+		EDBE8EBD2C07251B00A20A75 /* ShopsTroCellRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBE8EBC2C07251B00A20A75 /* ShopsTroCellRch.swift */; };
 		EDC50BD32C07541900482918 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC50BD22C07541900482918 /* Shop.swift */; };
 		EDC50BD52C0754CE00482918 /* BrandName.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC50BD42C0754CE00482918 /* BrandName.swift */; };
-		EDC50BD72C075B6200482918 /* ShopsBrandTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC50BD62C075B6200482918 /* ShopsBrandTableViewCell.swift */; };
-		EDC50BD92C075FF600482918 /* ShopAttributesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC50BD82C075FF600482918 /* ShopAttributesTableViewCell.swift */; };
-		EDC50BDB2C07684000482918 /* NewShopScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC50BDA2C07684000482918 /* NewShopScreen.swift */; };
-		EDC50BDD2C0768C300482918 /* NewShopVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC50BDC2C0768C300482918 /* NewShopVm.swift */; };
-		EDCD28702C0873EA00C6EF66 /* NewBrandVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCD286F2C0873EA00C6EF66 /* NewBrandVc.swift */; };
-		EDCD28722C0875D500C6EF66 /* NewBrandVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCD28712C0875D500C6EF66 /* NewBrandVm.swift */; };
+		EDC50BD72C075B6200482918 /* ShopsBrandTroTableViewCellRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC50BD62C075B6200482918 /* ShopsBrandTroTableViewCellRch.swift */; };
+		EDC50BD92C075FF600482918 /* ShopAttributesRtoTableViewCellRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC50BD82C075FF600482918 /* ShopAttributesRtoTableViewCellRch.swift */; };
+		EDC50BDB2C07684000482918 /* NewTopShopSorScreenRchs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC50BDA2C07684000482918 /* NewTopShopSorScreenRchs.swift */; };
+		EDC50BDD2C0768C300482918 /* NewShopTopVmSor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC50BDC2C0768C300482918 /* NewShopTopVmSor.swift */; };
+		EDCD28702C0873EA00C6EF66 /* NewRchBrandTopVcSor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCD286F2C0873EA00C6EF66 /* NewRchBrandTopVcSor.swift */; };
+		EDCD28722C0875D500C6EF66 /* NewSorBrandTopVmRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCD28712C0875D500C6EF66 /* NewSorBrandTopVmRch.swift */; };
 		EDF4B81E2C05C52700E0A479 /* FileManagerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B81D2C05C52700E0A479 /* FileManagerServiceProtocol.swift */; };
 		EDF4B8202C05C6F000E0A479 /* UICollView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B81F2C05C6F000E0A479 /* UICollView + Ext.swift */; };
 		EDF4B8222C05C6F900E0A479 /* UITableView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B8212C05C6F900E0A479 /* UITableView + Ext.swift */; };
-		EDF4B8272C05C9FC00E0A479 /* TeamsCellRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B8262C05C9FC00E0A479 /* TeamsCellRch.swift */; };
+		EDF4B8272C05C9FC00E0A479 /* TeamsRtoCellRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B8262C05C9FC00E0A479 /* TeamsRtoCellRch.swift */; };
 		EDF4B8292C05CBA400E0A479 /* BrandAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B8282C05CBA400E0A479 /* BrandAttributes.swift */; };
-		EDF4B82B2C05F78800E0A479 /* NewTeamScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B82A2C05F78800E0A479 /* NewTeamScreen.swift */; };
-		EDF4B82D2C05F80000E0A479 /* NewTeamVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B82C2C05F80000E0A479 /* NewTeamVm.swift */; };
-		EDF4B82F2C0607AC00E0A479 /* ImageTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B82E2C0607AC00E0A479 /* ImageTitleButton.swift */; };
-		EDF4B8312C0622AF00E0A479 /* TraTableGniViewArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B8302C0622AF00E0A479 /* TraTableGniViewArt.swift */; };
+		EDF4B82B2C05F78800E0A479 /* NewRchTeamSorScreenTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B82A2C05F78800E0A479 /* NewRchTeamSorScreenTop.swift */; };
+		EDF4B82D2C05F80000E0A479 /* NewTopTeamSorVmRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B82C2C05F80000E0A479 /* NewTopTeamSorVmRch.swift */; };
+		EDF4B82F2C0607AC00E0A479 /* ImageRchTitleRtoButtonTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B82E2C0607AC00E0A479 /* ImageRchTitleRtoButtonTro.swift */; };
+		EDF4B8312C0622AF00E0A479 /* TroTableOrtViewRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B8302C0622AF00E0A479 /* TroTableOrtViewRch.swift */; };
 		EDF4B8372C062C4500E0A479 /* TransitObjectsDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B8362C062C4500E0A479 /* TransitObjectsDelegateProtocol.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,53 +83,56 @@
 		ED31FC672C046A6100D09CC8 /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
 		ED31FC692C046A7300D09CC8 /* Double + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double + Ext.swift"; sourceTree = "<group>"; };
 		ED31FC6B2C046A8900D09CC8 /* RaceDefltsAtsServiceCes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDefltsAtsServiceCes.swift; sourceTree = "<group>"; };
-		ED31FC6E2C046B3E00D09CC8 /* SecSimpleLabelRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecSimpleLabelRace.swift; sourceTree = "<group>"; };
-		ED31FC712C046B5A00D09CC8 /* AtsOnboardRaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtsOnboardRaceCell.swift; sourceTree = "<group>"; };
-		ED31FC752C046BB400D09CC8 /* ClasPrimarySecButtonRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClasPrimarySecButtonRace.swift; sourceTree = "<group>"; };
-		ED31FC782C046BDA00D09CC8 /* TeamAttributesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamAttributesTableViewCell.swift; sourceTree = "<group>"; };
-		ED31FC7B2C046D0500D09CC8 /* SecTemplRaceTextViewAts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecTemplRaceTextViewAts.swift; sourceTree = "<group>"; };
-		ED31FC7D2C046D2A00D09CC8 /* SecTimCollectionRaceViewAts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecTimCollectionRaceViewAts.swift; sourceTree = "<group>"; };
+		ED31FC6E2C046B3E00D09CC8 /* TroSimpleTroLabelRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TroSimpleTroLabelRch.swift; sourceTree = "<group>"; };
+		ED31FC712C046B5A00D09CC8 /* RchsOnboardTroCellRto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RchsOnboardTroCellRto.swift; sourceTree = "<group>"; };
+		ED31FC752C046BB400D09CC8 /* RchsPrimaryTopButtonTro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RchsPrimaryTopButtonTro.swift; sourceTree = "<group>"; };
+		ED31FC782C046BDA00D09CC8 /* TeamAttributesTroTableViewCellRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamAttributesTroTableViewCellRch.swift; sourceTree = "<group>"; };
+		ED31FC7B2C046D0500D09CC8 /* RtoTemplRchTextViewTro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RtoTemplRchTextViewTro.swift; sourceTree = "<group>"; };
+		ED31FC7D2C046D2A00D09CC8 /* TroTopCollectionRchsViewOrt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TroTopCollectionRchsViewOrt.swift; sourceTree = "<group>"; };
 		ED31FC7F2C046D4500D09CC8 /* SecUnicalImageRaceViewAts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecUnicalImageRaceViewAts.swift; sourceTree = "<group>"; };
 		ED31FC812C046D5800D09CC8 /* SecUnicalRaceTFAts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecUnicalRaceTFAts.swift; sourceTree = "<group>"; };
 		ED31FC832C046D6B00D09CC8 /* SecUniqueStackViewGniff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecUniqueStackViewGniff.swift; sourceTree = "<group>"; };
-		ED31FC852C046D7900D09CC8 /* SimpleSecImageRaceButtonAts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSecImageRaceButtonAts.swift; sourceTree = "<group>"; };
+		ED31FC852C046D7900D09CC8 /* SimpleTroImageRchButtonTro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTroImageRchButtonTro.swift; sourceTree = "<group>"; };
 		ED31FC872C046DA300D09CC8 /* WeRaceViewsecViewAts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeRaceViewsecViewAts.swift; sourceTree = "<group>"; };
 		ED31FC892C046DE700D09CC8 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		ED31FC8B2C0471AD00D09CC8 /* RaceUsrSecDeviceArts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceUsrSecDeviceArts.swift; sourceTree = "<group>"; };
 		ED31FC8D2C04723C00D09CC8 /* SecOnboardArtsTypeRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecOnboardArtsTypeRace.swift; sourceTree = "<group>"; };
-		ED31FC902C0473E100D09CC8 /* SplashSecScreenRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashSecScreenRace.swift; sourceTree = "<group>"; };
-		ED31FC922C047AC000D09CC8 /* OnboardingRaceScreenAts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRaceScreenAts.swift; sourceTree = "<group>"; };
-		ED31FC942C047AD300D09CC8 /* OnboardingAtsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAtsProtocol.swift; sourceTree = "<group>"; };
-		ED31FC962C047B0F00D09CC8 /* PushAtrScreenRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAtrScreenRace.swift; sourceTree = "<group>"; };
-		ED31FC982C047B2E00D09CC8 /* TabBarRaceModuleSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRaceModuleSec.swift; sourceTree = "<group>"; };
-		ED31FC9A2C047B5800D09CC8 /* RacePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacePickerController.swift; sourceTree = "<group>"; };
-		ED31FC9C2C047C1F00D09CC8 /* SportsTeamsContrlr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTeamsContrlr.swift; sourceTree = "<group>"; };
-		ED31FC9E2C047C3C00D09CC8 /* TheShopsContrlr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheShopsContrlr.swift; sourceTree = "<group>"; };
-		ED31FCA02C047C6F00D09CC8 /* RaceSettingsArtModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSettingsArtModule.swift; sourceTree = "<group>"; };
+		ED31FC902C0473E100D09CC8 /* SplashSorScreenTopRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashSorScreenTopRch.swift; sourceTree = "<group>"; };
+		ED31FC922C047AC000D09CC8 /* OnboardingRchScreenTopTro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRchScreenTopTro.swift; sourceTree = "<group>"; };
+		ED31FC942C047AD300D09CC8 /* OnboardingTopProtocolRchSor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTopProtocolRchSor.swift; sourceTree = "<group>"; };
+		ED31FC962C047B0F00D09CC8 /* PushSorScreenRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushSorScreenRch.swift; sourceTree = "<group>"; };
+		ED31FC982C047B2E00D09CC8 /* RchTabSorBarRSorModuleRop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RchTabSorBarRSorModuleRop.swift; sourceTree = "<group>"; };
+		ED31FC9A2C047B5800D09CC8 /* SorPickerRemControllerSor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SorPickerRemControllerSor.swift; sourceTree = "<group>"; };
+		ED31FC9C2C047C1F00D09CC8 /* SportsRchTeamsSorContrlr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsRchTeamsSorContrlr.swift; sourceTree = "<group>"; };
+		ED31FC9E2C047C3C00D09CC8 /* TheSorShopsTopContrlrRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheSorShopsTopContrlrRch.swift; sourceTree = "<group>"; };
+		ED31FCA02C047C6F00D09CC8 /* RchSetSorScrTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RchSetSorScrTop.swift; sourceTree = "<group>"; };
 		ED31FCA22C047FB000D09CC8 /* WController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WController.swift; sourceTree = "<group>"; };
-		ED31FCA42C04BE8300D09CC8 /* SportsTeamsVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTeamsVm.swift; sourceTree = "<group>"; };
+		ED31FCA42C04BE8300D09CC8 /* SportsSorTeamsVmRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsSorTeamsVmRch.swift; sourceTree = "<group>"; };
 		ED31FCA62C04BF3D00D09CC8 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		ED7E47FE2C0907AA00CA2981 /* SplashVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVm.swift; sourceTree = "<group>"; };
-		ED7E48002C090A9600CA2981 /* ettst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ettst.swift; sourceTree = "<group>"; };
-		EDBE8EBA2C071BA900A20A75 /* ShopsErchVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsErchVm.swift; sourceTree = "<group>"; };
-		EDBE8EBC2C07251B00A20A75 /* ShopsCellRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsCellRch.swift; sourceTree = "<group>"; };
+		ED7E47FE2C0907AA00CA2981 /* SplashTopVmRchSor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashTopVmRchSor.swift; sourceTree = "<group>"; };
+		EDBCA6182C09AED0006E528A /* RchUsageSorPolicyTopScreenTro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RchUsageSorPolicyTopScreenTro.swift; sourceTree = "<group>"; };
+		EDBCA61A2C09AF39006E528A /* WeTraViewRamsViewArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeTraViewRamsViewArt.swift; sourceTree = "<group>"; };
+		EDBCA61C2C09AFA5006E528A /* PrefRchsCellSor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefRchsCellSor.swift; sourceTree = "<group>"; };
+		EDBCA61E2C09B009006E528A /* EthereTypeUell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereTypeUell.swift; sourceTree = "<group>"; };
+		EDBE8EBA2C071BA900A20A75 /* ShopsTopErchVmRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsTopErchVmRch.swift; sourceTree = "<group>"; };
+		EDBE8EBC2C07251B00A20A75 /* ShopsTroCellRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsTroCellRch.swift; sourceTree = "<group>"; };
 		EDC50BD22C07541900482918 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		EDC50BD42C0754CE00482918 /* BrandName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandName.swift; sourceTree = "<group>"; };
-		EDC50BD62C075B6200482918 /* ShopsBrandTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsBrandTableViewCell.swift; sourceTree = "<group>"; };
-		EDC50BD82C075FF600482918 /* ShopAttributesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopAttributesTableViewCell.swift; sourceTree = "<group>"; };
-		EDC50BDA2C07684000482918 /* NewShopScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewShopScreen.swift; sourceTree = "<group>"; };
-		EDC50BDC2C0768C300482918 /* NewShopVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewShopVm.swift; sourceTree = "<group>"; };
-		EDCD286F2C0873EA00C6EF66 /* NewBrandVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBrandVc.swift; sourceTree = "<group>"; };
-		EDCD28712C0875D500C6EF66 /* NewBrandVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBrandVm.swift; sourceTree = "<group>"; };
+		EDC50BD62C075B6200482918 /* ShopsBrandTroTableViewCellRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsBrandTroTableViewCellRch.swift; sourceTree = "<group>"; };
+		EDC50BD82C075FF600482918 /* ShopAttributesRtoTableViewCellRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopAttributesRtoTableViewCellRch.swift; sourceTree = "<group>"; };
+		EDC50BDA2C07684000482918 /* NewTopShopSorScreenRchs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTopShopSorScreenRchs.swift; sourceTree = "<group>"; };
+		EDC50BDC2C0768C300482918 /* NewShopTopVmSor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewShopTopVmSor.swift; sourceTree = "<group>"; };
+		EDCD286F2C0873EA00C6EF66 /* NewRchBrandTopVcSor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRchBrandTopVcSor.swift; sourceTree = "<group>"; };
+		EDCD28712C0875D500C6EF66 /* NewSorBrandTopVmRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSorBrandTopVmRch.swift; sourceTree = "<group>"; };
 		EDF4B81D2C05C52700E0A479 /* FileManagerServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerServiceProtocol.swift; sourceTree = "<group>"; };
 		EDF4B81F2C05C6F000E0A479 /* UICollView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollView + Ext.swift"; sourceTree = "<group>"; };
 		EDF4B8212C05C6F900E0A479 /* UITableView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView + Ext.swift"; sourceTree = "<group>"; };
-		EDF4B8262C05C9FC00E0A479 /* TeamsCellRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCellRch.swift; sourceTree = "<group>"; };
+		EDF4B8262C05C9FC00E0A479 /* TeamsRtoCellRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsRtoCellRch.swift; sourceTree = "<group>"; };
 		EDF4B8282C05CBA400E0A479 /* BrandAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandAttributes.swift; sourceTree = "<group>"; };
-		EDF4B82A2C05F78800E0A479 /* NewTeamScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTeamScreen.swift; sourceTree = "<group>"; };
-		EDF4B82C2C05F80000E0A479 /* NewTeamVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTeamVm.swift; sourceTree = "<group>"; };
-		EDF4B82E2C0607AC00E0A479 /* ImageTitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTitleButton.swift; sourceTree = "<group>"; };
-		EDF4B8302C0622AF00E0A479 /* TraTableGniViewArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraTableGniViewArt.swift; sourceTree = "<group>"; };
+		EDF4B82A2C05F78800E0A479 /* NewRchTeamSorScreenTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRchTeamSorScreenTop.swift; sourceTree = "<group>"; };
+		EDF4B82C2C05F80000E0A479 /* NewTopTeamSorVmRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTopTeamSorVmRch.swift; sourceTree = "<group>"; };
+		EDF4B82E2C0607AC00E0A479 /* ImageRchTitleRtoButtonTro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRchTitleRtoButtonTro.swift; sourceTree = "<group>"; };
+		EDF4B8302C0622AF00E0A479 /* TroTableOrtViewRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TroTableOrtViewRch.swift; sourceTree = "<group>"; };
 		EDF4B8362C062C4500E0A479 /* TransitObjectsDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitObjectsDelegateProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +202,7 @@
 				ED31FC8B2C0471AD00D09CC8 /* RaceUsrSecDeviceArts.swift */,
 				ED31FC612C046A1900D09CC8 /* GniOnboardArtTypeRams.swift */,
 				ED31FC8D2C04723C00D09CC8 /* SecOnboardArtsTypeRace.swift */,
+				EDBCA61E2C09B009006E528A /* EthereTypeUell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -206,12 +213,13 @@
 				ED31FC772C046BD100D09CC8 /* TableView */,
 				ED31FC742C046BAE00D09CC8 /* Buttons */,
 				ED31FC702C046B4900D09CC8 /* CollView */,
-				ED31FC6E2C046B3E00D09CC8 /* SecSimpleLabelRace.swift */,
-				ED31FC7B2C046D0500D09CC8 /* SecTemplRaceTextViewAts.swift */,
+				ED31FC6E2C046B3E00D09CC8 /* TroSimpleTroLabelRch.swift */,
+				ED31FC7B2C046D0500D09CC8 /* RtoTemplRchTextViewTro.swift */,
 				ED31FC7F2C046D4500D09CC8 /* SecUnicalImageRaceViewAts.swift */,
 				ED31FC812C046D5800D09CC8 /* SecUnicalRaceTFAts.swift */,
 				ED31FC832C046D6B00D09CC8 /* SecUniqueStackViewGniff.swift */,
 				ED31FC872C046DA300D09CC8 /* WeRaceViewsecViewAts.swift */,
+				EDBCA61A2C09AF39006E528A /* WeTraViewRamsViewArt.swift */,
 			);
 			path = DesignFlow;
 			sourceTree = "<group>";
@@ -220,7 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				ED31FC732C046B6500D09CC8 /* Cells */,
-				ED31FC7D2C046D2A00D09CC8 /* SecTimCollectionRaceViewAts.swift */,
+				ED31FC7D2C046D2A00D09CC8 /* TroTopCollectionRchsViewOrt.swift */,
 			);
 			path = CollView;
 			sourceTree = "<group>";
@@ -228,9 +236,10 @@
 		ED31FC732C046B6500D09CC8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				ED31FC712C046B5A00D09CC8 /* AtsOnboardRaceCell.swift */,
-				EDF4B8262C05C9FC00E0A479 /* TeamsCellRch.swift */,
-				EDBE8EBC2C07251B00A20A75 /* ShopsCellRch.swift */,
+				ED31FC712C046B5A00D09CC8 /* RchsOnboardTroCellRto.swift */,
+				EDF4B8262C05C9FC00E0A479 /* TeamsRtoCellRch.swift */,
+				EDBE8EBC2C07251B00A20A75 /* ShopsTroCellRch.swift */,
+				EDBCA61C2C09AFA5006E528A /* PrefRchsCellSor.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -238,9 +247,9 @@
 		ED31FC742C046BAE00D09CC8 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				ED31FC752C046BB400D09CC8 /* ClasPrimarySecButtonRace.swift */,
-				ED31FC852C046D7900D09CC8 /* SimpleSecImageRaceButtonAts.swift */,
-				EDF4B82E2C0607AC00E0A479 /* ImageTitleButton.swift */,
+				ED31FC752C046BB400D09CC8 /* RchsPrimaryTopButtonTro.swift */,
+				ED31FC852C046D7900D09CC8 /* SimpleTroImageRchButtonTro.swift */,
+				EDF4B82E2C0607AC00E0A479 /* ImageRchTitleRtoButtonTro.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -249,7 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				EDF4B8322C0622BD00E0A479 /* Cell */,
-				EDF4B8302C0622AF00E0A479 /* TraTableGniViewArt.swift */,
+				EDF4B8302C0622AF00E0A479 /* TroTableOrtViewRch.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -257,24 +266,25 @@
 		ED31FC8F2C0473D800D09CC8 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				ED31FC982C047B2E00D09CC8 /* TabBarRaceModuleSec.swift */,
-				ED31FC9C2C047C1F00D09CC8 /* SportsTeamsContrlr.swift */,
-				ED31FCA42C04BE8300D09CC8 /* SportsTeamsVm.swift */,
-				EDF4B82A2C05F78800E0A479 /* NewTeamScreen.swift */,
-				EDF4B82C2C05F80000E0A479 /* NewTeamVm.swift */,
-				ED31FC9E2C047C3C00D09CC8 /* TheShopsContrlr.swift */,
-				EDBE8EBA2C071BA900A20A75 /* ShopsErchVm.swift */,
-				EDC50BDA2C07684000482918 /* NewShopScreen.swift */,
-				EDC50BDC2C0768C300482918 /* NewShopVm.swift */,
-				EDCD286F2C0873EA00C6EF66 /* NewBrandVc.swift */,
-				EDCD28712C0875D500C6EF66 /* NewBrandVm.swift */,
-				ED31FC9A2C047B5800D09CC8 /* RacePickerController.swift */,
-				ED31FC962C047B0F00D09CC8 /* PushAtrScreenRace.swift */,
-				ED31FC902C0473E100D09CC8 /* SplashSecScreenRace.swift */,
-				ED7E47FE2C0907AA00CA2981 /* SplashVm.swift */,
-				ED31FCA02C047C6F00D09CC8 /* RaceSettingsArtModule.swift */,
-				ED31FC942C047AD300D09CC8 /* OnboardingAtsProtocol.swift */,
-				ED31FC922C047AC000D09CC8 /* OnboardingRaceScreenAts.swift */,
+				ED31FC982C047B2E00D09CC8 /* RchTabSorBarRSorModuleRop.swift */,
+				ED31FC9C2C047C1F00D09CC8 /* SportsRchTeamsSorContrlr.swift */,
+				ED31FCA42C04BE8300D09CC8 /* SportsSorTeamsVmRch.swift */,
+				EDF4B82A2C05F78800E0A479 /* NewRchTeamSorScreenTop.swift */,
+				EDF4B82C2C05F80000E0A479 /* NewTopTeamSorVmRch.swift */,
+				ED31FC9E2C047C3C00D09CC8 /* TheSorShopsTopContrlrRch.swift */,
+				EDBE8EBA2C071BA900A20A75 /* ShopsTopErchVmRch.swift */,
+				EDC50BDA2C07684000482918 /* NewTopShopSorScreenRchs.swift */,
+				EDC50BDC2C0768C300482918 /* NewShopTopVmSor.swift */,
+				EDCD286F2C0873EA00C6EF66 /* NewRchBrandTopVcSor.swift */,
+				EDCD28712C0875D500C6EF66 /* NewSorBrandTopVmRch.swift */,
+				ED31FC9A2C047B5800D09CC8 /* SorPickerRemControllerSor.swift */,
+				ED31FC962C047B0F00D09CC8 /* PushSorScreenRch.swift */,
+				ED31FC902C0473E100D09CC8 /* SplashSorScreenTopRch.swift */,
+				ED7E47FE2C0907AA00CA2981 /* SplashTopVmRchSor.swift */,
+				ED31FCA02C047C6F00D09CC8 /* RchSetSorScrTop.swift */,
+				ED31FC942C047AD300D09CC8 /* OnboardingTopProtocolRchSor.swift */,
+				ED31FC922C047AC000D09CC8 /* OnboardingRchScreenTopTro.swift */,
+				EDBCA6182C09AED0006E528A /* RchUsageSorPolicyTopScreenTro.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -295,10 +305,9 @@
 		EDF4B8322C0622BD00E0A479 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				ED31FC782C046BDA00D09CC8 /* TeamAttributesTableViewCell.swift */,
-				EDC50BD62C075B6200482918 /* ShopsBrandTableViewCell.swift */,
-				EDC50BD82C075FF600482918 /* ShopAttributesTableViewCell.swift */,
-				ED7E48002C090A9600CA2981 /* ettst.swift */,
+				ED31FC782C046BDA00D09CC8 /* TeamAttributesTroTableViewCellRch.swift */,
+				EDC50BD62C075B6200482918 /* ShopsBrandTroTableViewCellRch.swift */,
+				EDC50BD82C075FF600482918 /* ShopAttributesRtoTableViewCellRch.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -381,62 +390,65 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED31FC932C047AC000D09CC8 /* OnboardingRaceScreenAts.swift in Sources */,
+				ED31FC932C047AC000D09CC8 /* OnboardingRchScreenTopTro.swift in Sources */,
 				ED31FC642C046A2C00D09CC8 /* VC + Ext.swift in Sources */,
-				ED31FC762C046BB400D09CC8 /* ClasPrimarySecButtonRace.swift in Sources */,
+				ED31FC762C046BB400D09CC8 /* RchsPrimaryTopButtonTro.swift in Sources */,
 				ED31FC662C046A4C00D09CC8 /* Label + Ext.swift in Sources */,
 				ED31FC682C046A6100D09CC8 /* UIColor + Ext.swift in Sources */,
-				ED31FCA12C047C6F00D09CC8 /* RaceSettingsArtModule.swift in Sources */,
-				ED31FC9B2C047B5800D09CC8 /* RacePickerController.swift in Sources */,
+				EDBCA61B2C09AF39006E528A /* WeTraViewRamsViewArt.swift in Sources */,
+				ED31FCA12C047C6F00D09CC8 /* RchSetSorScrTop.swift in Sources */,
+				ED31FC9B2C047B5800D09CC8 /* SorPickerRemControllerSor.swift in Sources */,
 				ED31FCA32C047FB000D09CC8 /* WController.swift in Sources */,
-				EDF4B82D2C05F80000E0A479 /* NewTeamVm.swift in Sources */,
+				EDF4B82D2C05F80000E0A479 /* NewTopTeamSorVmRch.swift in Sources */,
 				ED31FC882C046DA300D09CC8 /* WeRaceViewsecViewAts.swift in Sources */,
-				ED7E48012C090A9600CA2981 /* ettst.swift in Sources */,
 				ED31FC8E2C04723C00D09CC8 /* SecOnboardArtsTypeRace.swift in Sources */,
 				ED31FC802C046D4500D09CC8 /* SecUnicalImageRaceViewAts.swift in Sources */,
 				ED31FCA72C04BF3D00D09CC8 /* Team.swift in Sources */,
-				ED31FC992C047B2E00D09CC8 /* TabBarRaceModuleSec.swift in Sources */,
-				ED31FC722C046B5A00D09CC8 /* AtsOnboardRaceCell.swift in Sources */,
+				ED31FC992C047B2E00D09CC8 /* RchTabSorBarRSorModuleRop.swift in Sources */,
+				ED31FC722C046B5A00D09CC8 /* RchsOnboardTroCellRto.swift in Sources */,
 				EDF4B8292C05CBA400E0A479 /* BrandAttributes.swift in Sources */,
 				ED31FC842C046D6B00D09CC8 /* SecUniqueStackViewGniff.swift in Sources */,
 				ED31FC8C2C0471AD00D09CC8 /* RaceUsrSecDeviceArts.swift in Sources */,
 				ED31FC622C046A1900D09CC8 /* GniOnboardArtTypeRams.swift in Sources */,
-				EDF4B8272C05C9FC00E0A479 /* TeamsCellRch.swift in Sources */,
-				ED31FC6F2C046B3E00D09CC8 /* SecSimpleLabelRace.swift in Sources */,
-				EDBE8EBD2C07251B00A20A75 /* ShopsCellRch.swift in Sources */,
-				ED31FC9F2C047C3C00D09CC8 /* TheShopsContrlr.swift in Sources */,
-				ED31FC912C0473E100D09CC8 /* SplashSecScreenRace.swift in Sources */,
-				EDC50BD72C075B6200482918 /* ShopsBrandTableViewCell.swift in Sources */,
+				EDF4B8272C05C9FC00E0A479 /* TeamsRtoCellRch.swift in Sources */,
+				ED31FC6F2C046B3E00D09CC8 /* TroSimpleTroLabelRch.swift in Sources */,
+				EDBE8EBD2C07251B00A20A75 /* ShopsTroCellRch.swift in Sources */,
+				ED31FC9F2C047C3C00D09CC8 /* TheSorShopsTopContrlrRch.swift in Sources */,
+				EDBCA61F2C09B009006E528A /* EthereTypeUell.swift in Sources */,
+				ED31FC912C0473E100D09CC8 /* SplashSorScreenTopRch.swift in Sources */,
+				EDC50BD72C075B6200482918 /* ShopsBrandTroTableViewCellRch.swift in Sources */,
 				EDF4B8222C05C6F900E0A479 /* UITableView + Ext.swift in Sources */,
 				EDF4B8372C062C4500E0A479 /* TransitObjectsDelegateProtocol.swift in Sources */,
-				EDC50BD92C075FF600482918 /* ShopAttributesTableViewCell.swift in Sources */,
+				EDC50BD92C075FF600482918 /* ShopAttributesRtoTableViewCellRch.swift in Sources */,
 				EDF4B8202C05C6F000E0A479 /* UICollView + Ext.swift in Sources */,
 				ED31FC6A2C046A7300D09CC8 /* Double + Ext.swift in Sources */,
-				ED31FC972C047B0F00D09CC8 /* PushAtrScreenRace.swift in Sources */,
-				ED31FC7C2C046D0500D09CC8 /* SecTemplRaceTextViewAts.swift in Sources */,
-				EDCD28702C0873EA00C6EF66 /* NewBrandVc.swift in Sources */,
+				ED31FC972C047B0F00D09CC8 /* PushSorScreenRch.swift in Sources */,
+				ED31FC7C2C046D0500D09CC8 /* RtoTemplRchTextViewTro.swift in Sources */,
+				EDCD28702C0873EA00C6EF66 /* NewRchBrandTopVcSor.swift in Sources */,
 				ED31FC822C046D5800D09CC8 /* SecUnicalRaceTFAts.swift in Sources */,
-				ED31FC7E2C046D2A00D09CC8 /* SecTimCollectionRaceViewAts.swift in Sources */,
+				ED31FC7E2C046D2A00D09CC8 /* TroTopCollectionRchsViewOrt.swift in Sources */,
 				ED31FC5F2C046A0000D09CC8 /* RaceSaverAtsManagerSta.swift in Sources */,
-				EDBE8EBB2C071BA900A20A75 /* ShopsErchVm.swift in Sources */,
+				EDBE8EBB2C071BA900A20A75 /* ShopsTopErchVmRch.swift in Sources */,
 				ED31FC8A2C046DE700D09CC8 /* FontSize.swift in Sources */,
-				ED31FC792C046BDA00D09CC8 /* TeamAttributesTableViewCell.swift in Sources */,
+				ED31FC792C046BDA00D09CC8 /* TeamAttributesTroTableViewCellRch.swift in Sources */,
 				EDC50BD52C0754CE00482918 /* BrandName.swift in Sources */,
 				EDC50BD32C07541900482918 /* Shop.swift in Sources */,
-				ED31FC9D2C047C1F00D09CC8 /* SportsTeamsContrlr.swift in Sources */,
+				ED31FC9D2C047C1F00D09CC8 /* SportsRchTeamsSorContrlr.swift in Sources */,
 				ED31FC6C2C046A8900D09CC8 /* RaceDefltsAtsServiceCes.swift in Sources */,
-				EDF4B82B2C05F78800E0A479 /* NewTeamScreen.swift in Sources */,
+				EDF4B82B2C05F78800E0A479 /* NewRchTeamSorScreenTop.swift in Sources */,
 				EDF4B81E2C05C52700E0A479 /* FileManagerServiceProtocol.swift in Sources */,
-				EDF4B8312C0622AF00E0A479 /* TraTableGniViewArt.swift in Sources */,
-				EDF4B82F2C0607AC00E0A479 /* ImageTitleButton.swift in Sources */,
-				ED31FC952C047AD300D09CC8 /* OnboardingAtsProtocol.swift in Sources */,
-				ED31FC862C046D7900D09CC8 /* SimpleSecImageRaceButtonAts.swift in Sources */,
-				EDCD28722C0875D500C6EF66 /* NewBrandVm.swift in Sources */,
-				EDC50BDB2C07684000482918 /* NewShopScreen.swift in Sources */,
-				EDC50BDD2C0768C300482918 /* NewShopVm.swift in Sources */,
-				ED31FCA52C04BE8300D09CC8 /* SportsTeamsVm.swift in Sources */,
+				EDF4B8312C0622AF00E0A479 /* TroTableOrtViewRch.swift in Sources */,
+				EDF4B82F2C0607AC00E0A479 /* ImageRchTitleRtoButtonTro.swift in Sources */,
+				ED31FC952C047AD300D09CC8 /* OnboardingTopProtocolRchSor.swift in Sources */,
+				ED31FC862C046D7900D09CC8 /* SimpleTroImageRchButtonTro.swift in Sources */,
+				EDCD28722C0875D500C6EF66 /* NewSorBrandTopVmRch.swift in Sources */,
+				EDC50BDB2C07684000482918 /* NewTopShopSorScreenRchs.swift in Sources */,
+				EDC50BDD2C0768C300482918 /* NewShopTopVmSor.swift in Sources */,
+				ED31FCA52C04BE8300D09CC8 /* SportsSorTeamsVmRch.swift in Sources */,
 				ED31FC4A2C04696000D09CC8 /* AppDelegate.swift in Sources */,
-				ED7E47FF2C0907AA00CA2981 /* SplashVm.swift in Sources */,
+				EDBCA61D2C09AFA5006E528A /* PrefRchsCellSor.swift in Sources */,
+				EDBCA6192C09AED0006E528A /* RchUsageSorPolicyTopScreenTro.swift in Sources */,
+				ED7E47FF2C0907AA00CA2981 /* SplashTopVmRchSor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +596,7 @@
 				INFOPLIST_FILE = "Sports Merch/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -613,6 +626,7 @@
 				INFOPLIST_FILE = "Sports Merch/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

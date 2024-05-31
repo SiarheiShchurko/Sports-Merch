@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 private extension AppDelegate {
     func setTimConfigureReko(with isRekoGtvTim: Bool) {
-        let rootVC = SplashSecScreenRace(isGtv: isRekoGtvTim, splashVm: SplashVm(shopsStorage: RaceSaverAtsManagerSta()))
+        let rootVC = SplashSorScreenTopRch(isGtv: isRekoGtvTim, splashVm: SplashTopVmRchSor(shopsStorage: RaceSaverAtsManagerSta()))
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UINavigationController(rootViewController: rootVC)

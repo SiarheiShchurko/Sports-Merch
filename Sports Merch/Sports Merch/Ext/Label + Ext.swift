@@ -1,6 +1,6 @@
 import UIKit
 extension UILabel {
-    func setGniLabelRamsTextArt(firstLine: String,
+    func setRchLabelTopTextSor(firstLine: String,
                      secondLine: String,
                      firstLineFontSize: CGFloat = 20,
                      secondLineFontSize: CGFloat = 13,

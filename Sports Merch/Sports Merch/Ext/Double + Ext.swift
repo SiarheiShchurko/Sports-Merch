@@ -1,7 +1,7 @@
 import Foundation
 
 extension Double {
-    func gniDoubleFormatingRams() -> String {
+    func rchDoubleFormatingSor() -> String {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
         numberFormatter.groupingSeparator = " "
