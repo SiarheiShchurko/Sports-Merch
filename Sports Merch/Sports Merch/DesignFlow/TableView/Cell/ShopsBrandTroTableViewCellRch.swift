@@ -18,16 +18,16 @@ final class ShopsBrandTroTableViewCellRch: UITableViewCell {
     
     weak var editDelegate: EditShopDelegateProtocol?
     
-    private var currentBrand: BrandName?
+    private var currentBrand: SorBrandRchsNameTro?
     private var brandIndexPath: Int?
     
     private let attributesRowHeight: CGFloat = {
-       return CGFloat.RaceFontArtSizeSec.midleFontSize * 2
+       return CGFloat.RchsFontSorSizeTro.midleFontSize * 2
     }()
     
     // Labels
     let brandNameLabel = TroSimpleTroLabelRch(text: "",
-                                            font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize),
+                                            font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize),
                                             numberOfLines: 1,
                                             textAlignment: .left)
     
@@ -45,7 +45,7 @@ final class ShopsBrandTroTableViewCellRch: UITableViewCell {
 }
 
 extension ShopsBrandTroTableViewCellRch {
-    func set(_ cell: BrandName, with indexPath: Int) {
+    func set(_ cell: SorBrandRchsNameTro, with indexPath: Int) {
         currentBrand = cell
         brandIndexPath = indexPath
         

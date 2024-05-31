@@ -1,12 +1,12 @@
-struct Team: Codable {
+struct SorTeamRch: Codable {
     let imageName: String
     let teamName: String
     let phoneNumber: String
-    let brandAttributes: [BrandAttributes]
+    let brandAttributes: [SorBrandTopAttributesRchs]
 }
 
-extension Team: Equatable {
-    static func ==(lhs: Team, rhs: Team) -> Bool {
+extension SorTeamRch: Equatable {
+    static func ==(lhs: SorTeamRch, rhs: SorTeamRch) -> Bool {
         return lhs.imageName == rhs.imageName &&
                lhs.teamName == rhs.teamName &&
                lhs.phoneNumber == rhs.phoneNumber &&

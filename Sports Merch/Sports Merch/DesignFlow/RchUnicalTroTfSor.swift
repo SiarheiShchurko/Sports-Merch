@@ -1,5 +1,5 @@
 import UIKit
-final class SecUnicalRaceTFAts: UITextField {
+final class RchUnicalTroTfSor: UITextField {
     let backgroundColors: UIColor
     private let isCanPerformAction: Bool
     init(placeholder: String = "",
@@ -41,7 +41,7 @@ final class SecUnicalRaceTFAts: UITextField {
         }
     }
 }
-private extension SecUnicalRaceTFAts {
+private extension RchUnicalTroTfSor {
     private func settingTextField(placeholdere: String,
                                   text: String,
                                   verticalAlign: ContentVerticalAlignment,
@@ -51,7 +51,7 @@ private extension SecUnicalRaceTFAts {
                                   backgroundColor: UIColor) {
         indent(size: 16)
         attributedPlaceholder = NSAttributedString(string: placeholdere,
-                                                   attributes: [NSAttributedString.Key.foregroundColor: placeholderColor, .font: UIFont.systemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize)])
+                                                   attributes: [NSAttributedString.Key.foregroundColor: placeholderColor, .font: UIFont.systemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize)])
         translatesAutoresizingMaskIntoConstraints = false
         self.keyboardType = keyboardType
         self.backgroundColor = backgroundColor
@@ -59,11 +59,11 @@ private extension SecUnicalRaceTFAts {
         textColor = tintColor
         layer.cornerRadius = 16
         clearButtonMode = .whileEditing
-        font = .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize)
+        font = .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize)
         contentVerticalAlignment = verticalAlign
     }
 }
-extension SecUnicalRaceTFAts {
+extension RchUnicalTroTfSor {
     func indent(size: CGFloat) {
         leftView = UIView(frame: CGRect(x: frame.minX, y: frame.minY, width: size, height: frame.height))
         leftViewMode = .always

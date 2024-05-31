@@ -15,13 +15,13 @@ final class TeamsRtoCellRch: UICollectionViewCell {
     // Label
     private let teamNameLabel = TroSimpleTroLabelRch(text: "",
                                                    textColor: .black,
-                                                   font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize),
+                                                   font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize),
                                                    numberOfLines: 1,
                                                    textAlignment: .center)
     
     private let phoneNumberLabel = TroSimpleTroLabelRch(text: "",
                                                       textColor: .black.withAlphaComponent(0.7),
-                                                   font: .systemFont(ofSize: CGFloat.RaceFontArtSizeSec.secondFontSize),
+                                                   font: .systemFont(ofSize: CGFloat.RchsFontSorSizeTro.secondFontSize),
                                                       numberOfLines: 1,
                                                       textAlignment: .center)
     // Image
@@ -35,7 +35,7 @@ final class TeamsRtoCellRch: UICollectionViewCell {
 }
 
 extension TeamsRtoCellRch {
-    func set(_ cell: Team) {
+    func set(_ cell: SorTeamRch) {
         if !cell.imageName.isEmpty {
             loadSorImageRch(imageName: cell.imageName) { [ weak self ] data in
                 self?.mainImage.image = UIImage(data: data)

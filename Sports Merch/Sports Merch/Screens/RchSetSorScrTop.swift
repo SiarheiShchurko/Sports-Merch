@@ -3,16 +3,16 @@ import StoreKit
 
 final class RchSetSorScrTop: UIViewController {
         
-        private let preffers: [EthereTypeUell] = [
-            EthereTypeUell(imageName: "square.and.arrow.up.fill", itemName: "Share app"),
-            EthereTypeUell(imageName: "star.fill", itemName: "Rate app"),
-            EthereTypeUell(imageName: "doc.text.fill", itemName: "Usage Policy")
+        private let preffers: [RemTypeSetOta] = [
+            RemTypeSetOta(imageName: "square.and.arrow.up.fill", itemName: "Share app"),
+            RemTypeSetOta(imageName: "star.fill", itemName: "Rate app"),
+            RemTypeSetOta(imageName: "doc.text.fill", itemName: "Usage Policy")
         ]
         
         // Labels
         private let titleLabel = TroSimpleTroLabelRch(text: "Settings",
                                                       textColor: .white,
-                                                    font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.mainFontSize))
+                                                    font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.mainFontSize))
         // CollectionView
         private let settingsCollView: UICollectionView = {
             let layout = UICollectionViewFlowLayout()

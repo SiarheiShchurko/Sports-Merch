@@ -1,5 +1,5 @@
 import UIKit
-final class SecUnicalImageRaceViewAts: UIImageView {
+final class TroUnicalRchImageSorRaceSrtViewTro: UIImageView {
     init(imageName: String,
          comtentMode: UIView.ContentMode,
          backgroundColor: UIColor = .clear) {
@@ -12,7 +12,7 @@ final class SecUnicalImageRaceViewAts: UIImageView {
     }
 }
 
-private extension SecUnicalImageRaceViewAts {
+private extension TroUnicalRchImageSorRaceSrtViewTro {
     func setImageView(with myContentMode: UIView.ContentMode, with bckgrdClr: UIColor) {
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = bckgrdClr

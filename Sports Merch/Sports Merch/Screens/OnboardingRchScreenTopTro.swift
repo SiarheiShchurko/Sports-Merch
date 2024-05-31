@@ -18,7 +18,7 @@ final class OnboardingRchScreenTopTro: UIViewController {
     private let onboardingModele: OnboardingTopProtocolRchSor
     
     private let customContainerViewTopConstraintsPoint: CGFloat = {
-         CGFloat.RaceFontArtSizeSec.mainFontSize * 5
+         CGFloat.RchsFontSorSizeTro.mainFontSize * 5
     }()
     
     private var currentPage = 0 {
@@ -32,7 +32,7 @@ final class OnboardingRchScreenTopTro: UIViewController {
     private lazy var mainLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.mainFontSize)
+        label.font = .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.mainFontSize)
         label.textColor = .mainTextColor
         label.textAlignment = .center
         label.numberOfLines = 3
@@ -51,7 +51,7 @@ final class OnboardingRchScreenTopTro: UIViewController {
     
     // Buttons
     private lazy var nextButton = RchsPrimaryTopButtonTro(title: "Next",
-                                                     font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize))
+                                                     font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize))
     
     
     private lazy var pageControl: UIPageControl = {
@@ -206,7 +206,7 @@ private extension OnboardingRchScreenTopTro {
 
 private extension OnboardingRchScreenTopTro {
     func screenRouter() {
-        RaceDefltsAtsServiceCes.isRaceOnboardingStaDidShowedSec = true
+        SorDefltsRchsServiceChe.isRemOnboardingRchsDidShowedChe = true
         let vc: UIViewController
         if isView {
             vc = PushSorScreenRch()

@@ -2,7 +2,7 @@ import UIKit
 
 final class NewTopShopSorScreenRchs: UIViewController {
     init(newShopmVm: NewTopShopRchVmProtocol,
-         currentShop: Shop?,
+         currentShop: SorShopRchs?,
          picker: SorPickerRemControllerSor) {
         self.newShopmVm = newShopmVm
         self.currentShop = currentShop
@@ -20,12 +20,12 @@ final class NewTopShopSorScreenRchs: UIViewController {
     weak var sportsShopDelegate: TransitObjectsDelegateProtocol?
     
     private var coverTeamsData: Data?
-    private let currentShop: Shop?
+    private let currentShop: SorShopRchs?
     
     private let newShopmVm: NewTopShopRchVmProtocol
     private let picker: SorPickerRemControllerSor
     
-    private lazy var textFieldsArray: [SecUnicalRaceTFAts] = [nameTextField, addressTextField, contactNumberTextField]
+    private lazy var textFieldsArray: [RchUnicalTroTfSor] = [nameTextField, addressTextField, contactNumberTextField]
     
     // Labels
     private let titleLabel = TroSimpleTroLabelRch(text: "",
@@ -40,11 +40,11 @@ final class NewTopShopSorScreenRchs: UIViewController {
     }()
     
     // Image
-    private let teamAvatar = SecUnicalImageRaceViewAts(imageName: "",
+    private let teamAvatar = TroUnicalRchImageSorRaceSrtViewTro(imageName: "",
                                                        comtentMode: .scaleAspectFill)
     // Buttons
     private let saveButton = RchsPrimaryTopButtonTro(title: "",
-                                                      font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize),
+                                                      font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize),
                                                       isEnabled: false)
     
     private lazy var deleteButton: UIButton = {
@@ -53,30 +53,30 @@ final class NewTopShopSorScreenRchs: UIViewController {
         button.layer.cornerRadius = 16
         button.setTitle("Delete", for: .normal)
         button.setTitleColor(.appPrimaryColor, for: .normal)
-        button.titleLabel?.font = .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize)
+        button.titleLabel?.font = .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize)
         button.layer.borderColor = UIColor.appPrimaryColor.cgColor
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
     // TextFields
-    private let nameTextField = SecUnicalRaceTFAts(placeholder: "Name")
+    private let nameTextField = RchUnicalTroTfSor(placeholder: "Name")
     
-    private let contactNumberTextField = SecUnicalRaceTFAts(placeholder: "+1392847562",
+    private let contactNumberTextField = RchUnicalTroTfSor(placeholder: "+1392847562",
                                                             keyboardType: .decimalPad,
                                                             isCanPerformAction: false)
     
-    private let addressTextField = SecUnicalRaceTFAts(placeholder: "Address")
+    private let addressTextField = RchUnicalTroTfSor(placeholder: "Address")
     
     // Stack
-    private lazy var textFieldStack = SecUniqueStackViewGniff(views: [nameTextField,
+    private lazy var textFieldStack = RchUniqueStackRtoViewSor(views: [nameTextField,
                                                                       addressTextField,
                                                                       contactNumberTextField],
                                                               axis: .vertical,
                                                               alignment: .fill,
                                                               spacing: 16)
     
-    private lazy var buttonsStack = SecUniqueStackViewGniff(views: [deleteButton,
+    private lazy var buttonsStack = RchUniqueStackRtoViewSor(views: [deleteButton,
                                                                     saveButton],
                                                             axis: .horizontal,
                                                             alignment: .fill,
@@ -214,17 +214,17 @@ private extension NewTopShopSorScreenRchs {
             return
         }
         
-        let newShop: Shop
+        let newShop: SorShopRchs
         
         if let coverTeamsData {
             let imageName = newShopmVm.saveImage(from: coverTeamsData)
-            newShop = Shop(imageName: imageName,
+            newShop = SorShopRchs(imageName: imageName,
                            shopName: name,
                            phoneNumber: phoneNumber,
                            brandName: currentShop?.brandName ?? [],
                            address: address)
         } else {
-            newShop = Shop(imageName: currentShop?.imageName ?? "",
+            newShop = SorShopRchs(imageName: currentShop?.imageName ?? "",
                            shopName: name,
                            phoneNumber: phoneNumber,
                            brandName: currentShop?.brandName ?? [],
@@ -291,7 +291,7 @@ extension NewTopShopSorScreenRchs: CustomErchPickerTroProtolSor {
 
 // Alert
 private extension NewTopShopSorScreenRchs {
-    func deleteAlert(with shop: Shop?) {
+    func deleteAlert(with shop: SorShopRchs?) {
         let alertController = UIAlertController(title: "Delete",
                                                 message: "Are you sure you want to delete this shop?",
                                                 preferredStyle: .alert)

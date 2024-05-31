@@ -1,10 +1,10 @@
-struct EthereTypeUell: Codable {
+struct RemTypeSetOta: Codable {
     let imageName: String
     let itemName: String
 }
 
-extension EthereTypeUell: Equatable {
-    static func ==(lhs: EthereTypeUell, rhs: EthereTypeUell) -> Bool {
+extension RemTypeSetOta: Equatable {
+    static func ==(lhs: RemTypeSetOta, rhs: RemTypeSetOta) -> Bool {
         return lhs.itemName == rhs.itemName &&
                lhs.imageName == rhs.imageName
     }

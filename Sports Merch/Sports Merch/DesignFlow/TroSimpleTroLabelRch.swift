@@ -2,7 +2,7 @@ import UIKit
 final class TroSimpleTroLabelRch: UILabel {
     init(text: String,
          textColor: UIColor = .mainTextColor,
-         font: UIFont = .systemFont(ofSize: CGFloat.RaceFontArtSizeSec.secondFontSize),
+         font: UIFont = .systemFont(ofSize: CGFloat.RchsFontSorSizeTro.secondFontSize),
          numberOfLines: Int = 0,
          textAlignment: NSTextAlignment = .left) {
         super.init(frame: .zero)

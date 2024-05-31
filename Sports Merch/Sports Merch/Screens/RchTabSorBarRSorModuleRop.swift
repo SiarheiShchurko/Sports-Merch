@@ -2,8 +2,8 @@ import UIKit
 
 final class RchTabSorBarRSorModuleRop: UITabBarController {
     init(picker: SorPickerRemControllerSor = SorPickerRemControllerSor(),
-         teamsStorage: RaceSaverAtsManagerSta<Team> = RaceSaverAtsManagerSta<Team>(),
-         shopsStorage: RaceSaverAtsManagerSta<Shop> = RaceSaverAtsManagerSta<Shop>(),
+         teamsStorage: RaceSaverAtsManagerSta<SorTeamRch> = RaceSaverAtsManagerSta<SorTeamRch>(),
+         shopsStorage: RaceSaverAtsManagerSta<SorShopRchs> = RaceSaverAtsManagerSta<SorShopRchs>(),
          fileManagerService: FileManagerServiceProtocol = FileManagerService()) {
         self.picker = picker
         self.fileManagerService = fileManagerService
@@ -29,8 +29,8 @@ final class RchTabSorBarRSorModuleRop: UITabBarController {
     
     private let picker: SorPickerRemControllerSor
     private let fileManagerService: FileManagerServiceProtocol
-    private let teamStorage: RaceSaverAtsManagerSta<Team>
-    private let shopStorage: RaceSaverAtsManagerSta<Shop>
+    private let teamStorage: RaceSaverAtsManagerSta<SorTeamRch>
+    private let shopStorage: RaceSaverAtsManagerSta<SorShopRchs>
     
     // Life cycle
     override func viewDidLoad() {

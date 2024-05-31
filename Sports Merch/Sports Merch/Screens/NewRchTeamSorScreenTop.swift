@@ -2,7 +2,7 @@ import UIKit
 
 final class NewRchTeamSorScreenTop: UIViewController {
     init(newTeamVm: NewTeamProtocol,
-         currentTeam: Team?,
+         currentTeam: SorTeamRch?,
          picker: SorPickerRemControllerSor) {
         self.newTeamVm = newTeamVm
         self.currentTeam = currentTeam
@@ -20,12 +20,12 @@ final class NewRchTeamSorScreenTop: UIViewController {
     weak var sportsTeamDelegate: TransitObjectsDelegateProtocol?
     
     private var coverTeamsData: Data?
-    private let currentTeam: Team?
+    private let currentTeam: SorTeamRch?
     
     private let newTeamVm: NewTeamProtocol
     private let picker: SorPickerRemControllerSor
     
-    private lazy var textFieldsArray: [SecUnicalRaceTFAts] = [nameTextField, contactNumberTextField]
+    private lazy var textFieldsArray: [RchUnicalTroTfSor] = [nameTextField, contactNumberTextField]
     
     // Labels
     private let titleLabel = TroSimpleTroLabelRch(text: "",
@@ -40,15 +40,15 @@ final class NewRchTeamSorScreenTop: UIViewController {
     }()
     
     // Image
-    private let teamAvatar = SecUnicalImageRaceViewAts(imageName: "",
+    private let teamAvatar = TroUnicalRchImageSorRaceSrtViewTro(imageName: "",
                                                        comtentMode: .scaleAspectFill)
     // Buttons
     private let addAttributeButton = ImageRchTitleRtoButtonTro(titleButton: "+ Add more",
                                                       colorButton: .white,
-                                                      fontButton: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize))
+                                                      fontButton: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize))
     
     private let saveButton = RchsPrimaryTopButtonTro(title: "",
-                                                      font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize),
+                                                      font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize),
                                                       isEnabled: false)
     
     private lazy var deleteButton: UIButton = {
@@ -57,16 +57,16 @@ final class NewRchTeamSorScreenTop: UIViewController {
         button.layer.cornerRadius = 16
         button.setTitle("Delete", for: .normal)
         button.setTitleColor(.appPrimaryColor, for: .normal)
-        button.titleLabel?.font = .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize)
+        button.titleLabel?.font = .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize)
         button.layer.borderColor = UIColor.appPrimaryColor.cgColor
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
     // TextFields
-    private let nameTextField = SecUnicalRaceTFAts(placeholder: "Name")
+    private let nameTextField = RchUnicalTroTfSor(placeholder: "Name")
     
-    private let contactNumberTextField = SecUnicalRaceTFAts(placeholder: "+1392847562",
+    private let contactNumberTextField = RchUnicalTroTfSor(placeholder: "+1392847562",
                                                             keyboardType: .decimalPad,
                                                             isCanPerformAction: false)
     // Table view
@@ -76,13 +76,13 @@ final class NewRchTeamSorScreenTop: UIViewController {
                                                    rowHeigh: UITableView.automaticDimension,
                                                    separatorStyle: .none)
     // Stack
-    private lazy var textFieldStack = SecUniqueStackViewGniff(views: [nameTextField,
+    private lazy var textFieldStack = RchUniqueStackRtoViewSor(views: [nameTextField,
                                                                       contactNumberTextField],
                                                               axis: .vertical,
                                                               alignment: .fill,
                                                               spacing: 16)
     
-    private lazy var buttonsStack = SecUniqueStackViewGniff(views: [deleteButton,
+    private lazy var buttonsStack = RchUniqueStackRtoViewSor(views: [deleteButton,
                                                                     saveButton],
                                                             axis: .horizontal,
                                                             alignment: .fill,
@@ -253,16 +253,16 @@ private extension NewRchTeamSorScreenTop {
             return
         }
         
-        let newTeam: Team
+        let newTeam: SorTeamRch
         
         if let coverTeamsData {
             let imageName = newTeamVm.saveImage(from: coverTeamsData)
-            newTeam = Team(imageName: imageName,
+            newTeam = SorTeamRch(imageName: imageName,
                            teamName: name,
                            phoneNumber: phoneNumber,
                            brandAttributes: self.newTeamVm.attributes)
         } else {
-            newTeam = Team(imageName: currentTeam?.imageName ?? "",
+            newTeam = SorTeamRch(imageName: currentTeam?.imageName ?? "",
                            teamName: name,
                            phoneNumber: phoneNumber,
                            brandAttributes: self.newTeamVm.attributes)
@@ -325,7 +325,7 @@ extension NewRchTeamSorScreenTop: TransitObjectsDelegateProtocol {
     }
     
     func delete<T>(_ deletingItem: T) where T : Decodable, T : Encodable {
-        if let currentAttribute = deletingItem as? BrandAttributes {
+        if let currentAttribute = deletingItem as? SorBrandTopAttributesRchs {
             newTeamVm.delete(currentAttribute)
         }
     }
@@ -342,7 +342,7 @@ extension NewRchTeamSorScreenTop: CustomErchPickerTroProtolSor {
 
 // Alert
 private extension NewRchTeamSorScreenTop {
-    func deleteAlert(with team: Team?) {
+    func deleteAlert(with team: SorTeamRch?) {
         let alertController = UIAlertController(title: "Delete",
                                                 message: "Are you sure you want to delete this team?",
                                                 preferredStyle: .alert)
@@ -382,7 +382,7 @@ private extension NewRchTeamSorScreenTop {
                   let currentAttributes = alertController.textFields?.first?.text else {
                 return
             }
-            let newAttributes = BrandAttributes(brandName: currentAttributes,
+            let newAttributes = SorBrandTopAttributesRchs(brandName: currentAttributes,
                                                 count: nil)
             
             self.newTeamVm.attributes.append(newAttributes)

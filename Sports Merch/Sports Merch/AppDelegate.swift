@@ -6,8 +6,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   //  private let component = MyDataClass.getMyData()
     private lazy var settingResult: Bool = false {
         didSet {
-            RaceDefltsAtsServiceCes.isRaceValAts = settingResult
-            isRekoGtvTim = setGtv(with: RaceDefltsAtsServiceCes.isGtvRams)
+            SorDefltsRchsServiceChe.isRchsValChe = settingResult
+            isRekoGtvTim = setGtv(with: SorDefltsRchsServiceChe.isRemGtvChe)
         }
     }
     
@@ -20,14 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) {
         
         if UIScreen.main.isCaptured {
-            RaceDefltsAtsServiceCes.isRaceValAts = false
+            SorDefltsRchsServiceChe.isRchsValChe = false
         }
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        RaceDefltsAtsServiceCes.staOptionsCesLaunchesEca = launchOptions
-        UIDevice.current.userInterfaceIdiom == .phone ? (RaceDefltsAtsServiceCes.secUsrRaceDvcAts = .phone) : (RaceDefltsAtsServiceCes.secUsrRaceDvcAts = .other)
+        SorDefltsRchsServiceChe.remOptionsRchsLaunchesChe = launchOptions
+        UIDevice.current.userInterfaceIdiom == .phone ? (SorDefltsRchsServiceChe.remUsrRchsDvcChe = .phone) : (SorDefltsRchsServiceChe.remUsrRchsDvcChe = .other)
         
         setFontSizes()
         setAddPreferences()
@@ -50,10 +50,10 @@ private extension AppDelegate {
     }
     
     func setFontSizes() {
-        if RaceDefltsAtsServiceCes.secUsrRaceDvcAts != .phone {
-            CGFloat.RaceFontArtSizeSec.mainFontSize = 34.00
-            CGFloat.RaceFontArtSizeSec.midleFontSize = 26.00
-            CGFloat.RaceFontArtSizeSec.secondFontSize = 17.00
+        if SorDefltsRchsServiceChe.remUsrRchsDvcChe != .phone {
+            CGFloat.RchsFontSorSizeTro.mainFontSize = 34.00
+            CGFloat.RchsFontSorSizeTro.midleFontSize = 26.00
+            CGFloat.RchsFontSorSizeTro.secondFontSize = 17.00
         }
     }
     

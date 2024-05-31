@@ -14,12 +14,12 @@ final class ShopAttributesRtoTableViewCellRch: UITableViewCell {
     
     // Labels
     let nameLabel = TroSimpleTroLabelRch(text: "",
-                                       font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize),
+                                       font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize),
                                        numberOfLines: 1,
                                        textAlignment: .left)
     
     let countLabel = TroSimpleTroLabelRch(text: "",
-                                        font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize),
+                                        font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize),
                                         numberOfLines: 1,
                                         textAlignment: .left)
     // View
@@ -32,7 +32,7 @@ final class ShopAttributesRtoTableViewCellRch: UITableViewCell {
 }
 
 extension ShopAttributesRtoTableViewCellRch {
-    func set(_ cell: BrandAttributes) {
+    func set(_ cell: SorBrandTopAttributesRchs) {
         nameLabel.text = cell.brandName
         countLabel.text = "\(cell.count ?? 0)"
         

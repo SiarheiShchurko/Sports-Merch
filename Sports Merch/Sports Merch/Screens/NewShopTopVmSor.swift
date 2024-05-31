@@ -1,7 +1,7 @@
 import Foundation
 
 protocol NewTopShopRchVmProtocol: AnyObject {
-    var attributes: [BrandAttributes] { get set }
+    var attributes: [SorBrandTopAttributesRchs] { get set }
     var updateAttributes: (() -> Void)? { get set }
     
     func saveImage(from data: Data?) -> String
@@ -12,7 +12,7 @@ final class NewShopTopVmSor: NewTopShopRchVmProtocol {
     
     var updateAttributes: (() -> Void)?
     
-    var attributes: [BrandAttributes] = [] {
+    var attributes: [SorBrandTopAttributesRchs] = [] {
         didSet {
             updateAttributes?()
         }

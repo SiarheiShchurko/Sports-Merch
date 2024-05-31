@@ -1,19 +1,19 @@
 import Foundation
 
 protocol NewTeamProtocol: AnyObject {
-    var attributes: [BrandAttributes] { get set }
+    var attributes: [SorBrandTopAttributesRchs] { get set }
     var updateAttributes: (() -> Void)? { get set }
     
     func saveImage(from data: Data?) -> String
     func loadImage(with name: String) -> Data?
-    func delete(_ attribute: BrandAttributes)
+    func delete(_ attribute: SorBrandTopAttributesRchs)
 }
 
 final class NewTopTeamSorVmRch: NewTeamProtocol {
     
     var updateAttributes: (() -> Void)?
     
-    var attributes: [BrandAttributes] = [] {
+    var attributes: [SorBrandTopAttributesRchs] = [] {
         didSet {
             updateAttributes?()
         }
@@ -56,7 +56,7 @@ extension NewTopTeamSorVmRch {
 
 // Delete brand attribute
 extension NewTopTeamSorVmRch {
-    func delete(_ attribute: BrandAttributes) {
+    func delete(_ attribute: SorBrandTopAttributesRchs) {
         let bufferAttribute = attributes
         attributes = bufferAttribute.filter({ $0 != attribute })
     }

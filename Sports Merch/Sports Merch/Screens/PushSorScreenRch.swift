@@ -4,7 +4,7 @@ import UIKit
 final class PushSorScreenRch: UIViewController {
     
     private let bottomOffsetForIpad: CGFloat = {
-        RaceDefltsAtsServiceCes.secUsrRaceDvcAts != .phone ? (CGFloat.RaceFontArtSizeSec.mainFontSize * 15) : (CGFloat.RaceFontArtSizeSec.mainFontSize * 3)
+        SorDefltsRchsServiceChe.remUsrRchsDvcChe != .phone ? (CGFloat.RchsFontSorSizeTro.mainFontSize * 15) : (CGFloat.RchsFontSorSizeTro.mainFontSize * 3)
     }()
     
     private lazy var  mainLabel: UILabel = {
@@ -13,7 +13,7 @@ final class PushSorScreenRch: UIViewController {
         label.text = "Don’t miss anything"
         label.textColor = .black
         label.textAlignment  = .center
-        label.font = .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.mainFontSize)
+        label.font = .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.mainFontSize)
         label.numberOfLines = 0
         return label
     }()
@@ -24,7 +24,7 @@ final class PushSorScreenRch: UIViewController {
         label.text = ""
         label.textColor = .secondTextColor
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: CGFloat.RaceFontArtSizeSec.secondFontSize)
+        label.font = .systemFont(ofSize: CGFloat.RchsFontSorSizeTro.secondFontSize)
         label.numberOfLines = 0
         return label
     }()
@@ -40,7 +40,7 @@ final class PushSorScreenRch: UIViewController {
     
     private lazy var continueButton = RchsPrimaryTopButtonTro(title: "Enable notifications",
                                                          mainTitleColor: .white,
-                                                         font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize))
+                                                         font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize))
     private let skipButton: UIButton = {
         let button = UIButton(type: .custom)
         button.translatesAutoresizingMaskIntoConstraints = false

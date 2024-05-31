@@ -24,12 +24,12 @@ final class RchUsageSorPolicyTopScreenTro: UIViewController {
         return view
     }()
     
-    var rootView: WeTraViewRamsViewArt {
-        self.view as! WeTraViewRamsViewArt
+    var rootView: WeRchViewSecViewTroSor {
+        self.view as! WeRchViewSecViewTroSor
     }
     
     override func loadView() {
-        self.view = WeTraViewRamsViewArt()
+        self.view = WeRchViewSecViewTroSor()
     }
     
     override func viewDidLoad() {

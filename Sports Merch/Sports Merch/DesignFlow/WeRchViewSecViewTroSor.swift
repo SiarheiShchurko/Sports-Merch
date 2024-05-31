@@ -1,5 +1,5 @@
 import WebKit
-class WeTraViewRamsViewArt: UIView {
+class WeRchViewSecViewTroSor: UIView {
     let webView: WKWebView = {
         let webView = WKWebView()
         webView.translatesAutoresizingMaskIntoConstraints = false

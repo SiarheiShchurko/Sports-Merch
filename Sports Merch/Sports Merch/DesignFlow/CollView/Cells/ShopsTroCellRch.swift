@@ -3,7 +3,7 @@ import UIKit
 protocol EditShopDelegateProtocol: AnyObject {
     func openShopForEdit(with indexPath: Int)
     func openNewBrandVc(with indexPath: Int)
-    func edit(_ currentBrand: BrandName, with indexPath: Int)
+    func edit(_ currentBrand: SorBrandRchsNameTro, with indexPath: Int)
 }
 
 final class ShopsTroCellRch: UICollectionViewCell {
@@ -25,29 +25,29 @@ final class ShopsTroCellRch: UICollectionViewCell {
     
     weak var editShopDelegate: EditShopDelegateProtocol?
     
-    private var currentShop: Shop?
+    private var currentShop: SorShopRchs?
     private var shopIndexPath: Int?
     
     private let brandRowHeight: CGFloat = {
-        CGFloat.RaceFontArtSizeSec.mainFontSize * 8
+        CGFloat.RchsFontSorSizeTro.mainFontSize * 8
     }()
     
     // Label
     private let nameShopLabel = TroSimpleTroLabelRch(text: "",
                                                    textColor: .black,
-                                                   font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize),
+                                                   font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize),
                                                    numberOfLines: 2,
                                                    textAlignment: .left)
     
     private let addressLabel = TroSimpleTroLabelRch(text: "",
                                                   textColor: .black,
-                                                  font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.secondFontSize),
+                                                  font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.secondFontSize),
                                                   numberOfLines: 0,
                                                   textAlignment: .left)
     
     private let phoneNumberLabel = TroSimpleTroLabelRch(text: "",
                                                       textColor: .black.withAlphaComponent(0.7),
-                                                      font: .systemFont(ofSize: CGFloat.RaceFontArtSizeSec.secondFontSize),
+                                                      font: .systemFont(ofSize: CGFloat.RchsFontSorSizeTro.secondFontSize),
                                                       numberOfLines: 1,
                                                       textAlignment: .left)
     // Image
@@ -76,7 +76,7 @@ final class ShopsTroCellRch: UICollectionViewCell {
 }
 
 extension ShopsTroCellRch {
-    func set(_ cell: Shop, indexPath: Int) {
+    func set(_ cell: SorShopRchs, indexPath: Int) {
         currentShop = cell
         shopIndexPath = indexPath
         
@@ -198,7 +198,7 @@ extension ShopsTroCellRch: EditShopDelegateProtocol {
         print("MOCK")
     }
     
-    func edit(_ currentBrand: BrandName, with indexPath: Int) {
+    func edit(_ currentBrand: SorBrandRchsNameTro, with indexPath: Int) {
         if let shopIndexPath {
             editShopDelegate?.edit(currentBrand, with: shopIndexPath)
         }

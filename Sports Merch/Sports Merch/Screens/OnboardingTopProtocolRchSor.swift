@@ -1,28 +1,28 @@
 protocol OnboardingTopProtocolRchSor: AnyObject {
-    var array: [SecOnboardArtsTypeRace] { get }
+    var array: [ModOnboardTorTypeSor] { get }
 }
 final class OnboardingRchViewTopModel: OnboardingTopProtocolRchSor {
     init(isView: Bool) {
         self.isView = isView
     }
     private let isView: Bool
-    lazy var array: [SecOnboardArtsTypeRace] = {
+    lazy var array: [ModOnboardTorTypeSor] = {
         isView ? isViewArray : noViewArray
     }()
     
     private let noViewArray = [
-        SecOnboardArtsTypeRace(imageName: "KeepRecordsOfStores",
+        ModOnboardTorTypeSor(imageName: "KeepRecordsOfStores",
                               mainText: "Keep records of stores",
                               secondaryText: ""),
-        SecOnboardArtsTypeRace(imageName: "TheAppIsAlwaysAtHand",
+        ModOnboardTorTypeSor(imageName: "TheAppIsAlwaysAtHand",
                               mainText: "The app is always at hand",
                               secondaryText: "")
     ]
     private let isViewArray = [
-        SecOnboardArtsTypeRace(imageName: "PlayAndWinWithUs",
+        ModOnboardTorTypeSor(imageName: "PlayAndWinWithUs",
                               mainText: "Play and win with us",
                               secondaryText: ""),
-        SecOnboardArtsTypeRace(imageName: "RateOurAppInTheAppStore",
+        ModOnboardTorTypeSor(imageName: "RateOurAppInTheAppStore",
                               mainText: "Rate our app in the AppStore",
                               secondaryText: "")
     ]

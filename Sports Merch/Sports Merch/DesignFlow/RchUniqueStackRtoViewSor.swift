@@ -1,5 +1,5 @@
 import UIKit
-final class SecUniqueStackViewGniff: UIStackView {
+final class RchUniqueStackRtoViewSor: UIStackView {
     convenience init(views: [UIView],
                      axis: NSLayoutConstraint.Axis,
                      alignment: UIStackView.Alignment,
@@ -13,7 +13,7 @@ final class SecUniqueStackViewGniff: UIStackView {
 }
 
 // MARK: - Private extension
-private extension SecUniqueStackViewGniff {
+private extension RchUniqueStackRtoViewSor {
     func configure(axis: NSLayoutConstraint.Axis, alignment: UIStackView.Alignment, distribution: UIStackView.Distribution, spacing: CGFloat, backgroundColor: UIColor, cornerRadius: CGFloat) {
         translatesAutoresizingMaskIntoConstraints = false
         self.axis = axis

@@ -1,32 +1,32 @@
 import Foundation
 
 protocol SportsRchTeamsSorProtocol: AnyObject {
-    var teams: [Team]  { get set }
-    var searchingTeams: [Team] { get set }
+    var teams: [SorTeamRch]  { get set }
+    var searchingTeams: [SorTeamRch] { get set }
     var searchingText: String { get set }
     var updateTeams: (() -> Void)? { get set }
     
-    func add(new team: Team)
-    func update(oldTeam: Team, for newTeam: Team)
-    func delete(_ deletingTeam: Team)
+    func add(new team: SorTeamRch)
+    func update(oldTeam: SorTeamRch, for newTeam: SorTeamRch)
+    func delete(_ deletingTeam: SorTeamRch)
 }
 
 final class SportsSorTeamsVmRch: SportsRchTeamsSorProtocol {
-    init(storage: RaceSaverAtsManagerSta<Team>) {
+    init(storage: RaceSaverAtsManagerSta<SorTeamRch>) {
         self.storage = storage
         getTeams()
     }
     
-    private let storage: RaceSaverAtsManagerSta<Team>
+    private let storage: RaceSaverAtsManagerSta<SorTeamRch>
     
     var updateTeams: (() -> Void)?
-    var teams: [Team] = [] {
+    var teams: [SorTeamRch] = [] {
         didSet {
             updateTeams?()
         }
     }
     
-     var searchingTeams: [Team] = [] {
+     var searchingTeams: [SorTeamRch] = [] {
         didSet {
             updateTeams?()
         }
@@ -57,14 +57,14 @@ private extension SportsSorTeamsVmRch {
 }
 
 extension SportsSorTeamsVmRch {
-    func add(new team: Team) {
+    func add(new team: SorTeamRch) {
         let key = "UserTeams"
         storage.saveModel(team, key: key)
         
         getTeams()
     }
     
-    func update(oldTeam: Team, for newTeam: Team) {
+    func update(oldTeam: SorTeamRch, for newTeam: SorTeamRch) {
         let key = "UserTeams"
         var bufferTeams = teams
         
@@ -78,7 +78,7 @@ extension SportsSorTeamsVmRch {
         getTeams()
     }
     
-    func delete(_ deletingTeam: Team) {
+    func delete(_ deletingTeam: SorTeamRch) {
         let key = "UserTeams"
         var bufferTeams = teams
         

@@ -16,7 +16,7 @@ final class RchsOnboardTroCellRto: UICollectionViewCell {
     }()
 }
 extension RchsOnboardTroCellRto {
-    func setCell(slide: SecOnboardArtsTypeRace, isView: Bool, index: Int) {
+    func setCell(slide: ModOnboardTorTypeSor, isView: Bool, index: Int) {
         mainImage.image = UIImage(named: slide.imageName)
     }
 }

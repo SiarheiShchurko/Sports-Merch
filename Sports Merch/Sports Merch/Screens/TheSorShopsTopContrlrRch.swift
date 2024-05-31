@@ -27,17 +27,17 @@ final class TheSorShopsTopContrlrRch: UIViewController {
     // Labels
     private let headerLabel: TroSimpleTroLabelRch = TroSimpleTroLabelRch(text: "The shops",
                                                                      textColor: .white,
-                                                                     font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.mainFontSize))
+                                                                     font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.mainFontSize))
     
     private let emptyLabel: TroSimpleTroLabelRch = TroSimpleTroLabelRch(text: "\nAdd your first store",
                                                                     textColor: .black,
-                                                                    font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize),
+                                                                    font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize),
                                                                     textAlignment: .center)
     
     private let bottomEmptyLabel: TroSimpleTroLabelRch = TroSimpleTroLabelRch(text: "")
     
     // Image
-    private let emptyTeamsImage = SecUnicalImageRaceViewAts(imageName: "emptyTeamImg",
+    private let emptyTeamsImage = TroUnicalRchImageSorRaceSrtViewTro(imageName: "emptyTeamImg",
                                                             comtentMode: .scaleAspectFit)
     // Buttons
     private let plusShopsErchButton: SimpleTroImageRchButtonTro = SimpleTroImageRchButtonTro(isSystem: true,
@@ -52,7 +52,7 @@ final class TheSorShopsTopContrlrRch: UIViewController {
                                                                   scrollDirection: .horizontal)
     
     // Stacks
-    private lazy var emptyStack = SecUniqueStackViewGniff(views: [emptyLabel, emptyTeamsImage, addStackEachButton, bottomEmptyLabel],
+    private lazy var emptyStack = RchUniqueStackRtoViewSor(views: [emptyLabel, emptyTeamsImage, addStackEachButton, bottomEmptyLabel],
                                                           axis: .vertical,
                                                           alignment: .center,
                                                           distribution: .fillProportionally,
@@ -153,7 +153,7 @@ extension TheSorShopsTopContrlrRch: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(ShopsTroCellRch.self)", for: indexPath) as? ShopsTroCellRch else {
             return UICollectionViewCell()
         }
-        let shop: Shop = shopsErchVm.shops[indexPath.row]
+        let shop: SorShopRchs = shopsErchVm.shops[indexPath.row]
         cell.editShopDelegate = self
         cell.set(shop, indexPath: indexPath.row)
         return cell
@@ -174,29 +174,29 @@ extension TheSorShopsTopContrlrRch: UICollectionViewDelegateFlowLayout {
 
 extension TheSorShopsTopContrlrRch: TransitObjectsDelegateProtocol {
     func add<T>(new: T) where T : Decodable, T : Encodable {
-        if let newShop = new as? Shop {
+        if let newShop = new as? SorShopRchs {
             shopsErchVm.add(new: newShop)
-        } else if let newBrand = new as? BrandName,
+        } else if let newBrand = new as? SorBrandRchsNameTro,
                   let shopIndexPath {
             shopsErchVm.add(new: newBrand, with: shopIndexPath)
         }
     }
     
     func delete<T>(_ deletingItem: T) where T : Decodable, T : Encodable {
-        if let deletingShop = deletingItem as? Shop {
+        if let deletingShop = deletingItem as? SorShopRchs {
             shopsErchVm.delete(deletingShop)
-        } else if let deletingBrand = deletingItem as? BrandName,
+        } else if let deletingBrand = deletingItem as? SorBrandRchsNameTro,
                   let shopIndexPath {
             shopsErchVm.delete(deletingBrand, with: shopIndexPath)
         }
     }
     
     func update<T>(oldValue: T, for newValue: T) where T : Decodable, T : Encodable {
-        if let oldShop = oldValue as? Shop,
-           let newShop = newValue as? Shop {
+        if let oldShop = oldValue as? SorShopRchs,
+           let newShop = newValue as? SorShopRchs {
             shopsErchVm.update(oldShop: oldShop, for: newShop)
-        } else if let oldBrand = oldValue as? BrandName,
-                  let newBrand = newValue as? BrandName,
+        } else if let oldBrand = oldValue as? SorBrandRchsNameTro,
+                  let newBrand = newValue as? SorBrandRchsNameTro,
                   let shopIndexPath {
             shopsErchVm.update(oldBrand, with: newBrand, with: shopIndexPath)
         }
@@ -204,7 +204,7 @@ extension TheSorShopsTopContrlrRch: TransitObjectsDelegateProtocol {
 }
 
 extension TheSorShopsTopContrlrRch: EditShopDelegateProtocol {
-    func edit(_ currentBrand: BrandName, with indexPath: Int) {
+    func edit(_ currentBrand: SorBrandRchsNameTro, with indexPath: Int) {
         shopIndexPath = indexPath
         
         let editBrandVc = NewRchBrandTopVcSor(currentBrand: currentBrand,
@@ -223,7 +223,7 @@ extension TheSorShopsTopContrlrRch: EditShopDelegateProtocol {
     }
     
     func openShopForEdit(with indexPath: Int) {
-        let currentShop: Shop = shopsErchVm.shops[indexPath]
+        let currentShop: SorShopRchs = shopsErchVm.shops[indexPath]
         
         let editShopScreen = NewTopShopSorScreenRchs(newShopmVm: NewShopTopVmSor(fileManager: fileManagerService),
                                            currentShop: currentShop,

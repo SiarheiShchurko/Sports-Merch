@@ -15,7 +15,7 @@ final class PrefRchsCellSor: UICollectionViewCell {
     }
     
     private let mainFontSize: CGFloat = {
-        CGFloat.RaceFontArtSizeSec.midleFontSize
+        CGFloat.RchsFontSorSizeTro.midleFontSize
     }()
     
     private lazy var sizeForIcon = mainFontSize * 2
@@ -61,7 +61,7 @@ private extension PrefRchsCellSor {
 
 // Ext
 extension PrefRchsCellSor {
-    func set(_ quilElement: EthereTypeUell) {
+    func set(_ quilElement: RemTypeSetOta) {
         mainLabel.text = quilElement.itemName
         iconImage.image = UIImage(systemName: quilElement.imageName)?.withTintColor(.black, renderingMode: .alwaysOriginal)
     }

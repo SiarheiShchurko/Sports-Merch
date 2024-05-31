@@ -15,11 +15,11 @@ final class TeamAttributesTroTableViewCellRch: UITableViewCell {
     
     weak var teamDelegate: TransitObjectsDelegateProtocol?
     
-    private var currentAttribute: BrandAttributes?
+    private var currentAttribute: SorBrandTopAttributesRchs?
     
     // Labels
     let nameLabel = TroSimpleTroLabelRch(text: "",
-                                        font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize),
+                                        font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize),
                                         numberOfLines: 1,
                                         textAlignment: .left)
     // View
@@ -38,7 +38,7 @@ final class TeamAttributesTroTableViewCellRch: UITableViewCell {
 }
 
 extension TeamAttributesTroTableViewCellRch {
-    func set(_ cell: BrandAttributes) {
+    func set(_ cell: SorBrandTopAttributesRchs) {
         currentAttribute = cell
         nameLabel.text = cell.brandName
     }

@@ -1,13 +1,13 @@
 protocol NewRchBrandVmProtocolSor: AnyObject {
-    var attributes: [BrandAttributes] { get set }
+    var attributes: [SorBrandTopAttributesRchs] { get set }
     var updateAttributes: (() -> Void)? { get set }
     
-    func replace(oldAttribute: BrandAttributes, for newAttribute: BrandAttributes)
+    func replace(oldAttribute: SorBrandTopAttributesRchs, for newAttribute: SorBrandTopAttributesRchs)
 }
 
 final class NewSorBrandTopVmRch: NewRchBrandVmProtocolSor {
     var updateAttributes: (() -> Void)?
-    var attributes: [BrandAttributes] = [] {
+    var attributes: [SorBrandTopAttributesRchs] = [] {
         didSet {
             updateAttributes?()
         }
@@ -15,7 +15,7 @@ final class NewSorBrandTopVmRch: NewRchBrandVmProtocolSor {
 }
 
 extension NewSorBrandTopVmRch {
-    func replace(oldAttribute: BrandAttributes, for newAttribute: BrandAttributes) {
+    func replace(oldAttribute: SorBrandTopAttributesRchs, for newAttribute: SorBrandTopAttributesRchs) {
         var bufferArray = attributes
         attributes.enumerated().forEach { index, value in
            if value == oldAttribute {

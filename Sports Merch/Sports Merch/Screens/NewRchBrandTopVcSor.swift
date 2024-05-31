@@ -1,7 +1,7 @@
 import UIKit
 
 final class NewRchBrandTopVcSor: UIViewController {
-    init(currentBrand: BrandName?,
+    init(currentBrand: SorBrandRchsNameTro?,
          newBrandVm: NewRchBrandVmProtocolSor) {
         self.currentBrand = currentBrand
         self.newBrandVm = newBrandVm
@@ -15,24 +15,24 @@ final class NewRchBrandTopVcSor: UIViewController {
     }
     
     weak var sportsShopDelegate: TransitObjectsDelegateProtocol?
-    private let currentBrand: BrandName?
+    private let currentBrand: SorBrandRchsNameTro?
     private let newBrandVm: NewRchBrandVmProtocolSor
     
     // Labels
     private let titleLabel: TroSimpleTroLabelRch = TroSimpleTroLabelRch(text: "",
-                                                                    font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize),
+                                                                    font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize),
                                                                     textAlignment: .center)
     
     private let brandNameLabel: TroSimpleTroLabelRch = TroSimpleTroLabelRch(text: "\nBrand name:",
-                                                                        font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize),
+                                                                        font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize),
                                                                         textAlignment: .left)
     // Buttons
     private let addAttributeButton = ImageRchTitleRtoButtonTro(titleButton: "+ Add attribute",
                                                       colorButton: .white,
-                                                      fontButton: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize))
+                                                      fontButton: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize))
     // Buttons
     private let saveButton = RchsPrimaryTopButtonTro(title: "",
-                                                      font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize),
+                                                      font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize),
                                                       isEnabled: false)
     
     private lazy var deleteButton: UIButton = {
@@ -41,14 +41,14 @@ final class NewRchBrandTopVcSor: UIViewController {
         button.layer.cornerRadius = 16
         button.setTitle("Delete", for: .normal)
         button.setTitleColor(.appPrimaryColor, for: .normal)
-        button.titleLabel?.font = .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize)
+        button.titleLabel?.font = .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize)
         button.layer.borderColor = UIColor.appPrimaryColor.cgColor
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
     // TextFields
-    private let nameTextField = SecUnicalRaceTFAts(placeholder: "Brand name")
+    private let nameTextField = RchUnicalTroTfSor(placeholder: "Brand name")
     
     // Table view
     private let attributeTableView = TroTableOrtViewRch(color: .white,
@@ -57,7 +57,7 @@ final class NewRchBrandTopVcSor: UIViewController {
                                                    rowHeigh: UITableView.automaticDimension,
                                                    separatorStyle: .none)
     // Stack
-    private lazy var buttonsStack = SecUniqueStackViewGniff(views: [deleteButton,
+    private lazy var buttonsStack = RchUniqueStackRtoViewSor(views: [deleteButton,
                                                                     saveButton],
                                                             axis: .horizontal,
                                                             alignment: .fill,
@@ -121,7 +121,7 @@ private extension NewRchBrandTopVcSor {
             return
         }
         
-        let newBrand: BrandName = BrandName(brandName: name,
+        let newBrand: SorBrandRchsNameTro = SorBrandRchsNameTro(brandName: name,
                                             brandAttributes: newBrandVm.attributes)
         
         print("New brand\(newBrand)")
@@ -257,7 +257,7 @@ private extension NewRchBrandTopVcSor {
                 return
             }
             let currentIntCount: Int = Int(currentCount) ?? 0
-            let newAttributes = BrandAttributes(brandName: currentAttributes,
+            let newAttributes = SorBrandTopAttributesRchs(brandName: currentAttributes,
                                                 count: currentIntCount)
             
             self.newBrandVm.attributes.append(newAttributes)
@@ -269,7 +269,7 @@ private extension NewRchBrandTopVcSor {
         present(alertController, animated: true, completion: nil)
     }
     
-    func editAttributeBrandAlert(brandAttributes: BrandAttributes) {
+    func editAttributeBrandAlert(brandAttributes: SorBrandTopAttributesRchs) {
         let alertController = UIAlertController(title: "Edit",
                                                 message: "Edit attributes",
                                                 preferredStyle: .alert)
@@ -300,7 +300,7 @@ private extension NewRchBrandTopVcSor {
             }
             
             let currentIntCount: Int = Int(currentCount) ?? 0
-            let newAttributes = BrandAttributes(brandName: currentAttributes,
+            let newAttributes = SorBrandTopAttributesRchs(brandName: currentAttributes,
                                                 count: currentIntCount)
             
             self.newBrandVm.replace(oldAttribute: brandAttributes, for: newAttributes)
@@ -312,7 +312,7 @@ private extension NewRchBrandTopVcSor {
         present(alertController, animated: true, completion: nil)
     }
     
-    func deleteAlert(with brand: BrandName?) {
+    func deleteAlert(with brand: SorBrandRchsNameTro?) {
         let alertController = UIAlertController(title: "Delete",
                                                 message: "Are you sure you want to delete this brand from current shop?",
                                                 preferredStyle: .alert)

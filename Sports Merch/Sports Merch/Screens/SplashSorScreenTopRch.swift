@@ -108,7 +108,7 @@ private extension SplashSorScreenTopRch {
     func screenRouter() {
         let vc: UIViewController
         
-        RaceDefltsAtsServiceCes.isRaceOnboardingStaDidShowedSec ?
+        SorDefltsRchsServiceChe.isRemOnboardingRchsDidShowedChe ?
         (vc = UINavigationController(rootViewController: RchTabSorBarRSorModuleRop())) :
         (vc = OnboardingRchScreenTopTro(isView: false,
                                       onboardingModele: OnboardingRchViewTopModel(isView: false)))
@@ -125,13 +125,13 @@ private extension SplashSorScreenTopRch {
         let currentLocale = Locale.current
         if let stranaKod = currentLocale.regionCode {
             if let stranaName = currentLocale.localizedString(forRegionCode: stranaKod) {
-                RaceDefltsAtsServiceCes.staObitationEca = stranaName
+                SorDefltsRchsServiceChe.remObitationChe = stranaName
             }
         }
     }
     
     func setAdditionalParametrs() {
-        if RaceDefltsAtsServiceCes.staAppHudRaceUserIdEca.isEmpty {
+        if SorDefltsRchsServiceChe.remAppHudRchsUserIdChe.isEmpty {
             
         }
     }

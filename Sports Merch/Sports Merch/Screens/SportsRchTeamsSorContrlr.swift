@@ -25,21 +25,21 @@ final class SportsRchTeamsSorContrlr: UIViewController {
     // Labels
     private let headerLabel: TroSimpleTroLabelRch = TroSimpleTroLabelRch(text: "Sports teams",
                                                                      textColor: .white,
-                                                                     font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.mainFontSize))
+                                                                     font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.mainFontSize))
     
     private let teamsCountLabel: TroSimpleTroLabelRch = TroSimpleTroLabelRch(text: "",
-                                                                         font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize),
+                                                                         font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize),
                                                                          textAlignment: .center)
     
     private let emptyLabel: TroSimpleTroLabelRch = TroSimpleTroLabelRch(text: "\nThere are no records",
                                                                     textColor: .black,
-                                                                    font: .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize),
+                                                                    font: .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize),
                                                                     textAlignment: .center)
     
     private let bottomEmptyLabel: TroSimpleTroLabelRch = TroSimpleTroLabelRch(text: "")
     
     // Image
-    private let emptyTeamsImage = SecUnicalImageRaceViewAts(imageName: "emptyTeamImg",
+    private let emptyTeamsImage = TroUnicalRchImageSorRaceSrtViewTro(imageName: "emptyTeamImg",
                                                             comtentMode: .scaleAspectFit)
     
     // Search bar
@@ -55,7 +55,7 @@ final class SportsRchTeamsSorContrlr: UIViewController {
         // Set attr
         let attributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.white,
-            .font: UIFont.systemFont(ofSize: CGFloat.RaceFontArtSizeSec.secondFontSize)]
+            .font: UIFont.systemFont(ofSize: CGFloat.RchsFontSorSizeTro.secondFontSize)]
         let attributedPlaceholder = NSAttributedString(string: "Search", attributes: attributes)
         searchBar.searchTextField.attributedPlaceholder = attributedPlaceholder
         
@@ -72,7 +72,7 @@ final class SportsRchTeamsSorContrlr: UIViewController {
                                                                   backgroudClr: .appMainBckgrd,
                                                                   scrollDirection: .vertical)
     // Stacks
-    private lazy var emptyStack = SecUniqueStackViewGniff(views: [emptyLabel, emptyTeamsImage, bottomEmptyLabel],
+    private lazy var emptyStack = RchUniqueStackRtoViewSor(views: [emptyLabel, emptyTeamsImage, bottomEmptyLabel],
                                                           axis: .vertical,
                                                           alignment: .fill,
                                                           distribution: .fillProportionally,
@@ -177,7 +177,7 @@ private extension SportsRchTeamsSorContrlr {
     func setSportScreenData() {
         let firstCharacterAttributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.appPrimaryColor,
-            .font: UIFont.boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize)
+            .font: UIFont.boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize)
         ]
         
         let remainingCharactersAttributes: [NSAttributedString.Key: Any] = [
@@ -203,7 +203,7 @@ extension SportsRchTeamsSorContrlr: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(TeamsRtoCellRch.self)", for: indexPath) as? TeamsRtoCellRch else {
             return UICollectionViewCell()
         }
-        let team: Team
+        let team: SorTeamRch
         isSearching ? (team = sportsTeamsVm.searchingTeams[indexPath.row]) : (team = sportsTeamsVm.teams[indexPath.row])
         cell.set(team)
         return cell
@@ -212,7 +212,7 @@ extension SportsRchTeamsSorContrlr: UICollectionViewDataSource {
 
 extension SportsRchTeamsSorContrlr: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let currentTeam: Team
+        let currentTeam: SorTeamRch
         isSearching ? (currentTeam = sportsTeamsVm.searchingTeams[indexPath.row]) : (currentTeam = sportsTeamsVm.teams[indexPath.row])
         
         let newTeamController = NewRchTeamSorScreenTop(newTeamVm: NewTopTeamSorVmRch(fileManager: fileManagerService),
@@ -266,8 +266,8 @@ extension SportsRchTeamsSorContrlr: TransitObjectsDelegateProtocol {
         isSearching = false
         sportsSearchBar.text = ""
         
-        if let newCurrentTeam = newValue as? Team,
-           let oldCurrentTeam = oldValue as? Team {
+        if let newCurrentTeam = newValue as? SorTeamRch,
+           let oldCurrentTeam = oldValue as? SorTeamRch {
             sportsTeamsVm.update(oldTeam: oldCurrentTeam, for: newCurrentTeam)
         }
     }
@@ -275,7 +275,7 @@ extension SportsRchTeamsSorContrlr: TransitObjectsDelegateProtocol {
     func add<T>(new: T) where T : Decodable, T : Encodable {
         isSearching = false
         sportsSearchBar.text = ""
-        if let newTeam = new as? Team {
+        if let newTeam = new as? SorTeamRch {
             sportsTeamsVm.add(new: newTeam)
         }
     }
@@ -283,7 +283,7 @@ extension SportsRchTeamsSorContrlr: TransitObjectsDelegateProtocol {
     func delete<T>(_ attribute: T) where T : Decodable, T : Encodable {
         isSearching = false
         sportsSearchBar.text = ""
-        if let deletingTeam = attribute as? Team {
+        if let deletingTeam = attribute as? SorTeamRch {
             sportsTeamsVm.delete(deletingTeam)
         }
     }

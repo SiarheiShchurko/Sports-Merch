@@ -4,15 +4,15 @@ import Foundation
 
 protocol ShopsErchProtocolSor: AnyObject {
     var updateShops: (() -> Void)? { get set }
-    var shops: [Shop] { get set }
+    var shops: [SorShopRchs] { get set }
     
-    func add(new shop: Shop)
-    func delete(_ deletingShop: Shop)
-    func update(oldShop: Shop, for newShop: Shop)
+    func add(new shop: SorShopRchs)
+    func delete(_ deletingShop: SorShopRchs)
+    func update(oldShop: SorShopRchs, for newShop: SorShopRchs)
     
-    func add(new brand: BrandName, with shopIndexPath: Int)
-    func delete(_ deletingBrand: BrandName, with shopIndexPath: Int)
-    func update(_ oldBrand: BrandName, with newBrand: BrandName, with shopIndexPath: Int)
+    func add(new brand: SorBrandRchsNameTro, with shopIndexPath: Int)
+    func delete(_ deletingBrand: SorBrandRchsNameTro, with shopIndexPath: Int)
+    func update(_ oldBrand: SorBrandRchsNameTro, with newBrand: SorBrandRchsNameTro, with shopIndexPath: Int)
 }
 
 final class ShopsTopErchVmRch: ShopsErchProtocolSor {
@@ -20,14 +20,14 @@ final class ShopsTopErchVmRch: ShopsErchProtocolSor {
     var updateShops: (() -> Void)?
     
     
-    init(storage: RaceSaverAtsManagerSta<Shop>) {
+    init(storage: RaceSaverAtsManagerSta<SorShopRchs>) {
         self.storage = storage
         getShops()
     }
     
-    private let storage: RaceSaverAtsManagerSta<Shop>
+    private let storage: RaceSaverAtsManagerSta<SorShopRchs>
     
-    var shops: [Shop] = [] {
+    var shops: [SorShopRchs] = [] {
         didSet {
              updateShops?()
         }
@@ -36,14 +36,14 @@ final class ShopsTopErchVmRch: ShopsErchProtocolSor {
 
 // Edit shops
 extension ShopsTopErchVmRch {
-    func add(new shop: Shop) {
+    func add(new shop: SorShopRchs) {
         let key = "UserShops"
         storage.saveModel(shop, key: key)
         
         getShops()
     }
     
-    func update(oldShop: Shop, for newShop: Shop) {
+    func update(oldShop: SorShopRchs, for newShop: SorShopRchs) {
         let key = "UserShops"
         var bufferShops = shops
         
@@ -57,7 +57,7 @@ extension ShopsTopErchVmRch {
         getShops()
     }
     
-    func delete(_ deletingShop: Shop) {
+    func delete(_ deletingShop: SorShopRchs) {
         let key = "UserShops"
         var bufferShops = shops
         
@@ -75,7 +75,7 @@ extension ShopsTopErchVmRch {
 // Edit brands
 extension ShopsTopErchVmRch {
     
-    func add(new brand: BrandName, with shopIndexPath: Int) {
+    func add(new brand: SorBrandRchsNameTro, with shopIndexPath: Int) {
         if shopIndexPath <= shops.count - 1 {
             let key = "UserShops"
             var bufferShops = shops
@@ -84,7 +84,7 @@ extension ShopsTopErchVmRch {
             var brands = currentShop.brandName
             brands.append(brand)
             
-            let updatingShop = Shop(imageName: currentShop.imageName,
+            let updatingShop = SorShopRchs(imageName: currentShop.imageName,
                                     shopName: currentShop.shopName,
                                     phoneNumber: currentShop.phoneNumber,
                                     brandName: brands,
@@ -98,7 +98,7 @@ extension ShopsTopErchVmRch {
         }
     }
     
-    func update(_ oldBrand: BrandName, with newBrand: BrandName, with shopIndexPath: Int) {
+    func update(_ oldBrand: SorBrandRchsNameTro, with newBrand: SorBrandRchsNameTro, with shopIndexPath: Int) {
         if shopIndexPath <= shops.count - 1 {
             let key = "UserShops"
             var bufferShops = shops
@@ -113,7 +113,7 @@ extension ShopsTopErchVmRch {
                 }
             }
             
-            let updatingShop = Shop(imageName: shop.imageName,
+            let updatingShop = SorShopRchs(imageName: shop.imageName,
                                     shopName: shop.shopName,
                                     phoneNumber: shop.phoneNumber,
                                     brandName: bufferBrands,
@@ -128,7 +128,7 @@ extension ShopsTopErchVmRch {
     }
     
     
-    func delete(_ deletingBrand: BrandName, with shopIndexPath: Int) {
+    func delete(_ deletingBrand: SorBrandRchsNameTro, with shopIndexPath: Int) {
         if shopIndexPath <= shops.count - 1 {
             let key = "UserShops"
             var bufferShops = shops
@@ -143,7 +143,7 @@ extension ShopsTopErchVmRch {
                 }
             }
             
-            let updatingShop = Shop(imageName: shop.imageName,
+            let updatingShop = SorShopRchs(imageName: shop.imageName,
                                     shopName: shop.shopName,
                                     phoneNumber: shop.phoneNumber,
                                     brandName: bufferBrands,

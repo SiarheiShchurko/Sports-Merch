@@ -3,7 +3,7 @@ final class RchsPrimaryTopButtonTro: UIButton {
     private let mainTitleColor: UIColor
     init(title: String,
          mainTitleColor: UIColor = .white,
-         font: UIFont = .boldSystemFont(ofSize: CGFloat.RaceFontArtSizeSec.midleFontSize),
+         font: UIFont = .boldSystemFont(ofSize: CGFloat.RchsFontSorSizeTro.midleFontSize),
          isEnabled: Bool = true) {
         self.mainTitleColor = mainTitleColor
         super.init(frame: .zero)

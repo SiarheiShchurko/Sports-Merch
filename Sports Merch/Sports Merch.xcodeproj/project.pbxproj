@@ -11,26 +11,24 @@
 		ED31FC532C04696200D09CC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED31FC522C04696200D09CC8 /* Assets.xcassets */; };
 		ED31FC562C04696200D09CC8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = ED31FC552C04696200D09CC8 /* Base */; };
 		ED31FC5F2C046A0000D09CC8 /* RaceSaverAtsManagerSta.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC5E2C046A0000D09CC8 /* RaceSaverAtsManagerSta.swift */; };
-		ED31FC622C046A1900D09CC8 /* GniOnboardArtTypeRams.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC612C046A1900D09CC8 /* GniOnboardArtTypeRams.swift */; };
 		ED31FC642C046A2C00D09CC8 /* VC + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC632C046A2C00D09CC8 /* VC + Ext.swift */; };
 		ED31FC662C046A4C00D09CC8 /* Label + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC652C046A4C00D09CC8 /* Label + Ext.swift */; };
 		ED31FC682C046A6100D09CC8 /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC672C046A6100D09CC8 /* UIColor + Ext.swift */; };
 		ED31FC6A2C046A7300D09CC8 /* Double + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC692C046A7300D09CC8 /* Double + Ext.swift */; };
-		ED31FC6C2C046A8900D09CC8 /* RaceDefltsAtsServiceCes.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC6B2C046A8900D09CC8 /* RaceDefltsAtsServiceCes.swift */; };
+		ED31FC6C2C046A8900D09CC8 /* SorDefltsRchsServiceChe.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC6B2C046A8900D09CC8 /* SorDefltsRchsServiceChe.swift */; };
 		ED31FC6F2C046B3E00D09CC8 /* TroSimpleTroLabelRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC6E2C046B3E00D09CC8 /* TroSimpleTroLabelRch.swift */; };
 		ED31FC722C046B5A00D09CC8 /* RchsOnboardTroCellRto.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC712C046B5A00D09CC8 /* RchsOnboardTroCellRto.swift */; };
 		ED31FC762C046BB400D09CC8 /* RchsPrimaryTopButtonTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC752C046BB400D09CC8 /* RchsPrimaryTopButtonTro.swift */; };
 		ED31FC792C046BDA00D09CC8 /* TeamAttributesTroTableViewCellRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC782C046BDA00D09CC8 /* TeamAttributesTroTableViewCellRch.swift */; };
-		ED31FC7C2C046D0500D09CC8 /* RtoTemplRchTextViewTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC7B2C046D0500D09CC8 /* RtoTemplRchTextViewTro.swift */; };
 		ED31FC7E2C046D2A00D09CC8 /* TroTopCollectionRchsViewOrt.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC7D2C046D2A00D09CC8 /* TroTopCollectionRchsViewOrt.swift */; };
-		ED31FC802C046D4500D09CC8 /* SecUnicalImageRaceViewAts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC7F2C046D4500D09CC8 /* SecUnicalImageRaceViewAts.swift */; };
-		ED31FC822C046D5800D09CC8 /* SecUnicalRaceTFAts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC812C046D5800D09CC8 /* SecUnicalRaceTFAts.swift */; };
-		ED31FC842C046D6B00D09CC8 /* SecUniqueStackViewGniff.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC832C046D6B00D09CC8 /* SecUniqueStackViewGniff.swift */; };
+		ED31FC802C046D4500D09CC8 /* TroUnicalRchImageSorRaceSrtViewTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC7F2C046D4500D09CC8 /* TroUnicalRchImageSorRaceSrtViewTro.swift */; };
+		ED31FC822C046D5800D09CC8 /* RchUnicalTroTfSor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC812C046D5800D09CC8 /* RchUnicalTroTfSor.swift */; };
+		ED31FC842C046D6B00D09CC8 /* RchUniqueStackRtoViewSor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC832C046D6B00D09CC8 /* RchUniqueStackRtoViewSor.swift */; };
 		ED31FC862C046D7900D09CC8 /* SimpleTroImageRchButtonTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC852C046D7900D09CC8 /* SimpleTroImageRchButtonTro.swift */; };
-		ED31FC882C046DA300D09CC8 /* WeRaceViewsecViewAts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC872C046DA300D09CC8 /* WeRaceViewsecViewAts.swift */; };
-		ED31FC8A2C046DE700D09CC8 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC892C046DE700D09CC8 /* FontSize.swift */; };
-		ED31FC8C2C0471AD00D09CC8 /* RaceUsrSecDeviceArts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC8B2C0471AD00D09CC8 /* RaceUsrSecDeviceArts.swift */; };
-		ED31FC8E2C04723C00D09CC8 /* SecOnboardArtsTypeRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC8D2C04723C00D09CC8 /* SecOnboardArtsTypeRace.swift */; };
+		ED31FC882C046DA300D09CC8 /* WeRchViewSecViewTroSor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC872C046DA300D09CC8 /* WeRchViewSecViewTroSor.swift */; };
+		ED31FC8A2C046DE700D09CC8 /* RchsFontSorSizeTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC892C046DE700D09CC8 /* RchsFontSorSizeTro.swift */; };
+		ED31FC8C2C0471AD00D09CC8 /* RchsUsrTopDeviceSor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC8B2C0471AD00D09CC8 /* RchsUsrTopDeviceSor.swift */; };
+		ED31FC8E2C04723C00D09CC8 /* ModOnboardTorTypeSor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC8D2C04723C00D09CC8 /* ModOnboardTorTypeSor.swift */; };
 		ED31FC912C0473E100D09CC8 /* SplashSorScreenTopRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC902C0473E100D09CC8 /* SplashSorScreenTopRch.swift */; };
 		ED31FC932C047AC000D09CC8 /* OnboardingRchScreenTopTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC922C047AC000D09CC8 /* OnboardingRchScreenTopTro.swift */; };
 		ED31FC952C047AD300D09CC8 /* OnboardingTopProtocolRchSor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FC942C047AD300D09CC8 /* OnboardingTopProtocolRchSor.swift */; };
@@ -42,16 +40,16 @@
 		ED31FCA12C047C6F00D09CC8 /* RchSetSorScrTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA02C047C6F00D09CC8 /* RchSetSorScrTop.swift */; };
 		ED31FCA32C047FB000D09CC8 /* WController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA22C047FB000D09CC8 /* WController.swift */; };
 		ED31FCA52C04BE8300D09CC8 /* SportsSorTeamsVmRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA42C04BE8300D09CC8 /* SportsSorTeamsVmRch.swift */; };
-		ED31FCA72C04BF3D00D09CC8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA62C04BF3D00D09CC8 /* Team.swift */; };
+		ED31FCA72C04BF3D00D09CC8 /* SorTeamRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31FCA62C04BF3D00D09CC8 /* SorTeamRch.swift */; };
 		ED7E47FF2C0907AA00CA2981 /* SplashTopVmRchSor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E47FE2C0907AA00CA2981 /* SplashTopVmRchSor.swift */; };
 		EDBCA6192C09AED0006E528A /* RchUsageSorPolicyTopScreenTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBCA6182C09AED0006E528A /* RchUsageSorPolicyTopScreenTro.swift */; };
-		EDBCA61B2C09AF39006E528A /* WeTraViewRamsViewArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBCA61A2C09AF39006E528A /* WeTraViewRamsViewArt.swift */; };
 		EDBCA61D2C09AFA5006E528A /* PrefRchsCellSor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBCA61C2C09AFA5006E528A /* PrefRchsCellSor.swift */; };
-		EDBCA61F2C09B009006E528A /* EthereTypeUell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBCA61E2C09B009006E528A /* EthereTypeUell.swift */; };
+		EDBCA61F2C09B009006E528A /* RemTypeSetOta.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBCA61E2C09B009006E528A /* RemTypeSetOta.swift */; };
+		EDBCA6212C09C27C006E528A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = EDBCA6202C09C27C006E528A /* PrivacyInfo.xcprivacy */; };
 		EDBE8EBB2C071BA900A20A75 /* ShopsTopErchVmRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBE8EBA2C071BA900A20A75 /* ShopsTopErchVmRch.swift */; };
 		EDBE8EBD2C07251B00A20A75 /* ShopsTroCellRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBE8EBC2C07251B00A20A75 /* ShopsTroCellRch.swift */; };
-		EDC50BD32C07541900482918 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC50BD22C07541900482918 /* Shop.swift */; };
-		EDC50BD52C0754CE00482918 /* BrandName.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC50BD42C0754CE00482918 /* BrandName.swift */; };
+		EDC50BD32C07541900482918 /* SorShopRchs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC50BD22C07541900482918 /* SorShopRchs.swift */; };
+		EDC50BD52C0754CE00482918 /* SorBrandRchsNameTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC50BD42C0754CE00482918 /* SorBrandRchsNameTro.swift */; };
 		EDC50BD72C075B6200482918 /* ShopsBrandTroTableViewCellRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC50BD62C075B6200482918 /* ShopsBrandTroTableViewCellRch.swift */; };
 		EDC50BD92C075FF600482918 /* ShopAttributesRtoTableViewCellRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC50BD82C075FF600482918 /* ShopAttributesRtoTableViewCellRch.swift */; };
 		EDC50BDB2C07684000482918 /* NewTopShopSorScreenRchs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC50BDA2C07684000482918 /* NewTopShopSorScreenRchs.swift */; };
@@ -62,7 +60,7 @@
 		EDF4B8202C05C6F000E0A479 /* UICollView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B81F2C05C6F000E0A479 /* UICollView + Ext.swift */; };
 		EDF4B8222C05C6F900E0A479 /* UITableView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B8212C05C6F900E0A479 /* UITableView + Ext.swift */; };
 		EDF4B8272C05C9FC00E0A479 /* TeamsRtoCellRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B8262C05C9FC00E0A479 /* TeamsRtoCellRch.swift */; };
-		EDF4B8292C05CBA400E0A479 /* BrandAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B8282C05CBA400E0A479 /* BrandAttributes.swift */; };
+		EDF4B8292C05CBA400E0A479 /* SorBrandTopAttributesRchs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B8282C05CBA400E0A479 /* SorBrandTopAttributesRchs.swift */; };
 		EDF4B82B2C05F78800E0A479 /* NewRchTeamSorScreenTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B82A2C05F78800E0A479 /* NewRchTeamSorScreenTop.swift */; };
 		EDF4B82D2C05F80000E0A479 /* NewTopTeamSorVmRch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B82C2C05F80000E0A479 /* NewTopTeamSorVmRch.swift */; };
 		EDF4B82F2C0607AC00E0A479 /* ImageRchTitleRtoButtonTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF4B82E2C0607AC00E0A479 /* ImageRchTitleRtoButtonTro.swift */; };
@@ -77,26 +75,24 @@
 		ED31FC552C04696200D09CC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED31FC572C04696200D09CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED31FC5E2C046A0000D09CC8 /* RaceSaverAtsManagerSta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSaverAtsManagerSta.swift; sourceTree = "<group>"; };
-		ED31FC612C046A1900D09CC8 /* GniOnboardArtTypeRams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GniOnboardArtTypeRams.swift; sourceTree = "<group>"; };
 		ED31FC632C046A2C00D09CC8 /* VC + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC + Ext.swift"; sourceTree = "<group>"; };
 		ED31FC652C046A4C00D09CC8 /* Label + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Label + Ext.swift"; sourceTree = "<group>"; };
 		ED31FC672C046A6100D09CC8 /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
 		ED31FC692C046A7300D09CC8 /* Double + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double + Ext.swift"; sourceTree = "<group>"; };
-		ED31FC6B2C046A8900D09CC8 /* RaceDefltsAtsServiceCes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDefltsAtsServiceCes.swift; sourceTree = "<group>"; };
+		ED31FC6B2C046A8900D09CC8 /* SorDefltsRchsServiceChe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SorDefltsRchsServiceChe.swift; sourceTree = "<group>"; };
 		ED31FC6E2C046B3E00D09CC8 /* TroSimpleTroLabelRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TroSimpleTroLabelRch.swift; sourceTree = "<group>"; };
 		ED31FC712C046B5A00D09CC8 /* RchsOnboardTroCellRto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RchsOnboardTroCellRto.swift; sourceTree = "<group>"; };
 		ED31FC752C046BB400D09CC8 /* RchsPrimaryTopButtonTro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RchsPrimaryTopButtonTro.swift; sourceTree = "<group>"; };
 		ED31FC782C046BDA00D09CC8 /* TeamAttributesTroTableViewCellRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamAttributesTroTableViewCellRch.swift; sourceTree = "<group>"; };
-		ED31FC7B2C046D0500D09CC8 /* RtoTemplRchTextViewTro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RtoTemplRchTextViewTro.swift; sourceTree = "<group>"; };
 		ED31FC7D2C046D2A00D09CC8 /* TroTopCollectionRchsViewOrt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TroTopCollectionRchsViewOrt.swift; sourceTree = "<group>"; };
-		ED31FC7F2C046D4500D09CC8 /* SecUnicalImageRaceViewAts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecUnicalImageRaceViewAts.swift; sourceTree = "<group>"; };
-		ED31FC812C046D5800D09CC8 /* SecUnicalRaceTFAts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecUnicalRaceTFAts.swift; sourceTree = "<group>"; };
-		ED31FC832C046D6B00D09CC8 /* SecUniqueStackViewGniff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecUniqueStackViewGniff.swift; sourceTree = "<group>"; };
+		ED31FC7F2C046D4500D09CC8 /* TroUnicalRchImageSorRaceSrtViewTro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TroUnicalRchImageSorRaceSrtViewTro.swift; sourceTree = "<group>"; };
+		ED31FC812C046D5800D09CC8 /* RchUnicalTroTfSor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RchUnicalTroTfSor.swift; sourceTree = "<group>"; };
+		ED31FC832C046D6B00D09CC8 /* RchUniqueStackRtoViewSor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RchUniqueStackRtoViewSor.swift; sourceTree = "<group>"; };
 		ED31FC852C046D7900D09CC8 /* SimpleTroImageRchButtonTro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTroImageRchButtonTro.swift; sourceTree = "<group>"; };
-		ED31FC872C046DA300D09CC8 /* WeRaceViewsecViewAts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeRaceViewsecViewAts.swift; sourceTree = "<group>"; };
-		ED31FC892C046DE700D09CC8 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
-		ED31FC8B2C0471AD00D09CC8 /* RaceUsrSecDeviceArts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceUsrSecDeviceArts.swift; sourceTree = "<group>"; };
-		ED31FC8D2C04723C00D09CC8 /* SecOnboardArtsTypeRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecOnboardArtsTypeRace.swift; sourceTree = "<group>"; };
+		ED31FC872C046DA300D09CC8 /* WeRchViewSecViewTroSor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeRchViewSecViewTroSor.swift; sourceTree = "<group>"; };
+		ED31FC892C046DE700D09CC8 /* RchsFontSorSizeTro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RchsFontSorSizeTro.swift; sourceTree = "<group>"; };
+		ED31FC8B2C0471AD00D09CC8 /* RchsUsrTopDeviceSor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RchsUsrTopDeviceSor.swift; sourceTree = "<group>"; };
+		ED31FC8D2C04723C00D09CC8 /* ModOnboardTorTypeSor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModOnboardTorTypeSor.swift; sourceTree = "<group>"; };
 		ED31FC902C0473E100D09CC8 /* SplashSorScreenTopRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashSorScreenTopRch.swift; sourceTree = "<group>"; };
 		ED31FC922C047AC000D09CC8 /* OnboardingRchScreenTopTro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRchScreenTopTro.swift; sourceTree = "<group>"; };
 		ED31FC942C047AD300D09CC8 /* OnboardingTopProtocolRchSor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTopProtocolRchSor.swift; sourceTree = "<group>"; };
@@ -108,16 +104,16 @@
 		ED31FCA02C047C6F00D09CC8 /* RchSetSorScrTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RchSetSorScrTop.swift; sourceTree = "<group>"; };
 		ED31FCA22C047FB000D09CC8 /* WController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WController.swift; sourceTree = "<group>"; };
 		ED31FCA42C04BE8300D09CC8 /* SportsSorTeamsVmRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsSorTeamsVmRch.swift; sourceTree = "<group>"; };
-		ED31FCA62C04BF3D00D09CC8 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		ED31FCA62C04BF3D00D09CC8 /* SorTeamRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SorTeamRch.swift; sourceTree = "<group>"; };
 		ED7E47FE2C0907AA00CA2981 /* SplashTopVmRchSor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashTopVmRchSor.swift; sourceTree = "<group>"; };
 		EDBCA6182C09AED0006E528A /* RchUsageSorPolicyTopScreenTro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RchUsageSorPolicyTopScreenTro.swift; sourceTree = "<group>"; };
-		EDBCA61A2C09AF39006E528A /* WeTraViewRamsViewArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeTraViewRamsViewArt.swift; sourceTree = "<group>"; };
 		EDBCA61C2C09AFA5006E528A /* PrefRchsCellSor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefRchsCellSor.swift; sourceTree = "<group>"; };
-		EDBCA61E2C09B009006E528A /* EthereTypeUell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereTypeUell.swift; sourceTree = "<group>"; };
+		EDBCA61E2C09B009006E528A /* RemTypeSetOta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemTypeSetOta.swift; sourceTree = "<group>"; };
+		EDBCA6202C09C27C006E528A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		EDBE8EBA2C071BA900A20A75 /* ShopsTopErchVmRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsTopErchVmRch.swift; sourceTree = "<group>"; };
 		EDBE8EBC2C07251B00A20A75 /* ShopsTroCellRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsTroCellRch.swift; sourceTree = "<group>"; };
-		EDC50BD22C07541900482918 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
-		EDC50BD42C0754CE00482918 /* BrandName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandName.swift; sourceTree = "<group>"; };
+		EDC50BD22C07541900482918 /* SorShopRchs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SorShopRchs.swift; sourceTree = "<group>"; };
+		EDC50BD42C0754CE00482918 /* SorBrandRchsNameTro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SorBrandRchsNameTro.swift; sourceTree = "<group>"; };
 		EDC50BD62C075B6200482918 /* ShopsBrandTroTableViewCellRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsBrandTroTableViewCellRch.swift; sourceTree = "<group>"; };
 		EDC50BD82C075FF600482918 /* ShopAttributesRtoTableViewCellRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopAttributesRtoTableViewCellRch.swift; sourceTree = "<group>"; };
 		EDC50BDA2C07684000482918 /* NewTopShopSorScreenRchs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTopShopSorScreenRchs.swift; sourceTree = "<group>"; };
@@ -128,7 +124,7 @@
 		EDF4B81F2C05C6F000E0A479 /* UICollView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollView + Ext.swift"; sourceTree = "<group>"; };
 		EDF4B8212C05C6F900E0A479 /* UITableView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView + Ext.swift"; sourceTree = "<group>"; };
 		EDF4B8262C05C9FC00E0A479 /* TeamsRtoCellRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsRtoCellRch.swift; sourceTree = "<group>"; };
-		EDF4B8282C05CBA400E0A479 /* BrandAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandAttributes.swift; sourceTree = "<group>"; };
+		EDF4B8282C05CBA400E0A479 /* SorBrandTopAttributesRchs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SorBrandTopAttributesRchs.swift; sourceTree = "<group>"; };
 		EDF4B82A2C05F78800E0A479 /* NewRchTeamSorScreenTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRchTeamSorScreenTop.swift; sourceTree = "<group>"; };
 		EDF4B82C2C05F80000E0A479 /* NewTopTeamSorVmRch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTopTeamSorVmRch.swift; sourceTree = "<group>"; };
 		EDF4B82E2C0607AC00E0A479 /* ImageRchTitleRtoButtonTro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRchTitleRtoButtonTro.swift; sourceTree = "<group>"; };
@@ -177,6 +173,7 @@
 				ED31FC542C04696200D09CC8 /* LaunchScreen.storyboard */,
 				ED31FC572C04696200D09CC8 /* Info.plist */,
 				ED31FCA22C047FB000D09CC8 /* WController.swift */,
+				EDBCA6202C09C27C006E528A /* PrivacyInfo.xcprivacy */,
 			);
 			path = "Sports Merch";
 			sourceTree = "<group>";
@@ -184,7 +181,7 @@
 		ED31FC5D2C0469F800D09CC8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				ED31FC6B2C046A8900D09CC8 /* RaceDefltsAtsServiceCes.swift */,
+				ED31FC6B2C046A8900D09CC8 /* SorDefltsRchsServiceChe.swift */,
 				ED31FC5E2C046A0000D09CC8 /* RaceSaverAtsManagerSta.swift */,
 				EDF4B81D2C05C52700E0A479 /* FileManagerServiceProtocol.swift */,
 			);
@@ -194,15 +191,14 @@
 		ED31FC602C046A1100D09CC8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ED31FCA62C04BF3D00D09CC8 /* Team.swift */,
-				EDC50BD22C07541900482918 /* Shop.swift */,
-				ED31FC892C046DE700D09CC8 /* FontSize.swift */,
-				EDC50BD42C0754CE00482918 /* BrandName.swift */,
-				EDF4B8282C05CBA400E0A479 /* BrandAttributes.swift */,
-				ED31FC8B2C0471AD00D09CC8 /* RaceUsrSecDeviceArts.swift */,
-				ED31FC612C046A1900D09CC8 /* GniOnboardArtTypeRams.swift */,
-				ED31FC8D2C04723C00D09CC8 /* SecOnboardArtsTypeRace.swift */,
-				EDBCA61E2C09B009006E528A /* EthereTypeUell.swift */,
+				ED31FCA62C04BF3D00D09CC8 /* SorTeamRch.swift */,
+				EDC50BD22C07541900482918 /* SorShopRchs.swift */,
+				ED31FC892C046DE700D09CC8 /* RchsFontSorSizeTro.swift */,
+				EDC50BD42C0754CE00482918 /* SorBrandRchsNameTro.swift */,
+				EDF4B8282C05CBA400E0A479 /* SorBrandTopAttributesRchs.swift */,
+				ED31FC8B2C0471AD00D09CC8 /* RchsUsrTopDeviceSor.swift */,
+				ED31FC8D2C04723C00D09CC8 /* ModOnboardTorTypeSor.swift */,
+				EDBCA61E2C09B009006E528A /* RemTypeSetOta.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,12 +210,10 @@
 				ED31FC742C046BAE00D09CC8 /* Buttons */,
 				ED31FC702C046B4900D09CC8 /* CollView */,
 				ED31FC6E2C046B3E00D09CC8 /* TroSimpleTroLabelRch.swift */,
-				ED31FC7B2C046D0500D09CC8 /* RtoTemplRchTextViewTro.swift */,
-				ED31FC7F2C046D4500D09CC8 /* SecUnicalImageRaceViewAts.swift */,
-				ED31FC812C046D5800D09CC8 /* SecUnicalRaceTFAts.swift */,
-				ED31FC832C046D6B00D09CC8 /* SecUniqueStackViewGniff.swift */,
-				ED31FC872C046DA300D09CC8 /* WeRaceViewsecViewAts.swift */,
-				EDBCA61A2C09AF39006E528A /* WeTraViewRamsViewArt.swift */,
+				ED31FC7F2C046D4500D09CC8 /* TroUnicalRchImageSorRaceSrtViewTro.swift */,
+				ED31FC812C046D5800D09CC8 /* RchUnicalTroTfSor.swift */,
+				ED31FC832C046D6B00D09CC8 /* RchUniqueStackRtoViewSor.swift */,
+				ED31FC872C046DA300D09CC8 /* WeRchViewSecViewTroSor.swift */,
 			);
 			path = DesignFlow;
 			sourceTree = "<group>";
@@ -379,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED31FC532C04696200D09CC8 /* Assets.xcassets in Resources */,
+				EDBCA6212C09C27C006E528A /* PrivacyInfo.xcprivacy in Resources */,
 				ED31FC562C04696200D09CC8 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,26 +390,24 @@
 				ED31FC762C046BB400D09CC8 /* RchsPrimaryTopButtonTro.swift in Sources */,
 				ED31FC662C046A4C00D09CC8 /* Label + Ext.swift in Sources */,
 				ED31FC682C046A6100D09CC8 /* UIColor + Ext.swift in Sources */,
-				EDBCA61B2C09AF39006E528A /* WeTraViewRamsViewArt.swift in Sources */,
 				ED31FCA12C047C6F00D09CC8 /* RchSetSorScrTop.swift in Sources */,
 				ED31FC9B2C047B5800D09CC8 /* SorPickerRemControllerSor.swift in Sources */,
 				ED31FCA32C047FB000D09CC8 /* WController.swift in Sources */,
 				EDF4B82D2C05F80000E0A479 /* NewTopTeamSorVmRch.swift in Sources */,
-				ED31FC882C046DA300D09CC8 /* WeRaceViewsecViewAts.swift in Sources */,
-				ED31FC8E2C04723C00D09CC8 /* SecOnboardArtsTypeRace.swift in Sources */,
-				ED31FC802C046D4500D09CC8 /* SecUnicalImageRaceViewAts.swift in Sources */,
-				ED31FCA72C04BF3D00D09CC8 /* Team.swift in Sources */,
+				ED31FC882C046DA300D09CC8 /* WeRchViewSecViewTroSor.swift in Sources */,
+				ED31FC8E2C04723C00D09CC8 /* ModOnboardTorTypeSor.swift in Sources */,
+				ED31FC802C046D4500D09CC8 /* TroUnicalRchImageSorRaceSrtViewTro.swift in Sources */,
+				ED31FCA72C04BF3D00D09CC8 /* SorTeamRch.swift in Sources */,
 				ED31FC992C047B2E00D09CC8 /* RchTabSorBarRSorModuleRop.swift in Sources */,
 				ED31FC722C046B5A00D09CC8 /* RchsOnboardTroCellRto.swift in Sources */,
-				EDF4B8292C05CBA400E0A479 /* BrandAttributes.swift in Sources */,
-				ED31FC842C046D6B00D09CC8 /* SecUniqueStackViewGniff.swift in Sources */,
-				ED31FC8C2C0471AD00D09CC8 /* RaceUsrSecDeviceArts.swift in Sources */,
-				ED31FC622C046A1900D09CC8 /* GniOnboardArtTypeRams.swift in Sources */,
+				EDF4B8292C05CBA400E0A479 /* SorBrandTopAttributesRchs.swift in Sources */,
+				ED31FC842C046D6B00D09CC8 /* RchUniqueStackRtoViewSor.swift in Sources */,
+				ED31FC8C2C0471AD00D09CC8 /* RchsUsrTopDeviceSor.swift in Sources */,
 				EDF4B8272C05C9FC00E0A479 /* TeamsRtoCellRch.swift in Sources */,
 				ED31FC6F2C046B3E00D09CC8 /* TroSimpleTroLabelRch.swift in Sources */,
 				EDBE8EBD2C07251B00A20A75 /* ShopsTroCellRch.swift in Sources */,
 				ED31FC9F2C047C3C00D09CC8 /* TheSorShopsTopContrlrRch.swift in Sources */,
-				EDBCA61F2C09B009006E528A /* EthereTypeUell.swift in Sources */,
+				EDBCA61F2C09B009006E528A /* RemTypeSetOta.swift in Sources */,
 				ED31FC912C0473E100D09CC8 /* SplashSorScreenTopRch.swift in Sources */,
 				EDC50BD72C075B6200482918 /* ShopsBrandTroTableViewCellRch.swift in Sources */,
 				EDF4B8222C05C6F900E0A479 /* UITableView + Ext.swift in Sources */,
@@ -423,18 +416,17 @@
 				EDF4B8202C05C6F000E0A479 /* UICollView + Ext.swift in Sources */,
 				ED31FC6A2C046A7300D09CC8 /* Double + Ext.swift in Sources */,
 				ED31FC972C047B0F00D09CC8 /* PushSorScreenRch.swift in Sources */,
-				ED31FC7C2C046D0500D09CC8 /* RtoTemplRchTextViewTro.swift in Sources */,
 				EDCD28702C0873EA00C6EF66 /* NewRchBrandTopVcSor.swift in Sources */,
-				ED31FC822C046D5800D09CC8 /* SecUnicalRaceTFAts.swift in Sources */,
+				ED31FC822C046D5800D09CC8 /* RchUnicalTroTfSor.swift in Sources */,
 				ED31FC7E2C046D2A00D09CC8 /* TroTopCollectionRchsViewOrt.swift in Sources */,
 				ED31FC5F2C046A0000D09CC8 /* RaceSaverAtsManagerSta.swift in Sources */,
 				EDBE8EBB2C071BA900A20A75 /* ShopsTopErchVmRch.swift in Sources */,
-				ED31FC8A2C046DE700D09CC8 /* FontSize.swift in Sources */,
+				ED31FC8A2C046DE700D09CC8 /* RchsFontSorSizeTro.swift in Sources */,
 				ED31FC792C046BDA00D09CC8 /* TeamAttributesTroTableViewCellRch.swift in Sources */,
-				EDC50BD52C0754CE00482918 /* BrandName.swift in Sources */,
-				EDC50BD32C07541900482918 /* Shop.swift in Sources */,
+				EDC50BD52C0754CE00482918 /* SorBrandRchsNameTro.swift in Sources */,
+				EDC50BD32C07541900482918 /* SorShopRchs.swift in Sources */,
 				ED31FC9D2C047C1F00D09CC8 /* SportsRchTeamsSorContrlr.swift in Sources */,
-				ED31FC6C2C046A8900D09CC8 /* RaceDefltsAtsServiceCes.swift in Sources */,
+				ED31FC6C2C046A8900D09CC8 /* SorDefltsRchsServiceChe.swift in Sources */,
 				EDF4B82B2C05F78800E0A479 /* NewRchTeamSorScreenTop.swift in Sources */,
 				EDF4B81E2C05C52700E0A479 /* FileManagerServiceProtocol.swift in Sources */,
 				EDF4B8312C0622AF00E0A479 /* TroTableOrtViewRch.swift in Sources */,
